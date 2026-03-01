@@ -1182,6 +1182,50 @@ img {
   color: var(--color-muted);
 }
 
+.restaurant-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+
+.restaurant-link {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--color-accent-gold);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: opacity 0.2s;
+}
+
+.restaurant-link:hover {
+  opacity: 0.7;
+}
+
+.restaurant-link svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.map-popup-links {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.map-popup-link {
+  font-size: 0.7em;
+  color: var(--color-accent-gold);
+  text-decoration: none;
+}
+
+.map-popup-link:hover {
+  text-decoration: underline;
+}
+
 /* --- Restaurant Section Dark Theme Overrides --- */
 .section-dark .filter-btn {
   color: var(--color-text-light);
@@ -1232,6 +1276,10 @@ img {
 .section-dark .restaurant-tag {
   border-color: rgba(247, 244, 239, 0.2);
   color: rgba(247, 244, 239, 0.5);
+}
+
+.section-dark .restaurant-link {
+  color: var(--color-accent-gold);
 }
 
 /* --- Seasonal Grid --- */
