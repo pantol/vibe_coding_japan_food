@@ -1150,6 +1150,58 @@ img {
   color: var(--color-muted);
 }
 
+/* --- Restaurant Section Dark Theme Overrides --- */
+.section-dark .filter-btn {
+  color: var(--color-text-light);
+  border-color: rgba(247, 244, 239, 0.3);
+}
+
+.section-dark .filter-btn:hover {
+  background: var(--color-text-light);
+  color: var(--color-bg-dark);
+  border-color: var(--color-text-light);
+}
+
+.section-dark .filter-btn.active {
+  background: var(--color-text-light);
+  color: var(--color-bg-dark);
+  border-color: var(--color-text-light);
+}
+
+.section-dark .filter-btn:focus-visible {
+  outline: 2px solid var(--color-accent-gold);
+  outline-offset: 2px;
+}
+
+.section-dark .restaurant-list {
+  background: rgba(247, 244, 239, 0.1);
+}
+
+.section-dark .restaurant-item {
+  background: rgba(247, 244, 239, 0.03);
+}
+
+.section-dark .restaurant-item:hover {
+  background: rgba(247, 244, 239, 0.07);
+}
+
+.section-dark .restaurant-name {
+  color: var(--color-text-light);
+}
+
+.section-dark .restaurant-description {
+  color: rgba(247, 244, 239, 0.65);
+}
+
+.section-dark .restaurant-location {
+  color: rgba(247, 244, 239, 0.5);
+}
+
+.section-dark .restaurant-tag {
+  border-color: rgba(247, 244, 239, 0.2);
+  color: rgba(247, 244, 239, 0.5);
+}
+
 /* --- Seasonal Grid --- */
 .seasonal-grid {
   display: grid;
