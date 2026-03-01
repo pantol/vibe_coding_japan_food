@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function(){try{var s=localStorage.getItem('darkMode');if(s==='true'||(s===null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark-mode')}}catch(e){}})();
+  </script>
 </head>
 <body>
 
@@ -28,6 +31,10 @@
       <li><a href="oita.html">Oita</a></li>
       <li><a href="kyushu.html">Kyushu</a></li>
     </ul>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </nav>
   <div class="mobile-menu">
@@ -39,6 +46,11 @@
     <a href="fukuoka.html">Fukuoka</a>
     <a href="oita.html">Oita</a>
     <a href="kyushu.html">Kyushu</a>
+  
+  <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
   </div>
 
   <!-- City Hero -->
@@ -78,13 +90,13 @@
           <span class="section-label">Chapter 4</span>
           <h2 class="section-title">Where East Met West on the Plate</h2>
           <p>
-            Kobe's food story begins at the harbor. When the port opened to foreign trade in 1868, it became one of the first places where Western food, Chinese cuisine, and Japanese tradition collided. This cosmopolitan heritage makes Kobe unique among Japan's great food cities.
+            Kobe opened as an international port on January 1, 1869, and the city&rsquo;s food has been cosmopolitan ever since. British, French, German, Chinese, and Indian merchants settled here, and their culinary legacies persist in Kobe&rsquo;s extraordinary bread culture (472 bakeries), its Nankinmachi Chinatown (one of Japan&rsquo;s three major Chinatowns), and its yoshoku tradition of hayashi rice, beef cutlets, and curry. Kobe consumes more bread and coffee per capita than anywhere else in Japan. Hokodo Coffee House, established in 1874, is reportedly Japan&rsquo;s oldest coffee shop.
           </p>
           <p>
-            Smaller and more walkable than Tokyo or Osaka, Kobe offers a remarkably compact culinary journey. You can stroll from a century-old kissaten to a Chinatown lunch, up the hill for sake tasting in Nada, and finish with teppanyaki &mdash; all within a few kilometers.
+            But the city&rsquo;s global fame rests on one thing: Kobe beef. Tajima cattle have been bred in northern Hyogo Prefecture since the Heian Period (~794 CE). Each animal must be purebred Tajima-strain Japanese Black cattle descended from just 12 government-selected &ldquo;super father&rdquo; bulls, born and raised entirely within Hyogo, with a Beef Marbling Standard score of 6+ and a carcass weight between 270 and 499.9 kg. Only ~5,500 cattle per year qualify. The fat melts at a lower temperature than common beef, creating the legendary buttery sweetness.
           </p>
           <p>
-            Port-city cosmopolitanism and legendary wagyu define Kobe's identity. The city's openness to foreign influence, combined with a deep respect for Japanese craft, has produced a food culture that feels both international and unmistakably Japanese.
+            Teppanyaki was invented here &mdash; at Misono restaurant in 1945 &mdash; and the Nada-Gogo sake district stretches 12 km along the coast, producing approximately 25&ndash;30% of all Japanese sake. Smaller and more walkable than Tokyo or Osaka, Kobe offers a remarkably compact culinary journey where century-old kissaten, Chinatown lunches, sake tastings, and teppanyaki dinners are all within a few kilometers.
           </p>
         </div>
         <div class="overview-sidebar reveal reveal-delay-2">
@@ -370,7 +382,7 @@
           <div>
             <h3 class="restaurant-name">Nagata-ward Sobameshi Shops</h3>
             <p class="restaurant-location">Nagata-ward</p>
-            <p class="restaurant-description">The birthplace of sobameshi. Casual teppan restaurants where the iconic fried noodle-rice dish was invented by factory workers on their lunch breaks.</p>
+            <p class="restaurant-description">The birthplace of sobameshi. In the 1950s, factory workers brought cold rice from bento boxes to local teppanyaki shops and asked chefs to stir-fry it with chopped yakisoba and Worcestershire sauce. It became a symbol of Nagata&rsquo;s resilient community after the 1995 earthquake.</p>
             <div class="restaurant-tags">
               <span class="restaurant-tag">Sobameshi</span>
               <span class="restaurant-tag">Local</span>
@@ -378,6 +390,51 @@
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">&yen;1,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Mouriya Honten</h3>
+            <p class="restaurant-location">Sannomiya &middot; Established 1885, 140+ Years</p>
+            <p class="restaurant-description">Kobe&rsquo;s most storied teppanyaki institution with five Sannomiya branches. The chef recommends eating the first bite with salt only to appreciate pure beef flavour, then exploring wasabi, miso, ponzu, and mustard.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Teppanyaki</span>
+              <span class="restaurant-tag">140+ Years</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;10,000&ndash;25,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Kobe Plaisir</h3>
+            <p class="restaurant-location">Sannomiya &middot; Farm-to-Table</p>
+            <p class="restaurant-description">Farm-to-table seiro-mushi (steaming) style &mdash; Kobe beef and 16&ndash;18 varieties of Hyogo vegetables steamed in bamboo baskets, accompanied by the restaurant&rsquo;s own Chardonnay. A lighter, more delicate approach to beef.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Seiro-Mushi</span>
+              <span class="restaurant-tag">Farm-to-Table</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;5,000&ndash;12,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Ikari</h3>
+            <p class="restaurant-location">Shin-Nagata &middot; Sobameshi Birthplace</p>
+            <p class="restaurant-description">The actual birthplace of sobameshi, served with the legendary &ldquo;dobe&rdquo; sauce. No-frills, authentic, and quintessentially Nagata. The working-class soul food that defined a neighbourhood.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Sobameshi</span>
+              <span class="restaurant-tag">Birthplace</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;600&ndash;900</span>
           </div>
         </div>
 
@@ -572,7 +629,7 @@
 
   <!-- Next City -->
   <a href="fukuoka.html" class="parallax-section" style="height: 50vh; min-height: 350px; cursor: pointer; display: flex; text-decoration: none; color: inherit;">
-    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1577593054080-9b6a47f1c2d6?w=1920&q=80');"></div>
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=1920&q=80');"></div>
     <div class="parallax-overlay"></div>
     <div class="parallax-content">
       <p style="font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 1rem;">Next Destination</p>

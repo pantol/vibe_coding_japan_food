@@ -11,6 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function(){try{var s=localStorage.getItem('darkMode');if(s==='true'||(s===null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark-mode')}}catch(e){}})();
+  </script>
 </head>
 <body>
 
@@ -38,6 +41,10 @@
       <li><a href="city/oita.html">Oita</a></li>
       <li><a href="city/kyushu.html">Kyushu</a></li>
     </ul>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <div class="nav-hamburger">
       <span></span>
       <span></span>
@@ -56,6 +63,11 @@
     <a href="city/fukuoka.html">Fukuoka</a>
     <a href="city/oita.html">Oita</a>
     <a href="city/kyushu.html">Kyushu</a>
+  
+  <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
   </div>
 
   <!-- Hero -->
@@ -118,21 +130,29 @@
       <a href="city/tokyo.html" class="city-featured reveal" style="margin-top: 4rem; cursor: pointer; text-decoration: none; color: inherit;">
         <div class="city-featured-image">
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80');"></div>
+          <div class="city-card-overlay"></div>
         </div>
         <div class="city-featured-content">
           <span class="section-label">Chapter 1</span>
           <h3 class="section-title">Tokyo</h3>
-          <p class="section-title-jp" style="color: rgba(247,244,239,0.4);">東京</p>
+          <p class="section-title-jp" style="color: rgba(247,244,239,0.4);">東京 &mdash; The Capital of Endless Appetite</p>
           <p class="section-description">
             The most cosmopolitan food city on Earth and one of the most deeply 
             traditional. More Michelin stars than any other metropolis, yet some of 
             its greatest meals are served on plastic trays in rooms with six seats 
             and no sign outside.
           </p>
-          <a href="city/tokyo.html" class="btn btn-light" style="margin-top: 1rem;">
+          <div class="city-featured-highlights">
+            <span>Edomae Sushi</span>
+            <span>Ramen</span>
+            <span>Tempura</span>
+            <span>Tonkatsu</span>
+            <span>Yakitori</span>
+          </div>
+          <span class="btn btn-light" style="margin-top: 1.5rem;">
             Explore Tokyo
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          </span>
         </div>
       </a>
 
@@ -182,7 +202,7 @@
         </a>
 
         <a href="city/fukuoka.html" class="city-card reveal">
-          <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1577593054080-9b6a47f1c2d6?w=800&q=80');"></div>
+          <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1554797589-7241bb691973?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
             <p class="city-card-label">Chapter 5</p>

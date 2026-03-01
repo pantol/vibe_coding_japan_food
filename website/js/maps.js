@@ -112,6 +112,54 @@ const RESTAURANT_DATA = {
         type: "Market",
         description: "Tamagoyaki, sashimi on sticks, grilled scallops, Japanese knives. Go by 7 a.m.",
         address: "Tsukiji 4-chome, Chuo-ku"
+      },
+      {
+        name: "Den",
+        lat: 35.6695, lng: 139.7087,
+        price: "splurge", priceLabel: "~¥15,000",
+        type: "Innovative Kaiseki",
+        description: "#1 Asia's 50 Best 2022. Chef Hasegawa's joyful reinvention of kaiseki — 'Dentucky Fried Chicken' and smiley-face salad.",
+        address: "Jingumae, Shibuya-ku"
+      },
+      {
+        name: "Narisawa",
+        lat: 35.6720, lng: 139.7245,
+        price: "splurge", priceLabel: "~¥30,000",
+        type: "Satoyama Cuisine",
+        description: "Innovative Satoyama Cuisine — French technique meets Japanese forest-to-sea philosophy.",
+        address: "Minami-Aoyama, Minato-ku"
+      },
+      {
+        name: "Maisen",
+        lat: 35.6652, lng: 139.7120,
+        price: "mid", priceLabel: "¥1,500\u20133,000",
+        type: "Tonkatsu",
+        description: "Kurobuta tonkatsu from a converted 1960s bathhouse. Since 1965.",
+        address: "Jingumae, Shibuya-ku"
+      },
+      {
+        name: "Nodaiwa",
+        lat: 35.6565, lng: 139.7385,
+        price: "mid", priceLabel: "¥4,000\u20138,000",
+        type: "Unagi",
+        description: "200-year-old unagi restaurant, fifth generation. World's oldest active Michelin chef.",
+        address: "Azabu, Minato-ku"
+      },
+      {
+        name: "Fuunji",
+        lat: 35.6910, lng: 139.7005,
+        price: "budget", priceLabel: "¥900\u20131,200",
+        type: "Tsukemen",
+        description: "Tiny tsukemen counter with intensely smoky-sweet dipping broth. Genre-defining.",
+        address: "Yoyogi, Shibuya-ku"
+      },
+      {
+        name: "Tsukishima Monja Street",
+        lat: 35.6605, lng: 139.7825,
+        price: "budget", priceLabel: "¥1,000\u20132,000",
+        type: "Monjayaki",
+        description: "75+ monjayaki restaurants in one arcade. Tokyo's working-class communal eating.",
+        address: "Tsukishima, Chuo-ku"
       }
     ]
   },
@@ -191,6 +239,30 @@ const RESTAURANT_DATA = {
         type: "Market",
         description: "\"Osaka's Kitchen.\" Grilled scallops, fresh uni, otoro, tamagoyaki. Go before 10 a.m.",
         address: "Nipponbashi, Chuo-ku"
+      },
+      {
+        name: "Kashiwaya",
+        lat: 34.7910, lng: 135.5150,
+        price: "splurge", priceLabel: "¥12,000\u201336,000",
+        type: "Kaiseki",
+        description: "Three Michelin stars since 2010. Chef Matsuo's 24-season kaiseki with Naniwa vegetables.",
+        address: "Senriyama, Suita"
+      },
+      {
+        name: "Hajime",
+        lat: 34.6810, lng: 135.4850,
+        price: "splurge", priceLabel: "¥25,000+",
+        type: "French-Japanese",
+        description: "Avant-garde cuisine by former design engineer Hajime Yoneda. 'A dialogue with the earth.'",
+        address: "Nishi-ku"
+      },
+      {
+        name: "Tokisushi Honten",
+        lat: 34.6620, lng: 135.5050,
+        price: "budget", priceLabel: "¥220/piece",
+        type: "Sushi",
+        description: "Genuine sushi from ¥220/piece in Ura-Namba — Osaka's best-kept dining secret.",
+        address: "Ura-Namba, Chuo-ku"
       }
     ]
   },
@@ -268,8 +340,40 @@ const RESTAURANT_DATA = {
         lat: 34.9344, lng: 135.7590,
         price: "budget", priceLabel: "Free\u2013\u00a5500",
         type: "Sake Tasting",
-        description: "Gekkeikan and Kizakura offer tastings of smooth, soft-water sake. Free or minimal charge.",
+        description: "Gekkeikan (est. 1637) and Kizakura offer tastings. Fushimi's soft water produces mellower sake.",
         address: "Fushimi-ku"
+      },
+      {
+        name: "Kikunoi Honten",
+        lat: 34.9955, lng: 135.7830,
+        price: "splurge", priceLabel: "¥22,000\u2013100,000+",
+        type: "Kaiseki",
+        description: "Three Michelin stars for 16 years. Chef Murata helped secure washoku's UNESCO status. Water from 1500s 'Chrysanthemum Well'.",
+        address: "Higashiyama-ku"
+      },
+      {
+        name: "Okutan",
+        lat: 35.0105, lng: 135.7935,
+        price: "mid", priceLabel: "¥3,000\u20134,000",
+        type: "Yudofu",
+        description: "Serving yudofu since 1638 — nearly 400 years. Silken tofu in kombu dashi near Nanzenji temple.",
+        address: "Nanzenji, Sakyo-ku"
+      },
+      {
+        name: "Matsuba Honten",
+        lat: 35.0040, lng: 135.7720,
+        price: "budget", priceLabel: "~¥1,200",
+        type: "Nishin Soba",
+        description: "Birthplace of nishin soba (1882). Buckwheat noodles with sweet-simmered herring. Operating since 1861.",
+        address: "Gion, Higashiyama-ku"
+      },
+      {
+        name: "Honke Owariya",
+        lat: 35.0100, lng: 135.7625,
+        price: "budget", priceLabel: "¥1,000\u20132,500",
+        type: "Soba",
+        description: "Soba since ~1465 — over 540 years. One of Japan's oldest restaurants of any kind.",
+        address: "Nakagyo-ku"
       }
     ]
   },
@@ -347,8 +451,32 @@ const RESTAURANT_DATA = {
         lat: 34.7140, lng: 135.2500,
         price: "budget", priceLabel: "Free",
         type: "Sake Tasting",
-        description: "Free tours and tastings at Hakutsuru, Shushinkan. Bold otoko-zake paired with rich foods.",
+        description: "12 km district producing 25–30% of all Japanese sake. Hakutsuru museum, Shushinkan (Fukuju — served at Nobel Prize dinner). Nadagogo Sakedokoro: world's largest 50m U-shaped counter.",
         address: "Nada-ku"
+      },
+      {
+        name: "Mouriya Honten",
+        lat: 34.6930, lng: 135.1920,
+        price: "splurge", priceLabel: "¥10,000\u201325,000+",
+        type: "Teppanyaki",
+        description: "Kobe's most storied teppanyaki — established 1885, 140+ years, five branches. First bite with salt only.",
+        address: "Sannomiya, Chuo-ku"
+      },
+      {
+        name: "Kobe Plaisir",
+        lat: 34.6925, lng: 135.1910,
+        price: "mid", priceLabel: "¥5,000\u201312,000",
+        type: "Seiro-Mushi",
+        description: "Farm-to-table steaming: Kobe beef and 16–18 Hyogo vegetables in bamboo baskets with own Chardonnay.",
+        address: "Sannomiya, Chuo-ku"
+      },
+      {
+        name: "Ikari",
+        lat: 34.6630, lng: 135.1525,
+        price: "budget", priceLabel: "¥600\u2013900",
+        type: "Sobameshi",
+        description: "The birthplace of sobameshi with legendary 'dobe' sauce. Working-class soul food of Nagata.",
+        address: "Shin-Nagata, Nagata-ku"
       }
     ]
   },
@@ -372,6 +500,14 @@ const RESTAURANT_DATA = {
         type: "Ramen",
         description: "Original Nagahama ramen from a 1952 yatai. Lighter tonkotsu, ultra-thin noodles. Open 24h.",
         address: "Nagahama, Chuo-ku"
+      },
+      {
+        name: "Taiho Ramen",
+        lat: 33.5850, lng: 130.4020,
+        price: "mid", priceLabel: "¥700",
+        type: "Ramen",
+        description: "Rich, creamy tonkotsu with a loyal following. Thick broth, thin noodles, no-frills setting.",
+        address: "Watanabe-dori, Chuo-ku"
       },
       {
         name: "Tetsunabe Gyoza",
@@ -428,13 +564,61 @@ const RESTAURANT_DATA = {
         type: "Market",
         description: "Morning market for seafood, mentaiko tastings, temari sushi. Best before 10 a.m. weekdays.",
         address: "Yanagibashi, Chuo-ku"
+      },
+      {
+        name: "Kokinchan Yatai",
+        lat: 33.5912, lng: 130.4050,
+        price: "budget", priceLabel: "¥2,000\u20133,000",
+        type: "Yatai",
+        description: "Reddit-recommended yatai along the Naka River. Grilled skewers and oden in a convivial open-air setting.",
+        address: "Nakasu, Hakata-ku"
+      },
+      {
+        name: "Koroshi Curry",
+        lat: 33.5885, lng: 130.3980,
+        price: "budget", priceLabel: "¥1,000\u20131,500",
+        type: "Curry",
+        description: "Intense, deeply spiced Japanese curry with generous portions. A cult favourite among locals and travellers alike.",
+        address: "Tenjin, Chuo-ku"
+      },
+      {
+        name: "Udon Kichi",
+        lat: 33.5870, lng: 130.4010,
+        price: "budget", priceLabel: "¥500\u2013900",
+        type: "Udon",
+        description: "Hakata-style soft udon with a delicate dashi broth. Simple, satisfying, and remarkably cheap.",
+        address: "Tenjin, Chuo-ku"
+      },
+      {
+        name: "Shin Shin",
+        lat: 33.5895, lng: 130.3985,
+        price: "mid", priceLabel: "¥800\u20131,100",
+        type: "Ramen",
+        description: "Locals' ramen of choice — 'pure soup' blending pork bones with Aritadori chicken from Saga.",
+        address: "Tenjin, Chuo-ku"
+      },
+      {
+        name: "Sushi Gyoten",
+        lat: 33.5940, lng: 130.4100,
+        price: "splurge", priceLabel: "¥30,000\u201350,000+",
+        type: "Omakase Sushi",
+        description: "Three Michelin stars, 5-month waiting list. Fukuoka's finest omakase.",
+        address: "Hakata-ku"
+      },
+      {
+        name: "Yatai Genkai",
+        lat: 33.5918, lng: 130.4055,
+        price: "budget", priceLabel: "¥2,000\u20133,000",
+        type: "Yatai",
+        description: "70-year-old Nakasu yatai specialising in fresh Genkai Sea tempura.",
+        address: "Nakasu, Hakata-ku"
       }
     ]
   },
 
   oita: {
-    center: [33.2800, 131.5000],
-    zoom: 12,
+    center: [33.1900, 131.2900],
+    zoom: 10,
     restaurants: [
       {
         name: "Toyotsune",
@@ -490,6 +674,78 @@ const RESTAURANT_DATA = {
         price: "budget", priceLabel: "\u00a51,000\u20131,500",
         type: "Tea House",
         description: "\"Nostalgic\" Oita food. Ox-tail curry with Bungo beef, shareable toriten, excellent sweets.",
+        address: "Beppu"
+      },
+      {
+        name: "Naruto Udon",
+        lat: 33.2340, lng: 131.6070,
+        price: "budget", priceLabel: "¥500",
+        type: "Udon",
+        description: "Comforting udon where all sizes are the same price. Soft, chewy noodles in warming broth.",
+        address: "Oita City"
+      },
+      {
+        name: "Shin Hakata",
+        lat: 33.2795, lng: 131.5015,
+        price: "mid", priceLabel: "¥1,500\u20133,000",
+        type: "Sushi / Izakaya",
+        description: "Beppu sushi and dangojiru specialist. Outstanding sushi set and hearty miso soup with hand-pulled dumplings.",
+        address: "Beppu City"
+      },
+      {
+        name: "Robata Jin",
+        lat: 33.2830, lng: 131.5045,
+        price: "mid", priceLabel: "¥2,000\u20134,000",
+        type: "Robatayaki",
+        description: "Charcoal-grilled izakaya with seasonal local ingredients and warm hospitality.",
+        address: "Beppu City"
+      },
+      {
+        name: "Yusuichaya",
+        lat: 33.1550, lng: 131.1850,
+        price: "mid", priceLabel: "¥1,000\u20132,000",
+        type: "Tofu",
+        description: "Best tofu in the region. Hand-made tofu dishes in a rustic mountain setting between Yufuin and Kurokawa.",
+        address: "Between Yufuin & Kurokawa Onsen"
+      },
+      {
+        name: "Pâtisserie Roku",
+        lat: 33.1025, lng: 131.0730,
+        price: "budget", priceLabel: "¥300\u2013500",
+        type: "Patisserie",
+        description: "Famous cream puffs in Kurokawa Onsen. Crisp shell, rich custard filling.",
+        address: "Kurokawa Onsen, Minamioguni"
+      },
+      {
+        name: "Milch",
+        lat: 33.2615, lng: 131.3690,
+        price: "budget", priceLabel: "¥300\u2013600",
+        type: "Sweets",
+        description: "Yufuin cheesecake shop. Famous jiggly soft cheesecake, best enjoyed warm on Yunotsubo Street.",
+        address: "Yunotsubo, Yufuin"
+      },
+      {
+        name: "Kotsukotsuan",
+        lat: 33.2340, lng: 131.6120,
+        price: "mid", priceLabel: "¥1,500\u20134,000",
+        type: "Local Specialties",
+        description: "Best single-stop for all Oita specialties: toriten, ryukyu, seki-aji, dango-jiru.",
+        address: "Oita City"
+      },
+      {
+        name: "Oryori Hatano",
+        lat: 33.2820, lng: 131.5010,
+        price: "splurge", priceLabel: "¥10,000\u201320,000+",
+        type: "Kaiseki",
+        description: "Two Michelin stars. Seasonal kaiseki reflecting 'once in a lifetime' philosophy.",
+        address: "Beppu"
+      },
+      {
+        name: "Somuri Teppanyaki",
+        lat: 33.2805, lng: 131.5025,
+        price: "mid", priceLabel: "¥6,900+",
+        type: "Bungo Beef Teppanyaki",
+        description: "35 years perfecting Bungo Beef teppanyaki exclusively. Rivals Kobe at a fraction of the price.",
         address: "Beppu"
       }
     ]
@@ -554,6 +810,70 @@ const RESTAURANT_DATA = {
         type: "Chicken",
         description: "Fried chicken in sweet vinegar with tartar sauce. Miyazaki signature. Teishoku restaurants.",
         address: "Miyazaki City"
+      },
+      {
+        name: "Michi-no-eki (Kyushu Roadside Stations)",
+        lat: 32.5000, lng: 131.0000,
+        price: "budget", priceLabel: "¥300\u20131,000",
+        type: "Local Specialties",
+        description: "Roadside rest stations across Kyushu with hyper-local produce, dishes, and specialties.",
+        address: "Various locations across Kyushu"
+      },
+      {
+        name: "Bunjiro Asahimachi",
+        lat: 32.7503, lng: 129.8779,
+        price: "mid", priceLabel: "¥1,200\u20132,000",
+        type: "Tonkatsu",
+        description: "Exceptional tonkatsu in Nagasaki. Thick-cut pork cutlets with shattering golden crust.",
+        address: "Asahimachi, Nagasaki"
+      },
+      {
+        name: "海鮮居酒屋 たぬきの里",
+        lat: 32.7525, lng: 129.8750,
+        price: "budget", priceLabel: "¥800\u20131,500",
+        type: "Seafood Izakaya",
+        description: "Generous set meals with fresh local catches. Sashimi, grilled fish, and small plates.",
+        address: "Nagasaki City"
+      },
+      {
+        name: "濃厚豚骨 かどや",
+        lat: 32.7480, lng: 129.8770,
+        price: "budget", priceLabel: "¥700\u20131,000",
+        type: "Ramen / Champon",
+        description: "Rich tonkotsu ramen and champon noodles. Hours-simmered broth with creamy consistency.",
+        address: "Nagasaki City"
+      },
+      {
+        name: "Kikaku Sushi",
+        lat: 31.5966, lng: 130.5571,
+        price: "splurge", priceLabel: "¥8,000\u201315,000",
+        type: "Omakase Sushi",
+        description: "Outstanding omakase in Kagoshima. Local catches — kibinago, kanpachi — prepared with precision.",
+        address: "Kagoshima City"
+      },
+      {
+        name: "Sueyoshi",
+        lat: 31.5900, lng: 130.5500,
+        price: "mid", priceLabel: "¥2,500\u20134,000",
+        type: "Unagi",
+        description: "Specialist eel restaurant. Charcoal-grilled Kagoshima unagi with caramelised tare glaze.",
+        address: "Kagoshima City"
+      },
+      {
+        name: "Yakushima Airport Restaurant",
+        lat: 30.3856, lng: 130.6589,
+        price: "budget", priceLabel: "¥700\u20131,000",
+        type: "Flying Fish Udon",
+        description: "Excellent tobiuo (flying fish) udon. Light, savoury broth — perfect island welcome or farewell.",
+        address: "Yakushima Airport"
+      },
+      {
+        name: "Hiro Bakery",
+        lat: 30.3700, lng: 130.6550,
+        price: "budget", priceLabel: "¥200\u2013500",
+        type: "Bakery",
+        description: "Local rice flour breads, tankan orange bread, sweet potato pastries. Closes early.",
+        address: "Yakushima"
       }
     ]
   }
@@ -572,12 +892,19 @@ const PRICE_LABELS = {
   budget: "Budget"
 };
 
+// Tile layer URLs
+const TILE_LIGHT = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
+const TILE_DARK = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
+const TILE_ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>';
+
 function initCityMap(cityKey) {
   const data = RESTAURANT_DATA[cityKey];
   if (!data) return;
 
   const mapContainer = document.getElementById("restaurant-map");
   if (!mapContainer) return;
+
+  const isDark = document.documentElement.classList.contains("dark-mode");
 
   // Create map (fitBounds will set the actual view after markers are added)
   const map = L.map("restaurant-map", {
@@ -587,12 +914,20 @@ function initCityMap(cityKey) {
     zoom: data.zoom
   });
 
-  // Use CartoDB Positron for a clean, muted aesthetic
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  // Use CartoDB tiles — light or dark based on current mode
+  let tileLayer = L.tileLayer(isDark ? TILE_DARK : TILE_LIGHT, {
+    attribution: TILE_ATTR,
     subdomains: "abcd",
     maxZoom: 19
   }).addTo(map);
+
+  // Listen for dark mode toggle to swap tiles
+  const observer = new MutationObserver(() => {
+    const nowDark = document.documentElement.classList.contains("dark-mode");
+    const newUrl = nowDark ? TILE_DARK : TILE_LIGHT;
+    tileLayer.setUrl(newUrl);
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
 
   // Store markers for filtering
   const allMarkers = [];
@@ -610,18 +945,18 @@ function initCityMap(cityKey) {
       fillOpacity: 0.9
     }).addTo(map);
 
-    // Popup content
+    // Popup content — uses CSS classes for theme compatibility
     const popup = `
-      <div style="font-family: 'EB Garamond', Georgia, serif; min-width: 220px;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
-          <strong style="font-size: 1.1em;">${r.name}</strong>
-          <span style="color: ${color}; font-weight: 500; white-space: nowrap; margin-left: 12px;">${r.priceLabel}</span>
+      <div class="map-popup">
+        <div class="map-popup-header">
+          <strong class="map-popup-name">${r.name}</strong>
+          <span class="map-popup-price" style="color: ${color};">${r.priceLabel}</span>
         </div>
-        <div style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.1em; color: #8a7e72; margin-bottom: 6px;">
+        <div class="map-popup-meta">
           ${r.type} &middot; ${PRICE_LABELS[r.price]}
         </div>
-        <p style="font-size: 0.85em; line-height: 1.6; color: #2c2520; margin: 0 0 6px;">${r.description}</p>
-        <p style="font-size: 0.75em; color: #8a7e72; margin: 0; font-style: italic;">${r.address}</p>
+        <p class="map-popup-desc">${r.description}</p>
+        <p class="map-popup-addr">${r.address}</p>
       </div>
     `;
 

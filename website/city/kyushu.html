@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function(){try{var s=localStorage.getItem('darkMode');if(s==='true'||(s===null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark-mode')}}catch(e){}})();
+  </script>
 </head>
 <body>
 
@@ -28,6 +31,10 @@
       <li><a href="oita.html">Oita</a></li>
       <li><a href="kyushu.html" class="active">Kyushu</a></li>
     </ul>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </nav>
   <div class="mobile-menu">
@@ -39,6 +46,11 @@
     <a href="fukuoka.html">Fukuoka</a>
     <a href="oita.html">Oita</a>
     <a href="kyushu.html">Kyushu</a>
+  
+  <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
   </div>
 
   <!-- City Hero -->
@@ -78,10 +90,13 @@
           <span class="section-label">Chapter 7</span>
           <h2 class="section-title">A Regional Specialties Overview</h2>
           <p>
-            Kyushu is a food world unto itself &mdash; volcanic, subtropical, with cuisine bolder, sweeter, and more pork-centric than anything on Honshu. The island's identity is built on the centrality of pork (especially Kagoshima's kurobuta), the prominence of shochu over sake, and a warmth that extends to its people and their cooking.
+            Beyond Fukuoka and Oita, the prefectures of Saga, Nagasaki, Kumamoto, Miyazaki, and Kagoshima form a culinary region unlike any other in Japan. Sweet soy sauce (amakuchi shoyu) grows sweeter the farther south you travel &mdash; a legacy of Nagasaki&rsquo;s role as Japan&rsquo;s sole open port during Edo-era isolation, when Dutch and Portuguese traders imported sugar through the artificial island of Dejima. That same trade channel brought tempura, castella cake, and konpeit&omacr; candy to Japan.
           </p>
           <p>
-            The coastline yields extraordinary seafood from three bodies of water &mdash; the Sea of Japan, the Pacific, and the East China Sea.
+            Kyushu is Japan&rsquo;s shochu heartland, with nearly 500 distilleries. Three production areas hold WTO Geographical Indication status &mdash; equivalent to Scotch or Champagne: Satsuma (Kagoshima), Kuma (Kumamoto), and Iki (Nagasaki). The warmer subtropical climate favors robust livestock and year-round seafood, while volcanic soil from Mt. Aso and Sakurajima produces the sweet potatoes that are the foundation of the region&rsquo;s great spirit.
+          </p>
+          <p>
+            The coastline yields extraordinary seafood from three bodies of water &mdash; the Sea of Japan, the Pacific, and the East China Sea. The island&rsquo;s identity is built on the centrality of pork (especially Kagoshima&rsquo;s kurobuta), the prominence of shochu over sake, and a warmth that extends to its people and their cooking.
           </p>
         </div>
         <div class="overview-sidebar reveal reveal-delay-2">
@@ -378,6 +393,111 @@
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">&yen;300&ndash;1,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Bunjiro Asahimachi</h3>
+            <p class="restaurant-location">Nagasaki &middot; Reddit Recommended</p>
+            <p class="restaurant-description">Exceptional tonkatsu in Nagasaki. Thick-cut pork cutlets with a shattering golden crust, served with mountains of shredded cabbage and rich tonkatsu sauce. A local institution.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Tonkatsu</span>
+              <span class="restaurant-tag">Local Favourite</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,200&ndash;2,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">&#28023;&#39854;&#23621;&#37202;&#23627; &#12383;&#12396;&#12365;&#12398;&#37324;</h3>
+            <p class="restaurant-location">Nagasaki &middot; Reddit Recommended</p>
+            <p class="restaurant-description">Seafood izakaya known for generous, well-priced set meals. Fresh catches prepared simply &mdash; sashimi, grilled fish, and small plates that showcase Nagasaki&rsquo;s coastal bounty.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Seafood</span>
+              <span class="restaurant-tag">Set Meals</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;800&ndash;1,500</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">&#28611;&#21402;&#35930;&#39592; &#12363;&#12393;&#12420;</h3>
+            <p class="restaurant-location">Nagasaki &middot; Reddit Recommended</p>
+            <p class="restaurant-description">Rich, thick tonkotsu ramen and champon noodles. The broth is simmered for hours until it reaches a creamy, almost porridge-like consistency &mdash; Nagasaki comfort food at its best.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Ramen</span>
+              <span class="restaurant-tag">Champon</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;700&ndash;1,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Kikaku Sushi</h3>
+            <p class="restaurant-location">Kagoshima &middot; Reddit Recommended</p>
+            <p class="restaurant-description">Outstanding omakase sushi in Kagoshima. The chef sources from local waters &mdash; expect kibinago, kanpachi, and other Kagoshima specialties prepared with quiet precision at the counter.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Omakase</span>
+              <span class="restaurant-tag">Sushi</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;8,000&ndash;15,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Sueyoshi</h3>
+            <p class="restaurant-location">Kagoshima &middot; Reddit Recommended</p>
+            <p class="restaurant-description">Specialist eel restaurant serving Kagoshima&rsquo;s prized unagi &mdash; grilled over charcoal with a caramelised tare glaze. Kagoshima is Japan&rsquo;s largest eel producer, and this is the place to taste why.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Unagi</span>
+              <span class="restaurant-tag">Specialist</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;2,500&ndash;4,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Yakushima Airport Restaurant</h3>
+            <p class="restaurant-location">Yakushima &middot; Reddit Recommended</p>
+            <p class="restaurant-description">Don&rsquo;t judge by the location &mdash; this airport restaurant serves excellent tobiuo (flying fish) udon, a Yakushima signature. Light, savoury broth with delicate flying fish flavour. The perfect island welcome or farewell.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Flying Fish</span>
+              <span class="restaurant-tag">Udon</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;700&ndash;1,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Hiro Bakery</h3>
+            <p class="restaurant-location">Yakushima &middot; Reddit Recommended</p>
+            <p class="restaurant-description">Beloved island bakery using local rice flour to create uniquely chewy, fragrant breads. The tankan orange bread and sweet potato pastries are local favourites. Closes early &mdash; arrive before noon.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Bakery</span>
+              <span class="restaurant-tag">Rice Flour Bread</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;200&ndash;500</span>
           </div>
         </div>
 

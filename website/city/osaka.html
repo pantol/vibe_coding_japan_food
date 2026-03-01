@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function(){try{var s=localStorage.getItem('darkMode');if(s==='true'||(s===null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark-mode')}}catch(e){}})();
+  </script>
 </head>
 <body>
 
@@ -28,6 +31,10 @@
       <li><a href="oita.html">Oita</a></li>
       <li><a href="kyushu.html">Kyushu</a></li>
     </ul>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </nav>
   <div class="mobile-menu">
@@ -39,6 +46,11 @@
     <a href="fukuoka.html">Fukuoka</a>
     <a href="oita.html">Oita</a>
     <a href="kyushu.html">Kyushu</a>
+  
+  <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
   </div>
 
   <!-- City Hero -->
@@ -78,13 +90,13 @@
           <span class="section-label">Chapter 2</span>
           <h2 class="section-title">The Nation's Kitchen</h2>
           <p>
-            Osaka calls itself "tenka no daidokoro" &mdash; the nation's kitchen. During the Edo period, it served as Japan's commercial capital, a hub where rice, soy sauce, and seafood from across the archipelago converged. The city's identity was forged in trade and fed by abundance.
+            Osaka&rsquo;s relationship with food is summed up in a single word: kuidaore &mdash; &ldquo;eat until you drop,&rdquo; or more precisely, &ldquo;ruin yourself through extravagance in food.&rdquo; While Kyoto&rsquo;s saying is &ldquo;kidaore&rdquo; (spend on clothing) and Tokyo&rsquo;s is &ldquo;keidaore&rdquo; (spend on fashion), Osaka&rsquo;s identity centers on eating. During the Edo period, Osaka functioned as Japan&rsquo;s central rice-trade hub &mdash; the &ldquo;Nation&rsquo;s Kitchen&rdquo; (tenka no daidokoro) &mdash; with ingredients arriving via the Kitamaebune sea routes from every corner of Japan.
           </p>
           <p>
-            The Osakan philosophy of "kuidaore" (eating until you drop) is not mere indulgence &mdash; it is a civic value. Where Tokyo prizes refinement, Osaka prizes flavor and volume. Signature dishes are bold, saucy, and designed for eating with friends while standing on a street corner.
+            The city&rsquo;s powerful merchant class, unlike the samurai of Edo or the aristocrats of Kyoto, demanded food that was bold, generous, and accessible. This produced a democratic food culture built on konamon (flour-based dishes): takoyaki, okonomiyaki, negiyaki. The merchant mentality also shaped Osaka&rsquo;s distinctive dashi &mdash; the monopolization of makombu kelp from Hokkaido created a lighter, kombu-forward broth that is the foundation of kitsune udon and the entire Kansai flavor profile, contrasting sharply with Tokyo&rsquo;s darker, bonito-heavy style.
           </p>
           <p>
-            Osaka's innovations include conveyor-belt sushi, instant ramen, and commercial takoyaki. This is the democratic table &mdash; food for everyone, meant to be shared loudly and devoured without pretense.
+            Osaka consumes roughly 60% of Japan&rsquo;s fugu supply, has over 700 takoyaki shops, and the city&rsquo;s innovations include conveyor-belt sushi, instant ramen, and commercial takoyaki. This is the democratic table &mdash; food for everyone, meant to be shared loudly and devoured without pretense.
           </p>
         </div>
         <div class="overview-sidebar reveal reveal-delay-2">
@@ -396,6 +408,51 @@
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">&yen;300&ndash;1,500</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Kashiwaya</h3>
+            <p class="restaurant-location">Senriyama &middot; Three Michelin Stars Since 2010</p>
+            <p class="restaurant-description">Chef Hideaki Matsuo creates kaiseki guided by a 24-season cycle using traditional Naniwa vegetables. Three Michelin stars held consecutively since 2010 &mdash; Osaka&rsquo;s pinnacle of refinement.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Kaiseki</span>
+              <span class="restaurant-tag">Three Stars</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;12,000&ndash;36,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Hajime</h3>
+            <p class="restaurant-location">Nishi-ku</p>
+            <p class="restaurant-description">Former design engineer Hajime Yoneda produces avant-garde French-Japanese cuisine described as &ldquo;a dialogue with the earth.&rdquo; Dishes arrive as edible art pieces that challenge every expectation.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Avant-Garde</span>
+              <span class="restaurant-tag">French-Japanese</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;25,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Tokisushi Honten</h3>
+            <p class="restaurant-location">Ura-Namba &middot; Hidden Namba</p>
+            <p class="restaurant-description">Genuine sushi from &yen;220 per piece in the hottest area among young locals. Ura-Namba (&ldquo;Hidden Namba&rdquo;) is Osaka&rsquo;s best-kept dining secret &mdash; dense with tiny bars where strangers become drinking companions.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Sushi</span>
+              <span class="restaurant-tag">Ura-Namba</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;220/piece</span>
           </div>
         </div>
 

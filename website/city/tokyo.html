@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function(){try{var s=localStorage.getItem('darkMode');if(s==='true'||(s===null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark-mode')}}catch(e){}})();
+  </script>
 </head>
 <body>
 
@@ -28,6 +31,10 @@
       <li><a href="oita.html">Oita</a></li>
       <li><a href="kyushu.html">Kyushu</a></li>
     </ul>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </nav>
   <div class="mobile-menu">
@@ -39,6 +46,11 @@
     <a href="fukuoka.html">Fukuoka</a>
     <a href="oita.html">Oita</a>
     <a href="kyushu.html">Kyushu</a>
+  
+  <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
   </div>
 
   <!-- City Hero -->
@@ -78,13 +90,13 @@
           <span class="section-label">Chapter 1</span>
           <h2 class="section-title">The Capital of Endless Appetite</h2>
           <p>
-            Tokyo's culinary identity is a paradox: it is simultaneously the most cosmopolitan food city on Earth and one of the most deeply traditional. The city holds more Michelin stars than any other metropolis, yet some of its greatest meals are served on plastic trays in rooms with six seats and no sign outside.
+            Tokyo holds 194 Michelin-starred restaurants with a combined 251 stars &mdash; more than any other city on earth, a title it has held for 19 consecutive years since the guide&rsquo;s first non-Western edition in 2007. Yet the city&rsquo;s culinary DNA is rooted not in haute cuisine but in street food, and some of its greatest meals are served on plastic trays in rooms with six seats and no sign outside.
           </p>
           <p>
-            The roots of Tokyo's cuisine stretch back to the Edo period (1603&ndash;1868), when the city&mdash;then called Edo&mdash;was a booming castle town drawing merchants, samurai, and laborers from across Japan. A thriving street food culture emerged to feed these workers: sushi, soba, tempura, and unagi all became Edo specialties sold from yatai carts and tiny shops.
+            During the Edo period (1603&ndash;1868), when the city was home to over a million people, laborers and samurai ate at yatai stalls selling vinegared-rice sushi, crispy tempura, and slippery soba noodles. Edomae sushi &mdash; fish from &ldquo;in front of Edo&rdquo; (Tokyo Bay), cured or pickled for preservation, pressed onto rice seasoned with red vinegar &mdash; was born at these stalls in the 1820s. The post-war period transformed Tokyo again: American wheat supplies catalyzed ramen&rsquo;s explosive rise, while Western yoshoku cuisine &mdash; tonkatsu, curry rice, omurice &mdash; became mainstream comfort food. The 1964 Olympics internationalized the dining scene.
           </p>
           <p>
-            Today, Tokyo's food culture is defined by specialization and obsession. The shokunin (craftsman) ethos means that a ramen shop may serve only one style of broth, perfected over decades. A tempura counter seats eight people and serves nothing else. This single-minded devotion to craft is what makes Tokyo's food scene so extraordinary.
+            The result is a city where a &yen;900 bowl of tsukemen (dipping noodles invented in the 1950s by Kazuo Yamagishi at Taishoken in Ikebukuro) and a &yen;30,000 dinner at Narisawa both represent Tokyo at its finest. The shokunin (craftsman) ethos means that a ramen shop may serve only one style of broth, perfected over decades. A tempura counter seats eight people and serves nothing else. This single-minded devotion to craft is what makes Tokyo&rsquo;s food scene so extraordinary.
           </p>
         </div>
         <div class="overview-sidebar reveal reveal-delay-2">
@@ -102,7 +114,7 @@
           </div>
           <div class="overview-stat">
             <p class="overview-stat-label">Michelin Stars</p>
-            <p class="overview-stat-value">Most of any city worldwide</p>
+            <p class="overview-stat-value">194 restaurants, 251 stars</p>
           </div>
           <div class="overview-stat">
             <p class="overview-stat-label">Price Range</p>
@@ -455,7 +467,7 @@
           <div>
             <h3 class="restaurant-name">Kiraku</h3>
             <p class="restaurant-location">Shibuya / Dogenzaka</p>
-            <p class="restaurant-description">Serving Tokyo-style chukamen since 1952. Soy-based broth with fried onions and chewy flat noodles. A 68-year-old institution.</p>
+            <p class="restaurant-description">Serving Tokyo-style chukamen since 1952. Soy-based broth with fried onions and chewy flat noodles. A legendary institution.</p>
             <div class="restaurant-tags">
               <span class="restaurant-tag">Ramen</span>
               <span class="restaurant-tag">Historic</span>
@@ -463,6 +475,96 @@
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">&yen;800</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Den</h3>
+            <p class="restaurant-location">Jingumae &middot; #1 Asia&rsquo;s 50 Best 2022</p>
+            <p class="restaurant-description">Chef Zaiyu Hasegawa&rsquo;s joyful reinvention of kaiseki, famous for &ldquo;Dentucky Fried Chicken&rdquo; and a salad with a smiley-face carrot. Playful, inventive, and deeply delicious.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Innovative Kaiseki</span>
+              <span class="restaurant-tag">Asia&rsquo;s 50 Best</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">~&yen;15,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Narisawa</h3>
+            <p class="restaurant-location">Minami-Aoyama</p>
+            <p class="restaurant-description">&ldquo;Innovative Satoyama Cuisine&rdquo; blending French technique with Japanese forest-to-sea philosophy. A dining experience rooted in nature, terroir, and seasonality at its most ambitious.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Satoyama Cuisine</span>
+              <span class="restaurant-tag">Fine Dining</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">~&yen;30,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Maisen</h3>
+            <p class="restaurant-location">Aoyama &middot; Since 1965</p>
+            <p class="restaurant-description">Transcendent kurobuta tonkatsu served from a converted 1960s bathhouse. The thick-cut, perfectly breaded pork cutlet with shredded cabbage and house sauce has been perfected over six decades.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Tonkatsu</span>
+              <span class="restaurant-tag">Institution</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,500&ndash;3,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Nodaiwa</h3>
+            <p class="restaurant-location">Azabu &middot; 200+ Years Old</p>
+            <p class="restaurant-description">A 200-year-old unagi restaurant now in its fifth generation. The 97-year-old owner is recognized as the world&rsquo;s oldest active Michelin chef. Eel steamed then grilled with sweet tare &mdash; impossibly soft, profoundly rich.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Unagi</span>
+              <span class="restaurant-tag">Historic</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;4,000&ndash;8,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Fuunji</h3>
+            <p class="restaurant-location">Shinjuku</p>
+            <p class="restaurant-description">A tiny tsukemen counter with an intensely smoky-sweet dipping broth that helped define the genre. Queue inevitable, worth every minute. The concentrated fish-pork broth clings to every noodle.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Tsukemen</span>
+              <span class="restaurant-tag">Cult Favourite</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;900&ndash;1,200</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Tsukishima Monja Street</h3>
+            <p class="restaurant-location">Tsukishima</p>
+            <p class="restaurant-description">75+ monjayaki restaurants line a single arcade. Tokyo&rsquo;s answer to Osaka&rsquo;s okonomiyaki &mdash; a savoury, deliberately gooey pancake eaten by scraping crispy edges with a tiny metal spatula. Try Moheji or Maguroya.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Monjayaki</span>
+              <span class="restaurant-tag">Working-Class Tokyo</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,000&ndash;2,000</span>
           </div>
         </div>
 

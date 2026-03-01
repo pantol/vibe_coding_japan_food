@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function(){try{var s=localStorage.getItem('darkMode');if(s==='true'||(s===null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark-mode')}}catch(e){}})();
+  </script>
 </head>
 <body>
 
@@ -28,6 +31,10 @@
       <li><a href="oita.html">Oita</a></li>
       <li><a href="kyushu.html">Kyushu</a></li>
     </ul>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </nav>
   <div class="mobile-menu">
@@ -39,11 +46,16 @@
     <a href="fukuoka.html">Fukuoka</a>
     <a href="oita.html">Oita</a>
     <a href="kyushu.html">Kyushu</a>
+  
+  <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
   </div>
 
   <!-- City Hero -->
   <section class="city-hero">
-    <div class="city-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1577593054080-9b6a47f1c2d6?w=1920&q=80');"></div>
+    <div class="city-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1554797589-7241bb691973?w=1920&q=80');"></div>
     <div class="city-hero-overlay"></div>
     <div class="city-hero-content">
       <a href="../index.html" class="city-hero-back">
@@ -78,10 +90,13 @@
           <span class="section-label">Chapter 5</span>
           <h2 class="section-title">Bold, Generous, Startlingly Affordable</h2>
           <p>
-            Fukuoka is the gateway to Kyushu, reflecting centuries of exchange with Korea, China, and Southeast Asia. More garlic, more chili, more pork than the rest of Japan. Food is generous, unpretentious, and startlingly affordable.
+            Fukuoka is the only major Japanese city to preserve its yatai (street stall) culture &mdash; roughly 100+ mobile stalls operating nightly along the Nakasu River and in Tenjin, serving ramen, gyoza, yakitori, and oden under canvas roofs. Permits are hereditary; no new ones were issued for years (though some launched in 2023). This tradition, born from post-war displacement, is inseparable from the city&rsquo;s identity.
           </p>
           <p>
-            Larger portions, bolder flavors, more relaxed attitude. You can eat brilliantly for very little money, stand at a yatai stall by the river, and discover why this city deserves to be on every food traveler's list.
+            Hakata Port has connected Fukuoka to China and Korea for over 1,200 years. Mentaiko (spicy cod roe) was adapted from Korean myeongnan-jeot in 1949 by Busan-born Toshio Kawahara, who founded Fukuya. Jotenji Temple in Hakata is considered the birthplace of udon and soba in Japan &mdash; a monk brought flour-milling techniques from China during the Kamakura period.
+          </p>
+          <p>
+            The city has 2,000+ ramen shops, 43 Michelin-starred restaurants, and the highest concentration of yakitori restaurants per capita in Japan. High-quality sushi and kaiseki run at far lower prices than Tokyo or Osaka. You can eat brilliantly for very little money here.
           </p>
         </div>
         <div class="overview-sidebar reveal reveal-delay-2">
@@ -254,8 +269,9 @@
 
       <div class="restaurant-filters reveal">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="mid">Mid/Specialist</button>
-        <button class="filter-btn" data-filter="budget">Yatai/Budget</button>
+        <button class="filter-btn" data-filter="splurge">Splurge</button>
+        <button class="filter-btn" data-filter="mid">Mid-Range</button>
+        <button class="filter-btn" data-filter="budget">Budget</button>
       </div>
 
       <div class="restaurant-list reveal">
@@ -275,7 +291,7 @@
           </div>
         </div>
 
-        <div class="restaurant-item" data-price="mid">
+        <div class="restaurant-item" data-price="budget">
           <div>
             <h3 class="restaurant-name">Ganso Nagahamaya</h3>
             <p class="restaurant-location">Nagahama &middot; 1952 Yatai Origin &middot; 24 Hours</p>
@@ -365,7 +381,7 @@
           </div>
         </div>
 
-        <div class="restaurant-item" data-price="budget">
+        <div class="restaurant-item" data-price="mid">
           <div>
             <h3 class="restaurant-name">Chez Remy Yatai</h3>
             <p class="restaurant-location">Nakasu</p>
@@ -407,6 +423,96 @@
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">&yen;500&ndash;2,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Kokinchan Yatai</h3>
+            <p class="restaurant-location">Tenjin &middot; Local Favorite</p>
+            <p class="restaurant-description">A Tenjin-area yatai that feels more authentic than the tourist-heavy Nakasu stalls. Friendly locals, genuine atmosphere, and great grilled fare. Recommended by travelers as the real Fukuoka yatai experience.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Yatai</span>
+              <span class="restaurant-tag">Local</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;2,000&ndash;3,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Koroshi Curry</h3>
+            <p class="restaurant-location">Dazaifu Area &middot; Unique</p>
+            <p class="restaurant-description">An atmospheric retro curry restaurant near Dazaifu Tenmangu. You order by filling out a paper form, then admire the eclectic indigenous decor. An experience as much as a meal&mdash;and the curry is excellent.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Curry</span>
+              <span class="restaurant-tag">Experience</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,000&ndash;1,500</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Udon Kichi</h3>
+            <p class="restaurant-location">Central Fukuoka &middot; Hidden Gem</p>
+            <p class="restaurant-description">A quiet, unassuming udon spot with a lowkey atmosphere beloved by locals. Excellent handmade noodles in a rich dashi broth. The kind of place you stumble upon and never forget.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Udon</span>
+              <span class="restaurant-tag">Hidden Gem</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;500&ndash;900</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Shin Shin</h3>
+            <p class="restaurant-location">Tenjin &middot; Locals&rsquo; Ramen of Choice</p>
+            <p class="restaurant-description">A &ldquo;pure soup&rdquo; concept blending Japanese pork bones with Aritadori chicken from Saga &mdash; lighter and more approachable than old-school Hakata style. The locals&rsquo; ramen of choice for good reason.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Ramen</span>
+              <span class="restaurant-tag">Pure Soup</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;800&ndash;1,100</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Sushi Gyoten</h3>
+            <p class="restaurant-location">Hakata &middot; Three Michelin Stars</p>
+            <p class="restaurant-description">Three Michelin stars with a 5-month waiting list. Omakase sushi at the highest level &mdash; proof that Fukuoka&rsquo;s fine dining rivals Tokyo at a fraction of the pretension. Book months ahead.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Omakase</span>
+              <span class="restaurant-tag">Three Stars</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;30,000&ndash;50,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Yatai Genkai</h3>
+            <p class="restaurant-location">Nakasu &middot; 70+ Years Old</p>
+            <p class="restaurant-description">A 70-year-old Nakasu yatai specialising in fresh Genkai Sea tempura. Seafood pulled from the nearby Genkai Sea, battered and fried to order at the riverside stall. An institution among yatai.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Yatai</span>
+              <span class="restaurant-tag">Tempura</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;2,000&ndash;3,000</span>
           </div>
         </div>
 

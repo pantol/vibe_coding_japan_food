@@ -4,6 +4,16 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // --- Dark Mode Toggle ---
+  const darkToggles = document.querySelectorAll('.dark-mode-toggle');
+  darkToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark-mode');
+      const isDark = document.documentElement.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+    });
+  });
+
   // --- Loading Screen ---
   const loadingScreen = document.querySelector('.loading-screen');
   const loadingBar = document.querySelector('.loading-bar-inner');

@@ -27,6 +27,19 @@
   --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* --- Dark Mode Color Overrides --- */
+html.dark-mode {
+  --color-bg: #1a1714;
+  --color-bg-dark: #0f0d0b;
+  --color-text: #e8e2d9;
+  --color-text-light: #f7f4ef;
+  --color-accent: #d4514a;
+  --color-accent-gold: #d4b46a;
+  --color-muted: #9e9488;
+  --color-border: #3a342e;
+  --color-card-bg: #242019;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -40,6 +53,7 @@ body {
   background-color: var(--color-bg);
   line-height: 1.8;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -661,7 +675,25 @@ img {
 
 .city-featured-content .section-description {
   color: rgba(247, 244, 239, 0.7);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.city-featured-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.city-featured-highlights span {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(247, 244, 239, 0.2);
+  color: rgba(247, 244, 239, 0.6);
+  border-radius: 2px;
 }
 
 /* --- CTA Button --- */
@@ -1478,6 +1510,202 @@ img {
   line-height: 1.8;
 }
 
+/* === DARK MODE TARGETED OVERRIDES === */
+
+/* Nav and mobile menu */
+html.dark-mode .nav-header.scrolled {
+  background: rgba(15, 13, 11, 0.95);
+}
+
+html.dark-mode .mobile-menu {
+  background: rgba(15, 13, 11, 0.97);
+}
+
+/* Hero & parallax overlays stay dark — no change needed */
+
+/* Section-dark in dark mode: deeper contrast */
+html.dark-mode .section-dark {
+  background: var(--color-bg-dark);
+}
+
+/* City nav */
+html.dark-mode .city-nav {
+  background: var(--color-bg);
+  border-bottom-color: var(--color-border);
+}
+
+/* Cards & interactive elements */
+html.dark-mode .dish-card:hover {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+html.dark-mode .restaurant-item:hover {
+  background: #2a2520;
+}
+
+html.dark-mode .seasonal-card:hover {
+  background: rgba(196, 163, 90, 0.08);
+}
+
+/* Etiquette cards (use hardcoded rgba) */
+html.dark-mode .etiquette-card {
+  border-color: rgba(247, 244, 239, 0.1);
+}
+
+/* Section-dark restaurant overrides — text already light from previous fix;
+   in dark mode the whole page is dark, so section-dark blends differently */
+html.dark-mode .section-dark .restaurant-item {
+  background: rgba(247, 244, 239, 0.02);
+}
+
+html.dark-mode .section-dark .restaurant-item:hover {
+  background: rgba(247, 244, 239, 0.05);
+}
+
+html.dark-mode .section-dark .restaurant-list {
+  background: rgba(247, 244, 239, 0.05);
+}
+
+/* Back to top */
+html.dark-mode .back-to-top {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+}
+
+/* Loading screen */
+html.dark-mode .loading-screen {
+  background: #0f0d0b;
+}
+
+/* Featured city */
+html.dark-mode .city-featured-content {
+  background: var(--color-bg-dark);
+}
+
+/* Section intro */
+html.dark-mode .section-intro {
+  background: var(--color-bg);
+}
+
+/* Footer stays dark — already uses bg-dark */
+html.dark-mode .footer {
+  background: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border);
+}
+
+html.dark-mode .footer-bottom {
+  border-top-color: var(--color-border);
+}
+
+/* Map section */
+html.dark-mode .map-section {
+  background-color: var(--color-bg);
+}
+
+html.dark-mode .map-controls {
+  background: var(--color-card-bg);
+  border-bottom-color: var(--color-border);
+  border-radius: 4px 4px 0 0;
+}
+
+html.dark-mode .map-filter-btn {
+  border-color: var(--color-border);
+}
+
+html.dark-mode .map-wrapper {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+html.dark-mode .map-legend-dot {
+  border-color: var(--color-card-bg);
+}
+
+html.dark-mode .map-wrapper .leaflet-popup-content-wrapper {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+html.dark-mode .map-wrapper .leaflet-popup-tip {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+html.dark-mode .map-hint {
+  background: var(--color-card-bg);
+}
+
+html.dark-mode #restaurant-map {
+  background-color: #1a1714;
+}
+
+/* Drinks section icon border */
+html.dark-mode .drink-icon {
+  border-color: var(--color-border);
+}
+
+/* Market cards */
+html.dark-mode .market-card {
+  background: var(--color-card-bg);
+  border-color: var(--color-border);
+}
+
+/* Intro quote */
+html.dark-mode .intro-quote {
+  color: var(--color-text);
+}
+
+/* Divider */
+html.dark-mode .divider {
+  background: var(--color-border);
+}
+
+/* --- Dark Mode Toggle Button --- */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1.5rem;
+  transition: opacity 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  opacity: 0.7;
+}
+
+.dark-mode-toggle svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-text-light);
+  fill: none;
+  stroke-width: 1.5;
+  transition: transform 0.4s var(--transition-ease);
+}
+
+.dark-mode-toggle:hover svg {
+  transform: rotate(30deg);
+}
+
+/* Show sun in dark mode, moon in light mode */
+.dark-mode-toggle .icon-moon { display: block; }
+.dark-mode-toggle .icon-sun { display: none; }
+
+html.dark-mode .dark-mode-toggle .icon-moon { display: none; }
+html.dark-mode .dark-mode-toggle .icon-sun { display: block; }
+
+/* Mobile: toggle in mobile menu */
+.mobile-menu .dark-mode-toggle {
+  margin-left: 0;
+  margin-top: 1rem;
+}
+
+.mobile-menu .dark-mode-toggle svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-text-light);
+}
+
 /* === RESPONSIVE === */
 
 @media (max-width: 1024px) {
@@ -1732,6 +1960,8 @@ img {
 .map-wrapper .leaflet-popup-content-wrapper {
   border-radius: 4px;
   box-shadow: 0 4px 20px rgba(44, 37, 32, 0.15);
+  background: var(--color-card-bg);
+  color: var(--color-text);
 }
 
 .map-wrapper .leaflet-popup-content {
@@ -1741,6 +1971,53 @@ img {
 
 .map-wrapper .leaflet-popup-tip {
   box-shadow: 0 4px 20px rgba(44, 37, 32, 0.1);
+  background: var(--color-card-bg);
+}
+
+/* Map popup content classes */
+.map-popup {
+  font-family: var(--font-serif);
+  min-width: 220px;
+}
+
+.map-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.map-popup-name {
+  font-size: 1.1em;
+  color: var(--color-text);
+}
+
+.map-popup-price {
+  font-weight: 500;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.map-popup-meta {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  margin-bottom: 6px;
+}
+
+.map-popup-desc {
+  font-size: 0.85em;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 6px;
+}
+
+.map-popup-addr {
+  font-size: 0.75em;
+  color: var(--color-muted);
+  margin: 0;
+  font-style: italic;
 }
 
 /* Responsive map */

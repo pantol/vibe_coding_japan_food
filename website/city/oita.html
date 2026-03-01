@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function(){try{var s=localStorage.getItem('darkMode');if(s==='true'||(s===null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark-mode')}}catch(e){}})();
+  </script>
 </head>
 <body>
 
@@ -28,6 +31,10 @@
       <li><a href="oita.html" class="active">Oita</a></li>
       <li><a href="kyushu.html">Kyushu</a></li>
     </ul>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </nav>
   <div class="mobile-menu">
@@ -39,6 +46,11 @@
     <a href="fukuoka.html">Fukuoka</a>
     <a href="oita.html">Oita</a>
     <a href="kyushu.html">Kyushu</a>
+  
+  <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
   </div>
 
   <!-- City Hero -->
@@ -78,13 +90,13 @@
           <span class="section-label">Chapter 6</span>
           <h2 class="section-title">Japan's Best-Kept Culinary Secret</h2>
           <p>
-            Oita Prefecture is one of Japan's best-kept culinary secrets. Tucked into Kyushu's northeastern corner, its dramatic terrain &mdash; the Kuju mountains, volcanic hot springs, the Bungo Channel coast &mdash; produces everything from shiitake mushrooms and kabosu citrus to world-class mackerel.
+            Oita is the quiet revelation of Kyushu. As Japan&rsquo;s number-one onsen prefecture (first in both hot spring sources and water volume), its cuisine is literally cooked by the earth. In the Kannawa district of Beppu, jigoku-mushi (hell-steaming) uses naturally occurring 98&deg;C geothermal steam to cook seafood, vegetables, eggs, and even pudding &mdash; a technique dating to before the Edo era. The sodium chloride in the steam adds natural saltiness that enhances umami without any seasoning.
           </p>
           <p>
-            Toriten (chicken tempura) is the signature dish, originating in a Beppu restaurant in the early 1920s. Unlike standard tempura, toriten uses marinated chicken pieces coated in a light batter and fried until golden, then dipped in a tangy ponzu or kabosu-vinegar sauce that cuts through the richness.
+            The Bungo Channel between Oita and Ehime prefectures is among Japan&rsquo;s richest fishing grounds. Where cold Seto Inland Sea water collides with the warm Kuroshio Current, plankton blooms attract extraordinary marine life. Seki-aji and seki-saba &mdash; horse mackerel and mackerel caught near Saganoseki using traditional single-hook fishing &mdash; became the first fishery products in Japan to receive trademark registration in 1996. Prices run 6&ndash;10x regular mackerel.
           </p>
           <p>
-            The prefecture's volcanic geography is not just scenery &mdash; it shapes the cuisine itself. In Beppu, locals have cooked food over natural hot spring vents for centuries, a technique called jigoku-mushi (hell steaming). Meanwhile, the fast-moving currents of the Bungo Channel produce some of Japan's most prized fish, while highland pastures yield beef that rivals Kobe at a fraction of the price.
+            Kabosu, Oita&rsquo;s signature citrus (the prefecture grows 99% of Japan&rsquo;s supply), permeates everything: squeezed on sashimi, mixed into ponzu, dropped into shochu highballs, and even fed to farmed fish to create kabosu-buri yellowtail and kabosu-hirame flounder. Meanwhile, Oita produces 99.6% of Japan&rsquo;s mugi (barley) shochu and sparked the nationwide shochu boom of the late 1970s.
           </p>
         </div>
         <div class="overview-sidebar reveal reveal-delay-2">
@@ -381,6 +393,126 @@
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">&yen;500</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Shin Hakata</h3>
+            <p class="restaurant-location">Beppu &middot; Reddit Recommended</p>
+            <p class="restaurant-description">A Beppu sushi and izakaya favourite praised for its outstanding sushi set and local specialty dangojiru &mdash; a hearty miso soup with hand-pulled flour dumplings. The kind of place locals return to again and again.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Sushi</span>
+              <span class="restaurant-tag">Dangojiru</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,500&ndash;3,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Robata Jin</h3>
+            <p class="restaurant-location">Beppu &middot; Reddit Recommended</p>
+            <p class="restaurant-description">Charcoal-grilled izakaya with a lively atmosphere and seasonal local ingredients. Praised by travellers for its robatayaki and warm hospitality &mdash; the sort of evening that defines Japanese dining.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Robatayaki</span>
+              <span class="restaurant-tag">Izakaya</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;2,000&ndash;4,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Yusuichaya</h3>
+            <p class="restaurant-location">Between Yufuin &amp; Kurokawa &middot; Reddit Recommended</p>
+            <p class="restaurant-description">Roadside tofu restaurant widely considered the best tofu in the region. Hand-made tofu dishes in a rustic mountain setting between Yufuin and Kurokawa Onsen. Worth the detour.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Tofu</span>
+              <span class="restaurant-tag">Mountain Dining</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,000&ndash;2,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">P&acirc;tisserie Roku</h3>
+            <p class="restaurant-location">Kurokawa Onsen &middot; Reddit Recommended</p>
+            <p class="restaurant-description">Tiny patisserie in the onsen town known for its cream puffs with a perfectly crisp shell and rich custard filling. A sweet reward after a morning of hot spring hopping.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Cream Puffs</span>
+              <span class="restaurant-tag">Patisserie</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;300&ndash;500</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Milch</h3>
+            <p class="restaurant-location">Yufuin &middot; Reddit Recommended</p>
+            <p class="restaurant-description">Famous Yufuin cheesecake shop drawing queues for its pillowy soft jiggly cheesecake and rich baked varieties. Best enjoyed warm, walking along Yunotsubo Street toward the lake.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Cheesecake</span>
+              <span class="restaurant-tag">Sweets</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;300&ndash;600</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Kotsukotsuan</h3>
+            <p class="restaurant-location">Oita City &middot; One-Stop Oita Sampler</p>
+            <p class="restaurant-description">The best single-stop for sampling all Oita specialties in one sitting: toriten, ryukyu, seki-aji, dango-jiru. Everything the prefecture does well, served in one welcoming restaurant.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Local Specialties</span>
+              <span class="restaurant-tag">All-in-One</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,500&ndash;4,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Oryori Hatano</h3>
+            <p class="restaurant-location">Beppu &middot; Two Michelin Stars</p>
+            <p class="restaurant-description">Two Michelin stars for seasonal kaiseki reflecting a &ldquo;once in a lifetime&rdquo; philosophy. Each course showcases Oita&rsquo;s volcanic terroir and Bungo Channel seafood at the highest level of Japanese cuisine.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Kaiseki</span>
+              <span class="restaurant-tag">Two Stars</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;10,000&ndash;20,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Somuri Teppanyaki</h3>
+            <p class="restaurant-location">Beppu &middot; 35 Years of Bungo Beef</p>
+            <p class="restaurant-description">35 years perfecting Bungo Beef teppanyaki exclusively. The highland-raised beef rivals Kobe at a fraction of the price, cooked with the focused intensity of a single-product master.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Bungo Beef</span>
+              <span class="restaurant-tag">Teppanyaki</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;6,900+</span>
           </div>
         </div>
 

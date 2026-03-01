@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function(){try{var s=localStorage.getItem('darkMode');if(s==='true'||(s===null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark-mode')}}catch(e){}})();
+  </script>
 </head>
 <body>
 
@@ -28,6 +31,10 @@
       <li><a href="oita.html">Oita</a></li>
       <li><a href="kyushu.html">Kyushu</a></li>
     </ul>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
     <div class="nav-hamburger"><span></span><span></span><span></span></div>
   </nav>
   <div class="mobile-menu">
@@ -39,6 +46,11 @@
     <a href="fukuoka.html">Fukuoka</a>
     <a href="oita.html">Oita</a>
     <a href="kyushu.html">Kyushu</a>
+  
+  <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
   </div>
 
   <!-- City Hero -->
@@ -78,13 +90,13 @@
           <span class="section-label">Chapter 3</span>
           <h2 class="section-title">A Thousand Years of Imperial and Monastic Culinary Tradition</h2>
           <p>
-            Kyoto's cuisine is the quiet opposite of Osaka's exuberance. Imperial capital for over a thousand years, the city's food culture was shaped by court aesthetics, Zen Buddhism's discipline, and tea ceremony ritual. Every dish reflects restraint, seasonality, and an almost spiritual attention to detail.
+            Kyoto&rsquo;s cuisine, Kyo-ryori, is among the world&rsquo;s most refined &mdash; shaped by over a millennium as Japan&rsquo;s imperial capital and codified into five distinct styles: imperial court cuisine, aristocratic palace-style, samurai banquet, Buddhist temple vegetarian (shojin ryori), and the tea-ceremony kaiseki that evolved into Japan&rsquo;s highest culinary art. Buddhist shojin ryori arrived from China in the 6th century and was codified by Zen patriarch Dogen in the 13th; Sen no Riky&umacr; reimagined it in the 15th century as cha-kaiseki. Kyoto ranks third globally for Michelin stars, with 469 recommended establishments in the 2025 guide.
           </p>
           <p>
-            The city's soft, mineral-rich water proved ideal for making tofu and yuba, and these ingredients became central to Kyoto's culinary identity. Kyo-yasai&mdash;traditional Kyoto vegetables like Shogoin turnip, Kujo green onion, and Kamo eggplant&mdash;are prized nationwide for their concentrated flavors and distinctive textures.
+            Two elements underpin everything: Kyo-yasai &mdash; roughly 32 heirloom vegetable varieties (Kamo eggplant, Shogoin daikon, Kujo green onions) cultivated in Kyoto&rsquo;s fertile basin &mdash; and the city&rsquo;s pristine underground springs. The water in Fushimi, known as &ldquo;Fushimizu,&rdquo; is the foundation of Kyoto&rsquo;s extraordinary tofu, yuba, sake, and dashi.
           </p>
           <p>
-            Over centuries, preserved foods developed extraordinary complexity, and Buddhist vegetarian cooking (shojin-ryori) elevated plant-based cuisine to high art. Combined with the refined multi-course kaiseki tradition and the purity of seasonal ingredients, Kyoto's food defines elegance in Japanese gastronomy.
+            Everything in Kyo-ryori serves a single principle: minimal seasoning to showcase the natural flavor of ingredients at their seasonal peak. The word &ldquo;kaiseki&rdquo; literally means &ldquo;breast-pocket stone,&rdquo; from monks who warmed stones against their stomachs to suppress hunger &mdash; a reminder that the cuisine was born from deprivation, not abundance.
           </p>
         </div>
         <div class="overview-sidebar reveal reveal-delay-2">
@@ -385,7 +397,7 @@
           <div>
             <h3 class="restaurant-name">Fushimi Sake Brewery Tastings</h3>
             <p class="restaurant-location">Fushimi District</p>
-            <p class="restaurant-description">Gekkeikan and Kizakura breweries offer free tastings of their sake, brewed with Fushimi's famously soft water. A half-day excursion into Kyoto's brewing heritage.</p>
+            <p class="restaurant-description">Gekkeikan (founded 1637) and Kizakura breweries offer free tastings. Fushimi&rsquo;s soft &ldquo;Fushimizu&rdquo; water produces mellower sake than Nada/Kobe&rsquo;s bolder style. The Okura Museum (&yen;600, includes tasting) and Torisei Honten &mdash; a restaurant in a converted 1677 brewery serving draft sake straight from the tank &mdash; are essential visits.</p>
             <div class="restaurant-tags">
               <span class="restaurant-tag">Sake</span>
               <span class="restaurant-tag">Free</span>
@@ -393,6 +405,66 @@
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Free</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Kikunoi Honten</h3>
+            <p class="restaurant-location">Higashiyama &middot; Three Michelin Stars, 16 Consecutive Years</p>
+            <p class="restaurant-description">Chef Yoshihiro Murata helped secure washoku&rsquo;s UNESCO Intangible Cultural Heritage status in 2013. The restaurant still draws water from the &ldquo;Chrysanthemum Well&rdquo; dating to the 1500s. Kaiseki at its most profound.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Kaiseki</span>
+              <span class="restaurant-tag">UNESCO Heritage</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;22,000&ndash;100,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Okutan</h3>
+            <p class="restaurant-location">Nanzenji &middot; Since 1638</p>
+            <p class="restaurant-description">The essential Kyoto winter experience &mdash; yudofu in a serene garden setting near Nanzenji temple. Nearly 400 years of serving silken tofu simmered in kombu dashi, with ponzu and seasonal garnishes.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Yudofu</span>
+              <span class="restaurant-tag">400 Years</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;3,000&ndash;4,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Matsuba Honten</h3>
+            <p class="restaurant-location">Gion &middot; Birthplace of Nishin Soba</p>
+            <p class="restaurant-description">The birthplace of nishin soba (1882), operating beside the Minamiza Theater since 1861. Buckwheat noodles in light dashi topped with sweet-simmered dried herring brought from Hokkaido &mdash; landlocked Kyoto&rsquo;s ingenious solution.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Nishin Soba</span>
+              <span class="restaurant-tag">Since 1861</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">~&yen;1,200</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Honke Owariya</h3>
+            <p class="restaurant-location">Nakagyo &middot; Over 540 Years Old</p>
+            <p class="restaurant-description">Serving soba since ~1465 &mdash; one of Japan&rsquo;s oldest restaurants of any kind. Over 540 years of buckwheat noodles made with the same dedication that has outlasted empires.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Soba</span>
+              <span class="restaurant-tag">Japan&rsquo;s Oldest</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,000&ndash;2,500</span>
           </div>
         </div>
 
