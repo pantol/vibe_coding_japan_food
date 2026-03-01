@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japan Culinary Guide | A Journey Through Japanese Food</title>
+  <meta name="description" content="An interactive guide to Japan's culinary regions. Explore Tokyo, Osaka, Kyoto, Kobe, Fukuoka, Oita, and Kyushu through their dishes, restaurants, and food culture.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <p class="loader-text">Japan Culinary Guide</p>
+    <div class="loading-bar"><div class="loading-bar-inner"></div></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav-header">
+    <div class="nav-logo">
+      <a href="index.html">
+        Japan <span class="jp-text">日本</span> Culinary Guide
+      </a>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="city/tokyo.html">Tokyo</a></li>
+      <li><a href="city/osaka.html">Osaka</a></li>
+      <li><a href="city/kyoto.html">Kyoto</a></li>
+      <li><a href="city/kobe.html">Kobe</a></li>
+      <li><a href="city/fukuoka.html">Fukuoka</a></li>
+      <li><a href="city/oita.html">Oita</a></li>
+      <li><a href="city/kyushu.html">Kyushu</a></li>
+    </ul>
+    <div class="nav-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="#destinations">Destinations</a>
+    <a href="#philosophy">Philosophy</a>
+    <a href="city/tokyo.html">Tokyo</a>
+    <a href="city/osaka.html">Osaka</a>
+    <a href="city/kyoto.html">Kyoto</a>
+    <a href="city/kobe.html">Kobe</a>
+    <a href="city/fukuoka.html">Fukuoka</a>
+    <a href="city/oita.html">Oita</a>
+    <a href="city/kyushu.html">Kyushu</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1553621042-f6e147245754?w=1920&q=80');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">A Culinary Journey</p>
+      <h1 class="hero-title">Japan</h1>
+      <p class="hero-title-jp">日本料理の旅</p>
+      <p class="hero-description">
+        Every city, every prefecture, every mountain valley and coastal village 
+        has its own food traditions. This is a guide for those who want to eat 
+        like someone who lives in these places.
+      </p>
+      <a href="#destinations" class="btn btn-light">
+        Explore Destinations
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <span>scroll</span>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <!-- Philosophy / Intro -->
+  <section class="section-intro" id="philosophy">
+    <div class="container-narrow">
+      <span class="section-label reveal">The Approach</span>
+      <div class="divider reveal"></div>
+      <blockquote class="intro-quote reveal">
+        "This guide assumes you want to eat like someone who lives in these places, 
+        not like someone passing through. That means prioritizing the local and the 
+        seasonal over the famous, understanding why a dish matters before you order it, 
+        and knowing when to splurge and when to stand at a counter."
+      </blockquote>
+      <div class="divider reveal"></div>
+      <p class="section-description reveal" style="margin: 2rem auto; text-align: center; text-indent: 0;">
+        Japan does not have a cuisine. It has hundreds. Each destination in this guide 
+        covers the food culture, essential dishes, seasonal rhythms, drinking traditions, 
+        and dining etiquette of each location&mdash;the education you need before you sit 
+        down&mdash;followed by specific restaurant recommendations across every budget tier.
+      </p>
+    </div>
+  </section>
+
+  <!-- Destinations -->
+  <section class="section" id="destinations">
+    <div class="container">
+      <span class="section-label reveal">Seven Destinations</span>
+      <h2 class="section-title reveal">Explore Japan's Culinary Regions</h2>
+      <p class="section-description reveal">
+        From the refined counters of Tokyo to the volcanic kitchens of Kyushu, 
+        each region offers a distinct culinary identity shaped by geography, history, 
+        and the obsessions of its people.
+      </p>
+
+      <!-- Featured: Tokyo -->
+      <a href="city/tokyo.html" class="city-featured reveal" style="margin-top: 4rem; cursor: pointer; text-decoration: none; color: inherit;">
+        <div class="city-featured-image">
+          <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80');"></div>
+        </div>
+        <div class="city-featured-content">
+          <span class="section-label">Chapter 1</span>
+          <h3 class="section-title">Tokyo</h3>
+          <p class="section-title-jp" style="color: rgba(247,244,239,0.4);">東京</p>
+          <p class="section-description">
+            The most cosmopolitan food city on Earth and one of the most deeply 
+            traditional. More Michelin stars than any other metropolis, yet some of 
+            its greatest meals are served on plastic trays in rooms with six seats 
+            and no sign outside.
+          </p>
+          <a href="city/tokyo.html" class="btn btn-light" style="margin-top: 1rem;">
+            Explore Tokyo
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </a>
+
+      <!-- City Cards Grid -->
+      <div class="cities-grid">
+
+        <a href="city/osaka.html" class="city-card reveal">
+          <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80');"></div>
+          <div class="city-card-overlay"></div>
+          <div class="city-card-content">
+            <p class="city-card-label">Chapter 2</p>
+            <h3 class="city-card-title">Osaka</h3>
+            <p class="city-card-jp">大阪</p>
+            <p class="city-card-tagline">The Nation's Kitchen &mdash; Eating until you drop</p>
+          </div>
+          <div class="city-card-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <a href="city/kyoto.html" class="city-card reveal reveal-delay-1">
+          <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80');"></div>
+          <div class="city-card-overlay"></div>
+          <div class="city-card-content">
+            <p class="city-card-label">Chapter 3</p>
+            <h3 class="city-card-title">Kyoto</h3>
+            <p class="city-card-jp">京都</p>
+            <p class="city-card-tagline">The Refined Palate of the Ancient Capital</p>
+          </div>
+          <div class="city-card-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <a href="city/kobe.html" class="city-card reveal reveal-delay-2">
+          <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?w=800&q=80');"></div>
+          <div class="city-card-overlay"></div>
+          <div class="city-card-content">
+            <p class="city-card-label">Chapter 4</p>
+            <h3 class="city-card-title">Kobe</h3>
+            <p class="city-card-jp">神戸</p>
+            <p class="city-card-tagline">Where East Met West on the Plate</p>
+          </div>
+          <div class="city-card-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <a href="city/fukuoka.html" class="city-card reveal">
+          <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1577593054080-9b6a47f1c2d6?w=800&q=80');"></div>
+          <div class="city-card-overlay"></div>
+          <div class="city-card-content">
+            <p class="city-card-label">Chapter 5</p>
+            <h3 class="city-card-title">Fukuoka</h3>
+            <p class="city-card-jp">福岡</p>
+            <p class="city-card-tagline">Kyushu's Fearless Food Capital</p>
+          </div>
+          <div class="city-card-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <a href="city/oita.html" class="city-card reveal reveal-delay-1">
+          <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80');"></div>
+          <div class="city-card-overlay"></div>
+          <div class="city-card-content">
+            <p class="city-card-label">Chapter 6</p>
+            <h3 class="city-card-title">Oita</h3>
+            <p class="city-card-jp">大分</p>
+            <p class="city-card-tagline">Hot Springs, Wild Mountains, and an Untouched Pantry</p>
+          </div>
+          <div class="city-card-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <a href="city/kyushu.html" class="city-card reveal reveal-delay-2">
+          <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80');"></div>
+          <div class="city-card-overlay"></div>
+          <div class="city-card-content">
+            <p class="city-card-label">Chapter 7</p>
+            <h3 class="city-card-title">Kyushu</h3>
+            <p class="city-card-jp">九州</p>
+            <p class="city-card-tagline">A Regional Specialties Overview</p>
+          </div>
+          <div class="city-card-arrow">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Break -->
+  <section class="parallax-section">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1580442151529-343f2f6e0e27?w=1920&q=80');"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <h2>Kuidaore</h2>
+      <p>"Eating until you drop" &mdash; the Osakan philosophy of food</p>
+    </div>
+  </section>
+
+  <!-- How to Use -->
+  <section class="section section-dark">
+    <div class="container-narrow" style="text-align: center;">
+      <span class="section-label reveal">How to Use This Guide</span>
+      <h2 class="section-title reveal" style="margin-bottom: 3rem;">Every Chapter, Two Halves</h2>
+      
+      <div class="etiquette-grid" style="text-align: left;">
+        <div class="etiquette-card reveal">
+          <h3 class="etiquette-card-title">The Education</h3>
+          <p>Food culture overview, essential dishes and their history, seasonal rhythms, 
+          drinking traditions, and dining etiquette. What you need to know before you sit down.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-1">
+          <h3 class="etiquette-card-title">The Recommendations</h3>
+          <p>Specific restaurants across every budget&mdash;high-end splurges, mid-range specialists, 
+          and budget street-level gems. With prices, addresses, and standout dishes.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-2">
+          <h3 class="etiquette-card-title">The Local Lens</h3>
+          <p>Markets worth visiting, seasonal specialties to time your trip around, 
+          local drinks to pair, and the etiquette rules that will earn you respect.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Another Parallax -->
+  <section class="parallax-section">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?w=1920&q=80');"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <h2>Shokunin</h2>
+      <p>The craftsman ethos &mdash; a ramen shop may serve only one style of broth, perfected over decades</p>
+    </div>
+  </section>
+
+  <!-- Quick Guide -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label reveal">At a Glance</span>
+      <h2 class="section-title reveal">What Each City Does Best</h2>
+      
+      <div class="restaurant-list reveal" style="margin-top: 3rem;">
+        <a href="city/tokyo.html" class="restaurant-item" style="text-decoration: none;">
+          <div>
+            <h3 class="restaurant-name">Tokyo</h3>
+            <p class="restaurant-location">The Capital of Endless Appetite</p>
+            <p class="restaurant-description">Edomae sushi, shoyu ramen, tempura, tonkatsu, yakitori, soba. The city of obsessive specialization.</p>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">7 regions</span>
+          </div>
+        </a>
+        <a href="city/osaka.html" class="restaurant-item" style="text-decoration: none;">
+          <div>
+            <h3 class="restaurant-name">Osaka</h3>
+            <p class="restaurant-location">The Nation's Kitchen</p>
+            <p class="restaurant-description">Takoyaki, okonomiyaki, kushikatsu, kitsune udon. Bold, saucy, affordable &mdash; the democratic table.</p>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">Kuidaore</span>
+          </div>
+        </a>
+        <a href="city/kyoto.html" class="restaurant-item" style="text-decoration: none;">
+          <div>
+            <h3 class="restaurant-name">Kyoto</h3>
+            <p class="restaurant-location">The Refined Palate</p>
+            <p class="restaurant-description">Kaiseki, yudofu, yuba, obanzai, matcha. A thousand years of imperial and monastic culinary tradition.</p>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">Kaiseki</span>
+          </div>
+        </a>
+        <a href="city/kobe.html" class="restaurant-item" style="text-decoration: none;">
+          <div>
+            <h3 class="restaurant-name">Kobe</h3>
+            <p class="restaurant-location">Where East Met West</p>
+            <p class="restaurant-description">Kobe beef, akashiyaki, sobameshi, Nada sake. Port-city cosmopolitanism and legendary wagyu.</p>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">Wagyu</span>
+          </div>
+        </a>
+        <a href="city/fukuoka.html" class="restaurant-item" style="text-decoration: none;">
+          <div>
+            <h3 class="restaurant-name">Fukuoka</h3>
+            <p class="restaurant-location">Kyushu's Food Capital</p>
+            <p class="restaurant-description">Hakata tonkotsu ramen, motsu nabe, mentaiko, yatai stalls. Bold, generous, startlingly affordable.</p>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">Yatai</span>
+          </div>
+        </a>
+        <a href="city/oita.html" class="restaurant-item" style="text-decoration: none;">
+          <div>
+            <h3 class="restaurant-name">Oita</h3>
+            <p class="restaurant-location">The Onsen Prefecture</p>
+            <p class="restaurant-description">Toriten, jigoku-mushi (hell steaming), kabosu citrus, seki mackerel. Japan's best-kept culinary secret.</p>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">Onsen</span>
+          </div>
+        </a>
+        <a href="city/kyushu.html" class="restaurant-item" style="text-decoration: none;">
+          <div>
+            <h3 class="restaurant-name">Kyushu</h3>
+            <p class="restaurant-location">Regional Overview</p>
+            <p class="restaurant-description">Nagasaki champon, Kumamoto basashi, Kagoshima kurobuta, Miyazaki chicken nanban. A food world unto itself.</p>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">Island</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-logo">Japan Culinary Guide</p>
+        <p class="footer-tagline">For the serious food traveler</p>
+      </div>
+      <div class="footer-cities">
+        <a href="city/tokyo.html">Tokyo</a>
+        <a href="city/osaka.html">Osaka</a>
+        <a href="city/kyoto.html">Kyoto</a>
+        <a href="city/kobe.html">Kobe</a>
+        <a href="city/fukuoka.html">Fukuoka</a>
+        <a href="city/oita.html">Oita</a>
+        <a href="city/kyushu.html">Kyushu</a>
+      </div>
+    </div>
+    <p class="footer-bottom">
+      Compiled from culinary resources, travel websites, and local publications. 
+      Images from Unsplash.
+    </p>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kobe | Japan Culinary Guide</title>
+  <meta name="description" content="Kobe culinary guide: legendary Kobe beef, Nada sake, akashiyaki, sobameshi, Nankinmachi Chinatown. Restaurants for every budget, markets, seasonal specialties, and dining etiquette.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav-header scrolled" aria-label="Main navigation">
+    <div class="nav-logo">
+      <a href="../index.html">Japan <span class="jp-text">日本</span> Culinary Guide</a>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="tokyo.html">Tokyo</a></li>
+      <li><a href="osaka.html">Osaka</a></li>
+      <li><a href="kyoto.html">Kyoto</a></li>
+      <li><a href="kobe.html" class="active">Kobe</a></li>
+      <li><a href="fukuoka.html">Fukuoka</a></li>
+      <li><a href="oita.html">Oita</a></li>
+      <li><a href="kyushu.html">Kyushu</a></li>
+    </ul>
+    <div class="nav-hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="../index.html">Home</a>
+    <a href="tokyo.html">Tokyo</a>
+    <a href="osaka.html">Osaka</a>
+    <a href="kyoto.html">Kyoto</a>
+    <a href="kobe.html">Kobe</a>
+    <a href="fukuoka.html">Fukuoka</a>
+    <a href="oita.html">Oita</a>
+    <a href="kyushu.html">Kyushu</a>
+  </div>
+
+  <!-- City Hero -->
+  <section class="city-hero">
+    <div class="city-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?w=1920&q=80');"></div>
+    <div class="city-hero-overlay"></div>
+    <div class="city-hero-content">
+      <a href="../index.html" class="city-hero-back">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        All Destinations
+      </a>
+      <h1 class="city-hero-title">Kobe</h1>
+      <p class="city-hero-jp">神戸</p>
+      <p class="city-hero-tagline">Where East Met West on the Plate</p>
+    </div>
+  </section>
+
+  <!-- City Nav -->
+  <nav class="city-nav" aria-label="Page sections">
+    <div class="city-nav-inner">
+      <a href="#overview" class="active">Overview</a>
+      <a href="#dishes">Dishes</a>
+      <a href="#restaurants">Restaurants</a>
+      <a href="#map">Map</a>
+      <a href="#markets">Markets</a>
+      <a href="#seasonal">Seasonal</a>
+      <a href="#drinks">Drinks</a>
+      <a href="#etiquette">Etiquette</a>
+    </div>
+  </nav>
+
+  <!-- Overview -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-text reveal">
+          <span class="section-label">Chapter 4</span>
+          <h2 class="section-title">Where East Met West on the Plate</h2>
+          <p>
+            Kobe's food story begins at the harbor. When the port opened to foreign trade in 1868, it became one of the first places where Western food, Chinese cuisine, and Japanese tradition collided. This cosmopolitan heritage makes Kobe unique among Japan's great food cities.
+          </p>
+          <p>
+            Smaller and more walkable than Tokyo or Osaka, Kobe offers a remarkably compact culinary journey. You can stroll from a century-old kissaten to a Chinatown lunch, up the hill for sake tasting in Nada, and finish with teppanyaki &mdash; all within a few kilometers.
+          </p>
+          <p>
+            Port-city cosmopolitanism and legendary wagyu define Kobe's identity. The city's openness to foreign influence, combined with a deep respect for Japanese craft, has produced a food culture that feels both international and unmistakably Japanese.
+          </p>
+        </div>
+        <div class="overview-sidebar reveal reveal-delay-2">
+          <div class="overview-stat">
+            <p class="overview-stat-label">Region</p>
+            <p class="overview-stat-value">Kansai (Hyogo)</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Known For</p>
+            <p class="overview-stat-value">Kobe Beef, Nada Sake, Akashiyaki</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Best Season</p>
+            <p class="overview-stat-value">Year-round</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Price Range</p>
+            <p class="overview-stat-value">From &yen;300 to &yen;30,000+</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Key Ethos</p>
+            <p class="overview-stat-value">East Meets West</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax -->
+  <section class="parallax-section">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?w=1920&q=80');"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <h2>Wagyu</h2>
+      <p>Extraordinary marbling that melts at low temperature</p>
+    </div>
+  </section>
+
+  <!-- Must-Try Dishes -->
+  <section class="section" id="dishes">
+    <div class="container">
+      <span class="section-label reveal">Essential Eating</span>
+      <h2 class="section-title reveal">Must-Try Dishes</h2>
+      <p class="section-description reveal">
+        Click any dish to learn more about its history, flavor profile, and where to eat it.
+      </p>
+
+      <div class="dishes-grid">
+
+        <div class="dish-card reveal">
+          <h3 class="dish-card-title">Kobe Beef</h3>
+          <p class="dish-card-jp">神戸ビーフ</p>
+          <p class="dish-card-description">
+            Tajima-gyu cattle produce extraordinary marbling that melts at low temperature. One of the world's top Wagyu brands, served as steaks, teppanyaki, sukiyaki, and shabu-shabu.
+          </p>
+          <div class="dish-card-meta">
+            <span>Signature Dish</span>
+            <span>&yen;&yen;&yen;&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Tajima region, Hyogo Prefecture. Strict certification standards since the Meiji era.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Rich, buttery, intensely marbled beef that melts on the tongue. Delicate sweetness and umami.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Teppanyaki counters, sukiyaki rooms, high-end steak houses. Cooked before your eyes.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Misono, Bifteck Kawamura, Royal Mouriya</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-1">
+          <h3 class="dish-card-title">Akashiyaki</h3>
+          <p class="dish-card-jp">明石焼き</p>
+          <p class="dish-card-description">
+            Soft, egg-rich octopus dumplings dipped in warm dashi broth. Originating from nearby Akashi city, these delicate morsels are considered the prototype of takoyaki.
+          </p>
+          <div class="dish-card-meta">
+            <span>Regional Classic</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Akashi city, just west of Kobe. Predates Osaka's takoyaki.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Soft, egg-custard texture with tender octopus. Dipped in warm, savory dashi broth.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Small specialty shops near Akashi or in Kobe's Nankinmachi and downtown areas.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Akashi Fish Market area, Nankinmachi stalls</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-2">
+          <h3 class="dish-card-title">Sobameshi</h3>
+          <p class="dish-card-jp">そばめし</p>
+          <p class="dish-card-description">
+            Teppan-fried yakisoba-and-rice, born in Nagata-ward as cheap, filling street food. The combination of noodles and rice caramelizes on the griddle into a hearty, savory dish.
+          </p>
+          <div class="dish-card-meta">
+            <span>Street Food</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Nagata-ward, Kobe. Workers brought rice to noodle shops and asked them to fry it together.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Hearty, caramelized, savory blend of chopped yakisoba noodles and fried rice with Worcestershire sauce.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Casual teppan-yaki griddle restaurants in Nagata-ward and downtown Kobe.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Nagata-ward sobameshi shops (birthplace of the dish)</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal">
+          <h3 class="dish-card-title">Nada Sake</h3>
+          <p class="dish-card-jp">灘の酒</p>
+          <p class="dish-card-description">
+            The Nada district produces roughly 25% of Japan's sake. Soft water from the Rokko mountains and a cool coastal climate yield crisp, refined sake prized across the country.
+          </p>
+          <div class="dish-card-meta">
+            <span>Local Specialty</span>
+            <span>&yen;&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Nada district, eastern Kobe. Brewing history stretching back centuries.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Crisp, clean, and refined. The soft Miyamizu water produces a bold "otoko-zake" (manly sake) style.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Brewery tasting rooms, sake bars, and restaurants throughout Kobe.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Hakutsuru Sake Brewery Museum, Shushinkan, Nada brewery district</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-1">
+          <h3 class="dish-card-title">Nankinmachi Food</h3>
+          <p class="dish-card-jp">南京町</p>
+          <p class="dish-card-description">
+            Kobe's Chinatown offers a vibrant fusion of Chinese and Japanese street food: buta-man (pork buns), gyoza, xiaolongbao, and roasted chestnuts line the bustling narrow streets.
+          </p>
+          <div class="dish-card-meta">
+            <span>Chinatown Cuisine</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Nankinmachi, Kobe's Chinatown. Established by Chinese merchants after the port opened in 1868.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Chinese-Japanese fusion. Savory pork buns, juicy dumplings, sweet roasted chestnuts.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Open-air stalls and small restaurants along Nankinmachi's main streets.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Nankinmachi Chinatown (near Motomachi Station)</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurants -->
+  <section class="section section-dark" id="restaurants">
+    <div class="container">
+      <span class="section-label reveal">Where to Eat</span>
+      <h2 class="section-title reveal">Restaurant Guide</h2>
+      <p class="section-description reveal" style="margin-bottom: 2rem;">
+        From legendary teppanyaki counters to &yen;300 Chinatown street stalls.
+      </p>
+
+      <div class="restaurant-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="splurge">Splurge</button>
+        <button class="filter-btn" data-filter="mid">Mid-Range</button>
+        <button class="filter-btn" data-filter="budget">Budget</button>
+      </div>
+
+      <div class="restaurant-list reveal">
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Misono Kobe Main Store</h3>
+            <p class="restaurant-location">Sannomiya &middot; Est. 1945</p>
+            <p class="restaurant-description">The world's first teppanyaki restaurant. A5 Kobe beef seared on a steel griddle before your eyes. Where the teppanyaki tradition began. Lunch from &yen;6,000, dinner &yen;15,000+.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Teppanyaki</span>
+              <span class="restaurant-tag">Kobe Beef</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;15,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Bifteck Kawamura</h3>
+            <p class="restaurant-location">Kobe &middot; Since 1972</p>
+            <p class="restaurant-description">Highest quality Kobe beef steak, served teppanyaki-style. Over fifty years of dedication to sourcing and grilling the finest Tajima-gyu cattle.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Steak</span>
+              <span class="restaurant-tag">Teppanyaki</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;15,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Royal Mouriya</h3>
+            <p class="restaurant-location">Near Kobe-Sannomiya Station &middot; 130+ Years</p>
+            <p class="restaurant-description">Over 130 years of history serving A5 wagyu. One of Kobe's most storied beef institutions, located steps from Sannomiya Station.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Wagyu</span>
+              <span class="restaurant-tag">Historic</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;12,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Kobe Beef Steak Ishida</h3>
+            <p class="restaurant-location">Multiple Locations</p>
+            <p class="restaurant-description">A5 sirloin lunch courses from &yen;8,000. Multiple locations across Kobe make this an accessible entry point to premium Kobe beef.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Kobe Beef</span>
+              <span class="restaurant-tag">Lunch Value</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;8,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Wakkoqu</h3>
+            <p class="restaurant-location">Kitanozaka</p>
+            <p class="restaurant-description">Known for its secret black sauce teppanyaki. A distinctive Kobe beef experience with a proprietary seasoning that has earned a devoted following.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Teppanyaki</span>
+              <span class="restaurant-tag">Signature Sauce</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;8,000&ndash;15,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Kobe Steak Sai Dining</h3>
+            <p class="restaurant-location">Kobe</p>
+            <p class="restaurant-description">A5 Kobe beef with a vegetable sommelier curating seasonal accompaniments. Lunch courses from &yen;4,500 offer excellent value for certified Kobe beef.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Kobe Beef</span>
+              <span class="restaurant-tag">Vegetable Sommelier</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;4,500</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Nankinmachi Chinatown Stalls</h3>
+            <p class="restaurant-location">Nankinmachi</p>
+            <p class="restaurant-description">Buta-man (pork buns), roasted chestnuts, xiaolongbao, and gyoza from street vendors and small shops lining Kobe's vibrant Chinatown.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Street Food</span>
+              <span class="restaurant-tag">Chinatown</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;300&ndash;500</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Motomachi Bakeries</h3>
+            <p class="restaurant-location">Motomachi Shopping Street</p>
+            <p class="restaurant-description">Kobe's Western heritage lives on in its bakeries. Melon-pan, Kobe milk bread, and pastries from shops that have been baking since the port city's early days.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Bakery</span>
+              <span class="restaurant-tag">Western-style</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;300</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Nagata-ward Sobameshi Shops</h3>
+            <p class="restaurant-location">Nagata-ward</p>
+            <p class="restaurant-description">The birthplace of sobameshi. Casual teppan restaurants where the iconic fried noodle-rice dish was invented by factory workers on their lunch breaks.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Sobameshi</span>
+              <span class="restaurant-tag">Local</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,000</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant Map -->
+  <section class="section map-section" id="map" aria-label="Kobe restaurant map">
+    <div class="container">
+      <span class="section-label reveal">Explore</span>
+      <h2 class="section-title reveal">Restaurant Map</h2>
+      <p class="section-description map-intro reveal">
+        Browse all featured restaurants by location. Click any marker for details. Filter by price category to find what suits your budget.
+      </p>
+      <div class="map-wrapper reveal">
+        <div class="map-controls">
+          <div class="map-filters" role="group" aria-label="Filter restaurants by price">
+            <button class="map-filter-btn active" data-filter="all">All</button>
+            <button class="map-filter-btn" data-filter="splurge">Splurge</button>
+            <button class="map-filter-btn" data-filter="mid">Mid-Range</button>
+            <button class="map-filter-btn" data-filter="budget">Budget</button>
+          </div>
+          <div class="map-legend">
+            <span class="map-legend-item"><span class="map-legend-dot splurge"></span> Splurge</span>
+            <span class="map-legend-item"><span class="map-legend-dot mid"></span> Mid-Range</span>
+            <span class="map-legend-item"><span class="map-legend-dot budget"></span> Budget</span>
+          </div>
+        </div>
+        <div id="restaurant-map" data-city="kobe" role="application" aria-label="Interactive map showing restaurant locations in Kobe"></div>
+        <p class="map-hint" role="status">Interact with the map to enable scroll zoom</p>
+        <div id="map-sr-fallback" class="sr-only" aria-label="Restaurant list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Markets -->
+  <section class="section" id="markets">
+    <div class="container">
+      <span class="section-label reveal">Street Food &amp; Markets</span>
+      <h2 class="section-title reveal">Where the City Eats</h2>
+
+      <div class="markets-grid">
+        <div class="market-card reveal">
+          <h3 class="market-name">Nankinmachi (Chinatown)</h3>
+          <p class="market-description">
+            One of Japan's three great Chinatowns. Narrow streets packed with vendors selling pork buns, 
+            gyoza, xiaolongbao, and roasted chestnuts. A vivid reminder of Kobe's cosmopolitan port heritage. 
+            Best visited at lunchtime for maximum bustle.
+          </p>
+        </div>
+        <div class="market-card reveal reveal-delay-1">
+          <h3 class="market-name">Nada Sake Brewery District</h3>
+          <p class="market-description">
+            Eastern Kobe's historic sake brewing quarter, producing roughly a quarter of Japan's sake. 
+            Many breweries offer free tours and tastings. Visit Hakutsuru, Shushinkan, or Kiku-Masamune 
+            to taste fresh sake straight from the source.
+          </p>
+        </div>
+        <div class="market-card reveal reveal-delay-2">
+          <h3 class="market-name">Motomachi Shopping Street</h3>
+          <p class="market-description">
+            A covered shopping arcade stretching from Motomachi Station. Bakeries, tea shops, 
+            and specialty food stores reflect Kobe's blend of Japanese and Western culture. 
+            Home to some of the city's finest bread and pastries.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal -->
+  <section class="section section-dark" id="seasonal">
+    <div class="container">
+      <span class="section-label reveal">Time Your Visit</span>
+      <h2 class="section-title reveal">Seasonal Specialties</h2>
+
+      <div class="seasonal-grid reveal">
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x1F338;</div>
+          <h3 class="seasonal-name">Spring</h3>
+          <p class="seasonal-jp">春 &middot; Haru</p>
+          <ul class="seasonal-items">
+            <li>Bamboo shoots from Rokko foothills</li>
+            <li>River fish from Hyogo streams</li>
+            <li>Awaji Island new onions</li>
+            <li>Fresh sake (shiboritate) releases</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x2600;</div>
+          <h3 class="seasonal-name">Summer</h3>
+          <p class="seasonal-jp">夏 &middot; Natsu</p>
+          <ul class="seasonal-items">
+            <li>Awaji Island seafood</li>
+            <li>Hiyashi chuka (cold noodles)</li>
+            <li>Kobe fruit parfaits</li>
+            <li>Cold Nada sake (hiyaoroshi)</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x1F341;</div>
+          <h3 class="seasonal-name">Autumn</h3>
+          <p class="seasonal-jp">秋 &middot; Aki</p>
+          <ul class="seasonal-items">
+            <li>Awaji onion soup</li>
+            <li>Matsutake from Tajima region</li>
+            <li>Roasted chestnuts in Nankinmachi</li>
+            <li>New-vintage Nada sake releases</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x2744;</div>
+          <h3 class="seasonal-name">Winter</h3>
+          <p class="seasonal-jp">冬 &middot; Fuyu</p>
+          <ul class="seasonal-items">
+            <li>Snow crab (zuwaigani)</li>
+            <li>Kobe beef sukiyaki and nabe</li>
+            <li>Awaji Island fugu</li>
+            <li>Warm amazake at shrines</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drinks -->
+  <section class="section" id="drinks">
+    <div class="container">
+      <span class="section-label reveal">Local Drinks</span>
+      <h2 class="section-title reveal">What to Drink</h2>
+
+      <div class="drinks-list reveal">
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F376;</div>
+          <div>
+            <h3 class="drink-name">Nada Sake</h3>
+            <p class="drink-description">Kobe's Nada district is Japan's sake heartland. Hakutsuru, Shushinkan, and others produce bold otoko-zake (manly sake) from Rokko mountain water. Visit brewery tasting rooms.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F377;</div>
+          <div>
+            <h3 class="drink-name">Fruit Wines</h3>
+            <p class="drink-description">Plum wine (umeshu) from the Rokko area and locally produced fruit wines pair beautifully with Kobe's lighter dishes and desserts.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F37A;</div>
+          <div>
+            <h3 class="drink-name">Craft Beer</h3>
+            <p class="drink-description">Kobe's international spirit extends to its craft beer scene. Local breweries produce ales and lagers influenced by the city's Western heritage.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x2615;</div>
+          <div>
+            <h3 class="drink-name">Kobe Kissaten Coffee</h3>
+            <p class="drink-description">Kobe's century-old kissaten (traditional coffee houses) serve hand-dripped coffee in an atmosphere unchanged for decades. The city's coffee culture rivals its sake tradition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Etiquette -->
+  <section class="section section-dark" id="etiquette">
+    <div class="container">
+      <span class="section-label reveal">Dining Etiquette</span>
+      <h2 class="section-title reveal">Rules of the Table</h2>
+
+      <div class="etiquette-grid">
+        <div class="etiquette-card reveal">
+          <h3 class="etiquette-card-title">At the Teppanyaki Counter</h3>
+          <p>Watch the chef work and follow their lead. Eat each piece as it's served. The chef controls the pace and presentation &mdash; trust their timing.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-1">
+          <h3 class="etiquette-card-title">Yakiniku Etiquette</h3>
+          <p>When grilling meat at yakiniku, cook only your own portions. Use communal tongs for raw meat and your own chopsticks for eating. Never mix the two.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-2">
+          <h3 class="etiquette-card-title">General Rules</h3>
+          <p>No tipping. Say "itadakimasu" before eating and "gochisosama" after. Table manners follow national custom. Never stick chopsticks upright in rice.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-3">
+          <h3 class="etiquette-card-title">Cosmopolitan Spirit</h3>
+          <p>Kobe is relaxed and cosmopolitan. The city's long history with international visitors means a welcoming atmosphere. Enjoy the blend of cultures at the table.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next City -->
+  <a href="fukuoka.html" class="parallax-section" style="height: 50vh; min-height: 350px; cursor: pointer; display: flex; text-decoration: none; color: inherit;">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1577593054080-9b6a47f1c2d6?w=1920&q=80');"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <p style="font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 1rem;">Next Destination</p>
+      <h2>Fukuoka</h2>
+      <p>Kyushu's Culinary Capital</p>
+    </div>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-logo">Japan Culinary Guide</p>
+        <p class="footer-tagline">For the serious food traveler</p>
+      </div>
+      <div class="footer-cities">
+        <a href="tokyo.html">Tokyo</a>
+        <a href="osaka.html">Osaka</a>
+        <a href="kyoto.html">Kyoto</a>
+        <a href="kobe.html">Kobe</a>
+        <a href="fukuoka.html">Fukuoka</a>
+        <a href="oita.html">Oita</a>
+        <a href="kyushu.html">Kyushu</a>
+      </div>
+    </div>
+    <p class="footer-bottom">Compiled from culinary resources, travel websites, and local publications.</p>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../js/maps.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

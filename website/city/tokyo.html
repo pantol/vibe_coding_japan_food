@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokyo | Japan Culinary Guide</title>
+  <meta name="description" content="Tokyo culinary guide: Edomae sushi, ramen, tempura, tonkatsu, yakitori, soba. Restaurants for every budget, markets, seasonal specialties, and dining etiquette.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav-header scrolled" aria-label="Main navigation">
+    <div class="nav-logo">
+      <a href="../index.html">Japan <span class="jp-text">日本</span> Culinary Guide</a>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="tokyo.html" class="active">Tokyo</a></li>
+      <li><a href="osaka.html">Osaka</a></li>
+      <li><a href="kyoto.html">Kyoto</a></li>
+      <li><a href="kobe.html">Kobe</a></li>
+      <li><a href="fukuoka.html">Fukuoka</a></li>
+      <li><a href="oita.html">Oita</a></li>
+      <li><a href="kyushu.html">Kyushu</a></li>
+    </ul>
+    <div class="nav-hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="../index.html">Home</a>
+    <a href="tokyo.html">Tokyo</a>
+    <a href="osaka.html">Osaka</a>
+    <a href="kyoto.html">Kyoto</a>
+    <a href="kobe.html">Kobe</a>
+    <a href="fukuoka.html">Fukuoka</a>
+    <a href="oita.html">Oita</a>
+    <a href="kyushu.html">Kyushu</a>
+  </div>
+
+  <!-- City Hero -->
+  <section class="city-hero">
+    <div class="city-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1920&q=80');"></div>
+    <div class="city-hero-overlay"></div>
+    <div class="city-hero-content">
+      <a href="../index.html" class="city-hero-back">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        All Destinations
+      </a>
+      <h1 class="city-hero-title">Tokyo</h1>
+      <p class="city-hero-jp">東京</p>
+      <p class="city-hero-tagline">The Capital of Endless Appetite</p>
+    </div>
+  </section>
+
+  <!-- City Nav -->
+  <nav class="city-nav" aria-label="Page sections">
+    <div class="city-nav-inner">
+      <a href="#overview" class="active">Overview</a>
+      <a href="#dishes">Dishes</a>
+      <a href="#restaurants">Restaurants</a>
+      <a href="#map">Map</a>
+      <a href="#markets">Markets</a>
+      <a href="#seasonal">Seasonal</a>
+      <a href="#drinks">Drinks</a>
+      <a href="#etiquette">Etiquette</a>
+    </div>
+  </nav>
+
+  <!-- Overview -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-text reveal">
+          <span class="section-label">Chapter 1</span>
+          <h2 class="section-title">The Capital of Endless Appetite</h2>
+          <p>
+            Tokyo's culinary identity is a paradox: it is simultaneously the most cosmopolitan food city on Earth and one of the most deeply traditional. The city holds more Michelin stars than any other metropolis, yet some of its greatest meals are served on plastic trays in rooms with six seats and no sign outside.
+          </p>
+          <p>
+            The roots of Tokyo's cuisine stretch back to the Edo period (1603&ndash;1868), when the city&mdash;then called Edo&mdash;was a booming castle town drawing merchants, samurai, and laborers from across Japan. A thriving street food culture emerged to feed these workers: sushi, soba, tempura, and unagi all became Edo specialties sold from yatai carts and tiny shops.
+          </p>
+          <p>
+            Today, Tokyo's food culture is defined by specialization and obsession. The shokunin (craftsman) ethos means that a ramen shop may serve only one style of broth, perfected over decades. A tempura counter seats eight people and serves nothing else. This single-minded devotion to craft is what makes Tokyo's food scene so extraordinary.
+          </p>
+        </div>
+        <div class="overview-sidebar reveal reveal-delay-2">
+          <div class="overview-stat">
+            <p class="overview-stat-label">Region</p>
+            <p class="overview-stat-value">Kanto</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Known For</p>
+            <p class="overview-stat-value">Edomae Sushi, Ramen, Tempura</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Best Season</p>
+            <p class="overview-stat-value">Year-round (each season unique)</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Michelin Stars</p>
+            <p class="overview-stat-value">Most of any city worldwide</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Price Range</p>
+            <p class="overview-stat-value">From &yen;500 to &yen;60,000+</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Key Ethos</p>
+            <p class="overview-stat-value">Shokunin (Craftsman Spirit)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax -->
+  <section class="parallax-section">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=1920&q=80');"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <h2>Edomae</h2>
+      <p>The Tokyo tradition of sushi &mdash; born from street carts in the 1820s</p>
+    </div>
+  </section>
+
+  <!-- Must-Try Dishes -->
+  <section class="section" id="dishes">
+    <div class="container">
+      <span class="section-label reveal">Essential Eating</span>
+      <h2 class="section-title reveal">Must-Try Dishes</h2>
+      <p class="section-description reveal">
+        Click any dish to learn more about its history, flavor profile, and where to eat it.
+      </p>
+
+      <div class="dishes-grid">
+
+        <div class="dish-card reveal">
+          <h3 class="dish-card-title">Edomae Sushi</h3>
+          <p class="dish-card-jp">江戸前寿司</p>
+          <p class="dish-card-description">
+            Born in the 1820s as a quick street snack, nigiri-zushi was originally preserved with vinegar and salt. Today's omakase counters honor that legacy while working with pristine fish from Toyosu Market.
+          </p>
+          <div class="dish-card-meta">
+            <span>Signature Dish</span>
+            <span>&yen;&yen;&yen;&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Edo period, 1820s street carts in Ryogoku</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Vinegared rice with raw seafood, seasoned with nikiri soy and wasabi. Pure, clean, focused.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Counter seating at sushi-ya. Eat with hands or chopsticks. Best at Ginza or Tsukiji area.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Sukiyabashi Jiro, Sushi Saito, Hakkoku, Sushi Dai (budget)</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-1">
+          <h3 class="dish-card-title">Ramen (Shoyu)</h3>
+          <p class="dish-card-jp">醤油ラーメン</p>
+          <p class="dish-card-description">
+            Tokyo's signature shoyu ramen features a clear, dark, deeply savory soy-based broth with curly medium noodles, chashu pork, menma bamboo shoots, nori, and a soft egg.
+          </p>
+          <div class="dish-card-meta">
+            <span>Comfort Food</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Chinese noodle houses of the early 1900s, adapted with Japanese ingredients</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Dark, savory soy-based broth with pork fat richness. Aromatic and deeply umami.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Narrow ramen-ya shops, often with ticket machines. Slurp loudly. Eat quickly.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Iruca Tokyo, Sobahouse Konjiki Hototogisu, Rokurinsha (tsukemen), Kiraku</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-2">
+          <h3 class="dish-card-title">Tempura</h3>
+          <p class="dish-card-jp">天ぷら</p>
+          <p class="dish-card-description">
+            Edo-period tempura was street food fried in sesame oil over charcoal. The finest tempura-ya today maintain that sesame oil tradition, producing impossibly light, greaseless results.
+          </p>
+          <div class="dish-card-meta">
+            <span>Edo Classic</span>
+            <span>&yen;&yen;&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Edo-period food stalls on Tokyo Bay. One of the three Edo delicacies.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Light, airy batter fried in sesame oil. Preserves the pure taste of seafood and vegetables.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Counter seating at specialty tempura restaurants. Served piece by piece.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Tempura Kondo (2 Michelin stars, Ginza)</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal">
+          <h3 class="dish-card-title">Tonkatsu</h3>
+          <p class="dish-card-jp">とんかつ</p>
+          <p class="dish-card-description">
+            Breaded and deep-fried pork cutlet adapted from European cuisine during the Meiji era, elevated to an art form. The city debates rosu (fatty loin) versus hire (lean tenderloin).
+          </p>
+          <div class="dish-card-meta">
+            <span>Meiji Era</span>
+            <span>&yen;&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Adapted from European cuisine during the Meiji era (1868&ndash;1912)</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Crispy panko exterior, juicy pork interior. Served with shredded cabbage and tonkatsu sauce.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Dedicated tonkatsu shops. Choose rosu or hire, then add rice, miso soup, and cabbage.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Tonkatsu Tonta (low-temperature specialists, Nerima-ku)</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-1">
+          <h3 class="dish-card-title">Yakitori</h3>
+          <p class="dish-card-jp">焼き鳥</p>
+          <p class="dish-card-description">
+            Grilled chicken skewers reach their apotheosis in Tokyo's smoky, intimate yakitori-ya beneath the train tracks. Each cut requires different heat and timing on binchotan charcoal.
+          </p>
+          <div class="dish-card-meta">
+            <span>Izakaya Classic</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Post-war Tokyo izakaya culture. Elevated to an art form at specialist counters.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Charcoal-grilled chicken (thigh, skin, heart, cartilage, tail) with tare sauce or salt.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Tiny counters under railway tracks, or upscale yakitori-ya in Ginza.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Bird Land Ginza (Michelin), Yurakucho yakitori alley (budget)</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-2">
+          <h3 class="dish-card-title">Soba</h3>
+          <p class="dish-card-jp">蕎麦</p>
+          <p class="dish-card-description">
+            Buckwheat noodles carry almost philosophical weight in Tokyo. The finest versions use freshly ground, stone-milled buckwheat with minimal wheat flour to bind it.
+          </p>
+          <div class="dish-card-meta">
+            <span>Edo Tradition</span>
+            <span>&yen;&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Edo period soba shops served as neighborhood gathering places since mid-1600s</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Earthy, nutty buckwheat with firm texture. Served cold (zaru) or hot in broth. Slurp to enhance aroma.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Small soba counters. Eat promptly. The craft is in the flour milling and kneading.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Specialty soba shops in Kanda, Nihonbashi areas</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal">
+          <h3 class="dish-card-title">Monjayaki</h3>
+          <p class="dish-card-jp">もんじゃ焼き</p>
+          <p class="dish-card-description">
+            Tokyo's messy, beloved answer to Osaka's okonomiyaki. Originating in Tsukishima as a children's snack, it uses a much thinner batter that stays gooey on the teppan griddle.
+          </p>
+          <div class="dish-card-meta">
+            <span>Tokyo Original</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Tsukishima neighborhood, early 20th century. Originally a children's after-school snack.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Savory, chewy, gooey batter with seafood, cabbage, and sauce. Scraped off the grill with metal spatulas.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Communal hotplate tables in Tsukishima (Tokyo's monja district).</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Tsukishima Monja Street (dozens of shops)</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurants -->
+  <section class="section section-dark" id="restaurants">
+    <div class="container">
+      <span class="section-label reveal">Where to Eat</span>
+      <h2 class="section-title reveal">Restaurant Guide</h2>
+      <p class="section-description reveal" style="margin-bottom: 2rem;">
+        From three-Michelin-starred counters to &yen;500 ramen windows.
+      </p>
+
+      <div class="restaurant-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="splurge">Splurge</button>
+        <button class="filter-btn" data-filter="mid">Mid-Range</button>
+        <button class="filter-btn" data-filter="budget">Budget</button>
+      </div>
+
+      <div class="restaurant-list reveal">
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Sukiyabashi Jiro</h3>
+            <p class="restaurant-location">Ginza &middot; 3 Michelin Stars</p>
+            <p class="restaurant-description">The legend founded by Jiro Ono in 1965. Omakase of roughly twenty nigiri pieces, each brushed with nikiri, is minimalist perfection. Book through a hotel concierge. Dinner only.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Sushi</span>
+              <span class="restaurant-tag">Omakase</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;58,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Sushi Saito</h3>
+            <p class="restaurant-location">Minato-ku &middot; 3 Michelin Stars &middot; Asia's 50 Best #33</p>
+            <p class="restaurant-description">Chef Takashi Saito's soft-simmered octopus and medium-fatty tuna are legendary. The original counter is clients-only; protege-run outposts at Azabudai Hills.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Sushi</span>
+              <span class="restaurant-tag">World-class</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;40,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Tempura Kondo</h3>
+            <p class="restaurant-location">Ginza &middot; 2 Michelin Stars</p>
+            <p class="restaurant-description">Chef Kondo's inventive tempura uses steaming techniques to lock in freshness. Vegetables and seafood fried only at peak ripeness in sesame oil.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Tempura</span>
+              <span class="restaurant-tag">Counter</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;20,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Hakkoku</h3>
+            <p class="restaurant-location">Ginza</p>
+            <p class="restaurant-description">Led by Hiroyuki Sato, around thirty pieces of top-class Edomae sushi. Purity of flavor and simplicity of presentation are extraordinary. Recommended by chefs and sommeliers.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Sushi</span>
+              <span class="restaurant-tag">Expert-curated</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;30,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Iruca Tokyo</h3>
+            <p class="restaurant-location">Roppongi &middot; Michelin Bib Gourmand</p>
+            <p class="restaurant-description">Four-broth soup base blending chicken, beef, clams, and spiny lobster. The porcini shoyu ramen in custom Arita porcelain feels like kaiseki.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Ramen</span>
+              <span class="restaurant-tag">Innovative</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;2,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Sobahouse Konjiki Hototogisu</h3>
+            <p class="restaurant-location">Shinjuku &middot; Michelin Star</p>
+            <p class="restaurant-description">Third ramen restaurant in the world to receive a Michelin star. The shio soba balances Mongolian rock salt and Okinawan sea salt with clam and sea bream dashi.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Ramen</span>
+              <span class="restaurant-tag">Michelin</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,300</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Tonkatsu Tonta</h3>
+            <p class="restaurant-location">Nerima-ku</p>
+            <p class="restaurant-description">Low-temperature tonkatsu specialists &mdash; bright, fresh pork with impossibly light breadcrumbs. Open only a few days per week. Plan around it.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Tonkatsu</span>
+              <span class="restaurant-tag">Specialist</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;2,000&ndash;3,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Sushi Tokyo Ten</h3>
+            <p class="restaurant-location">Shibuya Stream</p>
+            <p class="restaurant-description">Generous omakase lunch for &yen;4,400 weekdays, dinner &yen;8,800. Chutoro, abalone, ikura-don. Remarkable value inside the Shibuya Stream complex.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Sushi</span>
+              <span class="restaurant-tag">Value</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;4,400&ndash;8,800</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Sushi Dai</h3>
+            <p class="restaurant-location">Toyosu Market</p>
+            <p class="restaurant-description">Legendary 12-seat counter. 12-piece omakase for &yen;3,700 of market-fresh perfection. No reservations &mdash; queues from 2 a.m., opens 5:30 a.m.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Sushi</span>
+              <span class="restaurant-tag">Market</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;3,700</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Rokurinsha</h3>
+            <p class="restaurant-location">Tokyo Station / Ramen Street</p>
+            <p class="restaurant-description">Famous tsukemen with thick chewy noodles and rich dipping broth. Buy a ticket from the machine.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Tsukemen</span>
+              <span class="restaurant-tag">Station</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Yurakucho Yakitori Alley</h3>
+            <p class="restaurant-location">Under the railway tracks, Yurakucho</p>
+            <p class="restaurant-description">Tiny counters, binchotan charcoal, cold beer. Pure after-work Tokyo. The essence of the city's casual dining culture.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Yakitori</span>
+              <span class="restaurant-tag">After-work</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;150&ndash;300/skewer</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Kiraku</h3>
+            <p class="restaurant-location">Shibuya / Dogenzaka</p>
+            <p class="restaurant-description">Serving Tokyo-style chukamen since 1952. Soy-based broth with fried onions and chewy flat noodles. A 68-year-old institution.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Ramen</span>
+              <span class="restaurant-tag">Historic</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;800</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant Map -->
+  <section class="section map-section" id="map" aria-label="Tokyo restaurant map">
+    <div class="container">
+      <span class="section-label reveal">Explore</span>
+      <h2 class="section-title reveal">Restaurant Map</h2>
+      <p class="section-description map-intro reveal">
+        Browse all featured restaurants by location. Click any marker for details. Filter by price category to find what suits your budget.
+      </p>
+      <div class="map-wrapper reveal">
+        <div class="map-controls">
+          <div class="map-filters" role="group" aria-label="Filter restaurants by price">
+            <button class="map-filter-btn active" data-filter="all">All</button>
+            <button class="map-filter-btn" data-filter="splurge">Splurge</button>
+            <button class="map-filter-btn" data-filter="mid">Mid-Range</button>
+            <button class="map-filter-btn" data-filter="budget">Budget</button>
+          </div>
+          <div class="map-legend">
+            <span class="map-legend-item"><span class="map-legend-dot splurge"></span> Splurge</span>
+            <span class="map-legend-item"><span class="map-legend-dot mid"></span> Mid-Range</span>
+            <span class="map-legend-item"><span class="map-legend-dot budget"></span> Budget</span>
+          </div>
+        </div>
+        <div id="restaurant-map" data-city="tokyo" role="application" aria-label="Interactive map showing restaurant locations in Tokyo"></div>
+        <p class="map-hint" role="status">Interact with the map to enable scroll zoom</p>
+        <div id="map-sr-fallback" class="sr-only" aria-label="Restaurant list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Markets -->
+  <section class="section" id="markets">
+    <div class="container">
+      <span class="section-label reveal">Street Food &amp; Markets</span>
+      <h2 class="section-title reveal">Where the City Eats</h2>
+
+      <div class="markets-grid">
+        <div class="market-card reveal">
+          <h3 class="market-name">Tsukiji Outer Market</h3>
+          <p class="market-description">
+            Tokyo's most vibrant food destination even after the wholesale market's relocation to Toyosu. 
+            Narrow lanes packed with vendors selling tamagoyaki, fresh sashimi on sticks, grilled scallops, 
+            and exceptional Japanese knives. Go by 7 a.m. for the best experience.
+          </p>
+        </div>
+        <div class="market-card reveal reveal-delay-1">
+          <h3 class="market-name">Ameyoko Market (Ueno)</h3>
+          <p class="market-description">
+            Tokyo's scrappiest food street &mdash; a chaotic, postwar black-market corridor now selling everything 
+            from fresh seafood and dried fruits to chocolate and kebabs. Not refined, but real. 
+            Energy peaks in late December before New Year.
+          </p>
+        </div>
+        <div class="market-card reveal reveal-delay-2">
+          <h3 class="market-name">Omoide Yokocho</h3>
+          <p class="market-description">
+            "Memory Lane" near Shinjuku Station. Tiny alleyway bars and yakitori stalls in a 
+            nostalgic post-war setting. Smoke, cold beer, and charcoal-grilled skewers. 
+            Best visited after 6 p.m. on weekdays.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal -->
+  <section class="section section-dark" id="seasonal">
+    <div class="container">
+      <span class="section-label reveal">Time Your Visit</span>
+      <h2 class="section-title reveal">Seasonal Specialties</h2>
+
+      <div class="seasonal-grid reveal">
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x1F338;</div>
+          <h3 class="seasonal-name">Spring</h3>
+          <p class="seasonal-jp">春 &middot; Haru</p>
+          <ul class="seasonal-items">
+            <li>Sakura-flavored sweets</li>
+            <li>Bamboo shoots (takenoko)</li>
+            <li>Shirauo (whitebait) from Tokyo Bay</li>
+            <li>Cherry-blossom mochi</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x2600;</div>
+          <h3 class="seasonal-name">Summer</h3>
+          <p class="seasonal-jp">夏 &middot; Natsu</p>
+          <ul class="seasonal-items">
+            <li>Kakigori (shaved ice)</li>
+            <li>Cold zaru soba</li>
+            <li>Unagi (grilled eel)</li>
+            <li>Hiyashi chuka (cold noodles)</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x1F341;</div>
+          <h3 class="seasonal-name">Autumn</h3>
+          <p class="seasonal-jp">秋 &middot; Aki</p>
+          <ul class="seasonal-items">
+            <li>Matsutake mushrooms</li>
+            <li>Grilled sweet potato</li>
+            <li>Sanma (Pacific saury)</li>
+            <li>Kuri (chestnut) desserts</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x2744;</div>
+          <h3 class="seasonal-name">Winter</h3>
+          <p class="seasonal-jp">冬 &middot; Fuyu</p>
+          <ul class="seasonal-items">
+            <li>Oden (fish cake hot pot)</li>
+            <li>Yuzu citrus dishes</li>
+            <li>Fugu (pufferfish)</li>
+            <li>Nabe (hot pot)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drinks -->
+  <section class="section" id="drinks">
+    <div class="container">
+      <span class="section-label reveal">Local Drinks</span>
+      <h2 class="section-title reveal">What to Drink</h2>
+
+      <div class="drinks-list reveal">
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F376;</div>
+          <div>
+            <h3 class="drink-name">Sake</h3>
+            <p class="drink-description">Tokyo draws the best bottles from Niigata, Yamagata, and Akita. Standing sake bars (tachinomi) around Shinbashi and Yurakucho are ideal classrooms.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F37A;</div>
+          <div>
+            <h3 class="drink-name">Craft Beer</h3>
+            <p class="drink-description">Booming craft beer scene with breweries like Baird Beer. Also a thriving whiskey highball culture at standing bars.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F375;</div>
+          <div>
+            <h3 class="drink-name">Matcha</h3>
+            <p class="drink-description">Matcha lattes in specialty cafes. Also ramune soda with summer foods and hojicha (roasted green tea) in winter.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F943;</div>
+          <div>
+            <h3 class="drink-name">Whiskey Highball</h3>
+            <p class="drink-description">Japanese whiskey served as highball (with soda) is the city's preferred refreshment at izakayas. Suntory and Nikka lead.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Etiquette -->
+  <section class="section section-dark" id="etiquette">
+    <div class="container">
+      <span class="section-label reveal">Dining Etiquette</span>
+      <h2 class="section-title reveal">Rules of the Table</h2>
+
+      <div class="etiquette-grid">
+        <div class="etiquette-card reveal">
+          <h3 class="etiquette-card-title">At the Sushi Counter</h3>
+          <p>Eat nigiri with your hands if you prefer &mdash; it's traditional. Never dip rice-side down if the chef has already applied nikiri soy. Trust the chef's sequence.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-1">
+          <h3 class="etiquette-card-title">Noodle Etiquette</h3>
+          <p>Slurping noodles is not only acceptable but encouraged &mdash; it cools the noodles and enhances aroma. Eat promptly; don't let ramen sit.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-2">
+          <h3 class="etiquette-card-title">General Rules</h3>
+          <p>No tipping. Say "itadakimasu" before eating and "gochisosama" after. Never stick chopsticks upright in rice. Don't pass food chopstick-to-chopstick.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-3">
+          <h3 class="etiquette-card-title">Izakaya Culture</h3>
+          <p>Order a drink when you sit down. Pour for others before yourself. Share dishes communally. Eating promptly and sharing seating at communal bars is normal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next City -->
+  <a href="osaka.html" class="parallax-section" style="height: 50vh; min-height: 350px; cursor: pointer; display: flex; text-decoration: none; color: inherit;">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1590559899731-a382839e5549?w=1920&q=80');"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <p style="font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 1rem;">Next Destination</p>
+      <h2>Osaka</h2>
+      <p>The Nation's Kitchen</p>
+    </div>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-logo">Japan Culinary Guide</p>
+        <p class="footer-tagline">For the serious food traveler</p>
+      </div>
+      <div class="footer-cities">
+        <a href="tokyo.html">Tokyo</a>
+        <a href="osaka.html">Osaka</a>
+        <a href="kyoto.html">Kyoto</a>
+        <a href="kobe.html">Kobe</a>
+        <a href="fukuoka.html">Fukuoka</a>
+        <a href="oita.html">Oita</a>
+        <a href="kyushu.html">Kyushu</a>
+      </div>
+    </div>
+    <p class="footer-bottom">Compiled from culinary resources, travel websites, and local publications.</p>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../js/maps.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fukuoka | Japan Culinary Guide</title>
+  <meta name="description" content="Fukuoka culinary guide: Hakata ramen, yatai street stalls, mentaiko, motsu nabe, mizutaki, gyoza. Restaurants for every budget, markets, seasonal specialties, and dining etiquette.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav-header scrolled" aria-label="Main navigation">
+    <div class="nav-logo">
+      <a href="../index.html">Japan <span class="jp-text">日本</span> Culinary Guide</a>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="tokyo.html">Tokyo</a></li>
+      <li><a href="osaka.html">Osaka</a></li>
+      <li><a href="kyoto.html">Kyoto</a></li>
+      <li><a href="kobe.html">Kobe</a></li>
+      <li><a href="fukuoka.html" class="active">Fukuoka</a></li>
+      <li><a href="oita.html">Oita</a></li>
+      <li><a href="kyushu.html">Kyushu</a></li>
+    </ul>
+    <div class="nav-hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="../index.html">Home</a>
+    <a href="tokyo.html">Tokyo</a>
+    <a href="osaka.html">Osaka</a>
+    <a href="kyoto.html">Kyoto</a>
+    <a href="kobe.html">Kobe</a>
+    <a href="fukuoka.html">Fukuoka</a>
+    <a href="oita.html">Oita</a>
+    <a href="kyushu.html">Kyushu</a>
+  </div>
+
+  <!-- City Hero -->
+  <section class="city-hero">
+    <div class="city-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1577593054080-9b6a47f1c2d6?w=1920&q=80');"></div>
+    <div class="city-hero-overlay"></div>
+    <div class="city-hero-content">
+      <a href="../index.html" class="city-hero-back">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        All Destinations
+      </a>
+      <h1 class="city-hero-title">Fukuoka</h1>
+      <p class="city-hero-jp">福岡</p>
+      <p class="city-hero-tagline">Kyushu's Fearless Food Capital</p>
+    </div>
+  </section>
+
+  <!-- City Nav -->
+  <nav class="city-nav" aria-label="Page sections">
+    <div class="city-nav-inner">
+      <a href="#overview" class="active">Overview</a>
+      <a href="#dishes">Dishes</a>
+      <a href="#restaurants">Restaurants</a>
+      <a href="#map">Map</a>
+      <a href="#markets">Markets</a>
+      <a href="#seasonal">Seasonal</a>
+      <a href="#drinks">Drinks</a>
+      <a href="#etiquette">Etiquette</a>
+    </div>
+  </nav>
+
+  <!-- Overview -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-text reveal">
+          <span class="section-label">Chapter 5</span>
+          <h2 class="section-title">Bold, Generous, Startlingly Affordable</h2>
+          <p>
+            Fukuoka is the gateway to Kyushu, reflecting centuries of exchange with Korea, China, and Southeast Asia. More garlic, more chili, more pork than the rest of Japan. Food is generous, unpretentious, and startlingly affordable.
+          </p>
+          <p>
+            Larger portions, bolder flavors, more relaxed attitude. You can eat brilliantly for very little money, stand at a yatai stall by the river, and discover why this city deserves to be on every food traveler's list.
+          </p>
+        </div>
+        <div class="overview-sidebar reveal reveal-delay-2">
+          <div class="overview-stat">
+            <p class="overview-stat-label">Region</p>
+            <p class="overview-stat-value">Kyushu</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Known For</p>
+            <p class="overview-stat-value">Hakata Ramen, Yatai, Mentaiko</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Best Season</p>
+            <p class="overview-stat-value">Year-round (winter for fugu)</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Price Range</p>
+            <p class="overview-stat-value">From &yen;500 to &yen;10,000</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Key Ethos</p>
+            <p class="overview-stat-value">Bold &amp; Generous</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax -->
+  <section class="parallax-section">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80');"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <h2>Yatai</h2>
+      <p>The soul of Fukuoka dining &mdash; street stalls by the river</p>
+    </div>
+  </section>
+
+  <!-- Must-Try Dishes -->
+  <section class="section" id="dishes">
+    <div class="container">
+      <span class="section-label reveal">Essential Eating</span>
+      <h2 class="section-title reveal">Must-Try Dishes</h2>
+      <p class="section-description reveal">
+        Click any dish to learn more about its history, flavor profile, and where to eat it.
+      </p>
+
+      <div class="dishes-grid">
+
+        <div class="dish-card reveal">
+          <h3 class="dish-card-title">Hakata Ramen</h3>
+          <p class="dish-card-jp">博多ラーメン</p>
+          <p class="dish-card-description">
+            Tonkotsu broth simmered 12&ndash;20 hours until creamy white. Ultra-thin firm noodles (specify kata/barikata/harigane). Kaedama system for extra noodles.
+          </p>
+          <div class="dish-card-meta">
+            <span>Signature Dish</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Hakata district, Fukuoka. Perfected over decades at local yatai stalls.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Rich, creamy pork bone broth with deep umami. Milky white, intensely savory.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Small ramen shops with ticket machines, or yatai stalls by the river at night.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Hakata Daruma, Ganso Nagahamaya, Taiho Ramen</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-1">
+          <h3 class="dish-card-title">Motsu Nabe</h3>
+          <p class="dish-card-jp">もつ鍋</p>
+          <p class="dish-card-description">
+            Offal hot pot with cabbage, garlic chives, konnyaku in miso or soy broth. Communal, winter favorite.
+          </p>
+          <div class="dish-card-meta">
+            <span>Hot Pot</span>
+            <span>&yen;&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Post-war Fukuoka, born from necessity and resourcefulness with offal cuts.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Rich, garlicky broth with tender offal, sweet cabbage, and aromatic chives. Deeply comforting.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Communal tables at specialist motsu nabe restaurants. Best shared with friends.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Motsunabe Yamanaka</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-2">
+          <h3 class="dish-card-title">Mentaiko</h3>
+          <p class="dish-card-jp">明太子</p>
+          <p class="dish-card-description">
+            Seasoned pollock roe, spicy karashi mentaiko invented in Hakata. Spicy, salty, umami-rich. With rice, pasta, or as onigiri filling.
+          </p>
+          <div class="dish-card-meta">
+            <span>Local Specialty</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Invented in Hakata, inspired by Korean myeongnan-jeot. Popularized post-war.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Spicy, briny, intensely umami pollock roe. Pairs perfectly with plain white rice.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>As part of teishoku sets, in onigiri, over pasta, or purchased at Yanagibashi Market.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Yanagibashi Market (tastings), restaurants citywide</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal">
+          <h3 class="dish-card-title">Hakata Gyoza</h3>
+          <p class="dish-card-jp">博多餃子</p>
+          <p class="dish-card-description">
+            Thin-skinned, crispy-winged pan-fried dumplings. Cabbage-heavy pork filling. Served with yuzu kosho.
+          </p>
+          <div class="dish-card-meta">
+            <span>Street Classic</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Hakata's take on Chinese jiaozi, refined with thinner skins and local seasonings.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Crispy, golden wings with juicy cabbage-pork filling. Yuzu kosho adds citrus heat.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Iron pan (tetsunabe) gyoza specialists. Casual, lively atmosphere.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Tetsunabe Gyoza</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-1">
+          <h3 class="dish-card-title">Mizutaki</h3>
+          <p class="dish-card-jp">水炊き</p>
+          <p class="dish-card-description">
+            Milky collagen-rich chicken hot pot served with ceremony. Premier poultry quality.
+          </p>
+          <div class="dish-card-meta">
+            <span>Elegant Hot Pot</span>
+            <span>&yen;&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Fukuoka's refined chicken hot pot tradition, dating back over a century.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Delicate, milky chicken broth rich in collagen. Subtle, clean, nourishing.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Formal service at specialist restaurants. Broth served first as soup, then chicken and vegetables added.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Mizutaki Nagano</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-2">
+          <h3 class="dish-card-title">Yatai Food</h3>
+          <p class="dish-card-jp">屋台</p>
+          <p class="dish-card-description">
+            Street stall cuisine: ramen, yakitori, oden, gyoza. The soul of Fukuoka dining.
+          </p>
+          <div class="dish-card-meta">
+            <span>Street Culture</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Post-war mobile food stalls along the rivers. A Fukuoka tradition since the 1940s.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Everything from tonkotsu ramen to yakitori, oden, and gyoza. Casual, communal, unforgettable.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Open-air stalls along the Naka River. Best visited after 8 p.m. or after 10 p.m.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Nakasu yatai stalls, Tenjin yatai, Chez Remy yatai</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurants -->
+  <section class="section section-dark" id="restaurants">
+    <div class="container">
+      <span class="section-label reveal">Where to Eat</span>
+      <h2 class="section-title reveal">Restaurant Guide</h2>
+      <p class="section-description reveal" style="margin-bottom: 2rem;">
+        From specialist ramen legends to riverside yatai stalls.
+      </p>
+
+      <div class="restaurant-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="mid">Mid/Specialist</button>
+        <button class="filter-btn" data-filter="budget">Yatai/Budget</button>
+      </div>
+
+      <div class="restaurant-list reveal">
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Hakata Daruma Honten</h3>
+            <p class="restaurant-location">Hakata &middot; Since 1963</p>
+            <p class="restaurant-description">The yobimodoshi method: broth is simmered 16 hours, cooled, then reboiled to deepen the flavor. Rich, creamy, and deeply porky. A Hakata ramen institution.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Ramen</span>
+              <span class="restaurant-tag">Historic</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;850</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Ganso Nagahamaya</h3>
+            <p class="restaurant-location">Nagahama &middot; 1952 Yatai Origin &middot; 24 Hours</p>
+            <p class="restaurant-description">Lighter tonkotsu broth than most Hakata shops. Originally a yatai stall, now a no-frills 24-hour institution. The birthplace of Nagahama ramen style.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Ramen</span>
+              <span class="restaurant-tag">24 Hours</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;500</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Taiho Ramen</h3>
+            <p class="restaurant-location">Kurume &middot; Since 1953</p>
+            <p class="restaurant-description">From Kurume, the birthplace of tonkotsu ramen. Heavier, more intense broth than Hakata style. A pilgrimage for ramen enthusiasts.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Ramen</span>
+              <span class="restaurant-tag">Origin</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;700</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Tetsunabe Gyoza</h3>
+            <p class="restaurant-location">Nakasu / Gion</p>
+            <p class="restaurant-description">Iron pan gyoza with impossibly thin, crispy skins and juicy cabbage-pork filling. Served sizzling in the tetsunabe with yuzu kosho on the side.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Gyoza</span>
+              <span class="restaurant-tag">Specialist</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;500&ndash;800</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Mizutaki Nagano</h3>
+            <p class="restaurant-location">Hakata</p>
+            <p class="restaurant-description">Collagen-rich chicken broth served with ceremony. The broth arrives first as soup, then premium chicken and vegetables are added. A refined Fukuoka experience.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Mizutaki</span>
+              <span class="restaurant-tag">Hot Pot</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;3,000&ndash;5,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Nakasu Yatai Stalls</h3>
+            <p class="restaurant-location">Along the Naka River &middot; ~20 Stalls</p>
+            <p class="restaurant-description">The iconic riverside yatai experience. Ramen, yakitori, oden, gyoza under tarpaulin canopies. Go at 8 p.m. or after 10 p.m. to avoid the biggest crowds.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Yatai</span>
+              <span class="restaurant-tag">Street Food</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;2,000&ndash;3,000 w/ drinks</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Tenjin Yatai</h3>
+            <p class="restaurant-location">Tenjin District</p>
+            <p class="restaurant-description">More local, less touristy than the Nakasu stalls. Same great food, more authentic atmosphere. A favorite among Fukuoka residents.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Yatai</span>
+              <span class="restaurant-tag">Local</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;2,000&ndash;3,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Chez Remy Yatai</h3>
+            <p class="restaurant-location">Nakasu</p>
+            <p class="restaurant-description">French cuisine served from a yatai stall. Escargot, foie gras, and wine under a tarpaulin canopy. Expect a 45-minute wait. Unforgettable.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">French</span>
+              <span class="restaurant-tag">Yatai</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;3,000&ndash;5,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Imaizumi Kitchen</h3>
+            <p class="restaurant-location">Imaizumi</p>
+            <p class="restaurant-description">Honest, hearty teishoku (set meals) for under &yen;1,000. The kind of place locals eat lunch every day. Simple, satisfying, incredible value.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Teishoku</span>
+              <span class="restaurant-tag">Value</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">Under &yen;1,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Yanagibashi Market</h3>
+            <p class="restaurant-location">Yanagibashi &middot; Morning</p>
+            <p class="restaurant-description">Morning seafood market with mentaiko tastings and fresh sashimi. Arrive before 10 a.m. for the best selection. Fukuoka's kitchen.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Market</span>
+              <span class="restaurant-tag">Seafood</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;500&ndash;2,000</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant Map -->
+  <section class="section map-section" id="map" aria-label="Fukuoka restaurant map">
+    <div class="container">
+      <span class="section-label reveal">Explore</span>
+      <h2 class="section-title reveal">Restaurant Map</h2>
+      <p class="section-description map-intro reveal">
+        Browse all featured restaurants by location. Click any marker for details. Filter by price category to find what suits your budget.
+      </p>
+      <div class="map-wrapper reveal">
+        <div class="map-controls">
+          <div class="map-filters" role="group" aria-label="Filter restaurants by price">
+            <button class="map-filter-btn active" data-filter="all">All</button>
+            <button class="map-filter-btn" data-filter="splurge">Splurge</button>
+            <button class="map-filter-btn" data-filter="mid">Mid-Range</button>
+            <button class="map-filter-btn" data-filter="budget">Budget</button>
+          </div>
+          <div class="map-legend">
+            <span class="map-legend-item"><span class="map-legend-dot splurge"></span> Splurge</span>
+            <span class="map-legend-item"><span class="map-legend-dot mid"></span> Mid-Range</span>
+            <span class="map-legend-item"><span class="map-legend-dot budget"></span> Budget</span>
+          </div>
+        </div>
+        <div id="restaurant-map" data-city="fukuoka" role="application" aria-label="Interactive map showing restaurant locations in Fukuoka"></div>
+        <p class="map-hint" role="status">Interact with the map to enable scroll zoom</p>
+        <div id="map-sr-fallback" class="sr-only" aria-label="Restaurant list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Markets -->
+  <section class="section" id="markets">
+    <div class="container">
+      <span class="section-label reveal">Street Food &amp; Markets</span>
+      <h2 class="section-title reveal">Where the City Eats</h2>
+
+      <div class="markets-grid">
+        <div class="market-card reveal">
+          <h3 class="market-name">Yanagibashi Market</h3>
+          <p class="market-description">
+            Fukuoka's premier morning market for fresh seafood and mentaiko tastings. 
+            Small vendors sell the city's best pollock roe, dried fish, and seasonal produce. 
+            Arrive before 10 a.m. for the full experience.
+          </p>
+        </div>
+        <div class="market-card reveal reveal-delay-1">
+          <h3 class="market-name">Nakasu &amp; Tenjin Yatai</h3>
+          <p class="market-description">
+            Fukuoka's legendary night river stalls &mdash; around 20 yatai line the banks of the Naka River 
+            in Nakasu, with more in Tenjin. Ramen, yakitori, oden, and gyoza under tarpaulin canopies. 
+            The soul of the city's food culture, best experienced after 8 p.m.
+          </p>
+        </div>
+        <div class="market-card reveal reveal-delay-2">
+          <h3 class="market-name">Nagahama Fish Market</h3>
+          <p class="market-description">
+            Early morning fish market where Fukuoka's restaurants source their seafood. 
+            Fresh sashimi breakfasts and a glimpse into the city's fishing heritage. 
+            Best visited at dawn for the real action.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal -->
+  <section class="section section-dark" id="seasonal">
+    <div class="container">
+      <span class="section-label reveal">Time Your Visit</span>
+      <h2 class="section-title reveal">Seasonal Specialties</h2>
+
+      <div class="seasonal-grid reveal">
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x1F338;</div>
+          <h3 class="seasonal-name">Spring</h3>
+          <p class="seasonal-jp">春 &middot; Haru</p>
+          <ul class="seasonal-items">
+            <li>Fresh pickles</li>
+            <li>Sandakan specialties</li>
+            <li>Cherry blossom festival foods</li>
+            <li>Seasonal sashimi</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x2600;</div>
+          <h3 class="seasonal-name">Summer</h3>
+          <p class="seasonal-jp">夏 &middot; Natsu</p>
+          <ul class="seasonal-items">
+            <li>Festival yakitori</li>
+            <li>Hakata Gion Yamakasa foods</li>
+            <li>Cold ramen variations</li>
+            <li>Mugicha (barley tea)</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x1F341;</div>
+          <h3 class="seasonal-name">Autumn</h3>
+          <p class="seasonal-jp">秋 &middot; Aki</p>
+          <ul class="seasonal-items">
+            <li>Somen nagashi events</li>
+            <li>Seasonal seafood</li>
+            <li>Autumn matsuri foods</li>
+            <li>Sweet potato shochu season</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x2744;</div>
+          <h3 class="seasonal-name">Winter</h3>
+          <p class="seasonal-jp">冬 &middot; Fuyu</p>
+          <ul class="seasonal-items">
+            <li>Fugu from Shimonoseki (sashimi or hotpot)</li>
+            <li>Motsu nabe season</li>
+            <li>Mizutaki hot pot</li>
+            <li>Hot shochu (oyuwari)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drinks -->
+  <section class="section" id="drinks">
+    <div class="container">
+      <span class="section-label reveal">Local Drinks</span>
+      <h2 class="section-title reveal">What to Drink</h2>
+
+      <div class="drinks-list reveal">
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F376;</div>
+          <div>
+            <h3 class="drink-name">Mugi (Barley) Shochu</h3>
+            <p class="drink-description">The local preference in Fukuoka. Served mizuwari (with cold water) or oyuwari (with hot water). Smooth, earthy, and easy-drinking.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F943;</div>
+          <div>
+            <h3 class="drink-name">Sweet Potato Shochu</h3>
+            <p class="drink-description">Kyushu's signature spirit. Brands like Kirishima and iichiko are staples at every izakaya. Rich, aromatic, and deeply satisfying.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F351;</div>
+          <div>
+            <h3 class="drink-name">Ume Drink</h3>
+            <p class="drink-description">Plum juice or umeshu (plum wine). Sweet, tart, and refreshing. A popular choice for those who prefer lighter drinks.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F375;</div>
+          <div>
+            <h3 class="drink-name">Mugicha</h3>
+            <p class="drink-description">Barley tea served cold in summer. Toasty, caffeine-free, and ubiquitous in Fukuoka homes and restaurants during the warmer months.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Etiquette -->
+  <section class="section section-dark" id="etiquette">
+    <div class="container">
+      <span class="section-label reveal">Dining Etiquette</span>
+      <h2 class="section-title reveal">Rules of the Table</h2>
+
+      <div class="etiquette-grid">
+        <div class="etiquette-card reveal">
+          <h3 class="etiquette-card-title">At the Yatai</h3>
+          <p>Order a drink first if you sit down &mdash; it's expected etiquette. Space is tight, so be considerate of your neighbors and keep belongings close.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-1">
+          <h3 class="etiquette-card-title">Pouring Drinks</h3>
+          <p>Pour drinks for others before yourself. This is especially important with shochu. Receiving a pour with both hands on the glass is a sign of respect.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-2">
+          <h3 class="etiquette-card-title">Show Appreciation</h3>
+          <p>Praise local specialties &mdash; a hearty "umai!" (delicious) is the highest compliment. Use small plates to share dishes communally at izakaya.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-3">
+          <h3 class="etiquette-card-title">General Manners</h3>
+          <p>The atmosphere is relaxed at yatai and izakaya, but always say "arigatou gozaimashita" when leaving. Fukuoka dining is warm, generous, and forgiving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next City -->
+  <a href="oita.html" class="parallax-section" style="height: 50vh; min-height: 350px; cursor: pointer; display: flex; text-decoration: none; color: inherit;">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1920&q=80');"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <p style="font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 1rem;">Next Destination</p>
+      <h2>Oita</h2>
+      <p>Hot Springs &amp; Hidden Flavors</p>
+    </div>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-logo">Japan Culinary Guide</p>
+        <p class="footer-tagline">For the serious food traveler</p>
+      </div>
+      <div class="footer-cities">
+        <a href="tokyo.html">Tokyo</a>
+        <a href="osaka.html">Osaka</a>
+        <a href="kyoto.html">Kyoto</a>
+        <a href="kobe.html">Kobe</a>
+        <a href="fukuoka.html">Fukuoka</a>
+        <a href="oita.html">Oita</a>
+        <a href="kyushu.html">Kyushu</a>
+      </div>
+    </div>
+    <p class="footer-bottom">Compiled from culinary resources, travel websites, and local publications.</p>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../js/maps.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

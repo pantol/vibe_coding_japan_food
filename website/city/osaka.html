@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osaka | Japan Culinary Guide</title>
+  <meta name="description" content="Osaka culinary guide: Takoyaki, okonomiyaki, kushikatsu, kitsune udon, hamo, fugu. Restaurants for every budget, markets, seasonal specialties, and dining etiquette.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav-header scrolled" aria-label="Main navigation">
+    <div class="nav-logo">
+      <a href="../index.html">Japan <span class="jp-text">日本</span> Culinary Guide</a>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="tokyo.html">Tokyo</a></li>
+      <li><a href="osaka.html" class="active">Osaka</a></li>
+      <li><a href="kyoto.html">Kyoto</a></li>
+      <li><a href="kobe.html">Kobe</a></li>
+      <li><a href="fukuoka.html">Fukuoka</a></li>
+      <li><a href="oita.html">Oita</a></li>
+      <li><a href="kyushu.html">Kyushu</a></li>
+    </ul>
+    <div class="nav-hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="../index.html">Home</a>
+    <a href="tokyo.html">Tokyo</a>
+    <a href="osaka.html">Osaka</a>
+    <a href="kyoto.html">Kyoto</a>
+    <a href="kobe.html">Kobe</a>
+    <a href="fukuoka.html">Fukuoka</a>
+    <a href="oita.html">Oita</a>
+    <a href="kyushu.html">Kyushu</a>
+  </div>
+
+  <!-- City Hero -->
+  <section class="city-hero">
+    <div class="city-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1590559899731-a382839e5549?w=1920&q=80');"></div>
+    <div class="city-hero-overlay"></div>
+    <div class="city-hero-content">
+      <a href="../index.html" class="city-hero-back">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        All Destinations
+      </a>
+      <h1 class="city-hero-title">Osaka</h1>
+      <p class="city-hero-jp">大阪</p>
+      <p class="city-hero-tagline">"Eating until you drop" &mdash; the civic value of kuidaore</p>
+    </div>
+  </section>
+
+  <!-- City Nav -->
+  <nav class="city-nav" aria-label="Page sections">
+    <div class="city-nav-inner">
+      <a href="#overview" class="active">Overview</a>
+      <a href="#dishes">Dishes</a>
+      <a href="#restaurants">Restaurants</a>
+      <a href="#map">Map</a>
+      <a href="#markets">Markets</a>
+      <a href="#seasonal">Seasonal</a>
+      <a href="#drinks">Drinks</a>
+      <a href="#etiquette">Etiquette</a>
+    </div>
+  </nav>
+
+  <!-- Overview -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-text reveal">
+          <span class="section-label">Chapter 2</span>
+          <h2 class="section-title">The Nation's Kitchen</h2>
+          <p>
+            Osaka calls itself "tenka no daidokoro" &mdash; the nation's kitchen. During the Edo period, it served as Japan's commercial capital, a hub where rice, soy sauce, and seafood from across the archipelago converged. The city's identity was forged in trade and fed by abundance.
+          </p>
+          <p>
+            The Osakan philosophy of "kuidaore" (eating until you drop) is not mere indulgence &mdash; it is a civic value. Where Tokyo prizes refinement, Osaka prizes flavor and volume. Signature dishes are bold, saucy, and designed for eating with friends while standing on a street corner.
+          </p>
+          <p>
+            Osaka's innovations include conveyor-belt sushi, instant ramen, and commercial takoyaki. This is the democratic table &mdash; food for everyone, meant to be shared loudly and devoured without pretense.
+          </p>
+        </div>
+        <div class="overview-sidebar reveal reveal-delay-2">
+          <div class="overview-stat">
+            <p class="overview-stat-label">Region</p>
+            <p class="overview-stat-value">Kansai</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Known For</p>
+            <p class="overview-stat-value">Takoyaki, Okonomiyaki, Kushikatsu</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Best Season</p>
+            <p class="overview-stat-value">Year-round (summer festivals)</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Price Range</p>
+            <p class="overview-stat-value">From &yen;300 to &yen;20,000+</p>
+          </div>
+          <div class="overview-stat">
+            <p class="overview-stat-label">Key Ethos</p>
+            <p class="overview-stat-value">Kuidaore (Eat till you drop)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax -->
+  <section class="parallax-section">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1920&q=80');"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <h2>Kuidaore</h2>
+      <p>Eating until you drop</p>
+    </div>
+  </section>
+
+  <!-- Must-Try Dishes -->
+  <section class="section" id="dishes">
+    <div class="container">
+      <span class="section-label reveal">Essential Eating</span>
+      <h2 class="section-title reveal">Must-Try Dishes</h2>
+      <p class="section-description reveal">
+        Click any dish to learn more about its history, flavor profile, and where to eat it.
+      </p>
+
+      <div class="dishes-grid">
+
+        <div class="dish-card reveal">
+          <h3 class="dish-card-title">Takoyaki</h3>
+          <p class="dish-card-jp">たこ焼き</p>
+          <p class="dish-card-description">
+            Crispy-skinned, molten-centered octopus balls. Invented in the 1930s by Endo Tomekichi. Topped with takoyaki sauce, mayo, and dancing bonito flakes. Osaka's undisputed street food icon.
+          </p>
+          <div class="dish-card-meta">
+            <span>Street Food Icon</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Invented 1935 by street vendor Endo Tomekichi in Osaka</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Crispy shell, molten dough center with tender octopus. Rich sauce, creamy mayo, umami bonito flakes.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Street stalls and standing counters. Eaten with toothpicks, piping hot. Careful of the molten center.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Abeno Takoyaki Yamachan, Takoyaki Wanaka</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-1">
+          <h3 class="dish-card-title">Okonomiyaki</h3>
+          <p class="dish-card-jp">お好み焼き</p>
+          <p class="dish-card-description">
+            Savory pancake &mdash; "grill what you like." Cabbage and flour batter loaded with meat or seafood. Slathered with thick fruity sauce, mayo, and katsuobushi. DIY at teppan tables.
+          </p>
+          <div class="dish-card-meta">
+            <span>Osaka Soul Food</span>
+            <span>&yen;&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Evolved from pre-war "issen yoshoku" one-coin Western food. Osaka-style mixes all ingredients together.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Savory cabbage-rich pancake with thick fruity sauce, creamy mayo, and dancing katsuobushi flakes.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Cook-it-yourself at teppan griddle tables, or let the chef handle it. Social, lively atmosphere.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Ajinoya, Mizuno</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-2">
+          <h3 class="dish-card-title">Kushikatsu</h3>
+          <p class="dish-card-jp">串カツ</p>
+          <p class="dish-card-description">
+            Deep-fried skewers born in 1920s Shinsekai as working-class food. Fine panko, light fry, endless variety. Cardinal rule: absolutely no double dipping in the communal sauce.
+          </p>
+          <div class="dish-card-meta">
+            <span>Shinsekai Classic</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>1920s Shinsekai district, created as affordable food for laborers and workers</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Lightly panko-breaded skewers of meat, seafood, and vegetables. Crispy, not greasy. Dipped in tangy Worcestershire-based sauce.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Standing counters in Shinsekai. Communal sauce pot &mdash; one dip only. Use cabbage leaf to scoop extra sauce.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Kushikatsu Daruma, Yaekatsu</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal">
+          <h3 class="dish-card-title">Kitsune Udon</h3>
+          <p class="dish-card-jp">きつねうどん</p>
+          <p class="dish-card-description">
+            Fat chewy wheat noodles in pale konbu-rich dashi, topped with sweet simmered aburaage (fried tofu). Originated at Matsubaaya in the 1890s. Simple, soul-warming, quintessentially Osaka.
+          </p>
+          <div class="dish-card-meta">
+            <span>Comfort Classic</span>
+            <span>&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Created at Matsubaaya in the 1890s, one of Osaka's oldest udon traditions</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Delicate konbu-rich dashi broth, chewy thick udon noodles, sweet and savory simmered aburaage tofu.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Traditional udon shops. Slurp freely. The broth is lighter than Tokyo's soy-heavy style.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Nishiya</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-1">
+          <h3 class="dish-card-title">Hamo</h3>
+          <p class="dish-card-jp">鱧</p>
+          <p class="dish-card-description">
+            Pike conger, peaking during Tenjin Matsuri in July. A delicate white fish requiring the bone-cut technique (honegiri) to slice through hundreds of tiny bones while keeping the flesh intact.
+          </p>
+          <div class="dish-card-meta">
+            <span>Seasonal Delicacy</span>
+            <span>&yen;&yen;&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Summer tradition tied to Tenjin Matsuri festival in July. Prized in Kansai cuisine for centuries.</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Delicate, refined white fish. Light and clean. Often served as tempura, shabu-shabu, or with ume (plum) sauce.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Upscale kaiseki restaurants and traditional Japanese dining rooms during summer months.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Seasonal &mdash; available at fine dining establishments across Osaka in summer</p></div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-2">
+          <h3 class="dish-card-title">Fugu</h3>
+          <p class="dish-card-jp">ふぐ</p>
+          <p class="dish-card-description">
+            Pufferfish, the winter specialty that requires licensed chefs to prepare. Osaka is Japan's biggest fugu market. Served as translucent sashimi (tessa), hot pot (tecchiri), or deep-fried (karaage).
+          </p>
+          <div class="dish-card-meta">
+            <span>Winter Specialty</span>
+            <span>&yen;&yen;&yen;</span>
+          </div>
+          <div class="dish-card-expanded">
+            <div class="detail-row"><span class="detail-label">Origin</span><p>Osaka is the center of Japan's fugu culture, consuming more pufferfish than any other city</p></div>
+            <div class="detail-row"><span class="detail-label">Flavor</span><p>Subtle, clean, delicate. Tessa (sashimi) is paper-thin. Tecchiri (hot pot) extracts deep umami from bones and skin.</p></div>
+            <div class="detail-row"><span class="detail-label">Setting</span><p>Specialist fugu restaurants, October through March. Licensed chefs only. A winter ritual.</p></div>
+            <div class="detail-row"><span class="detail-label">Where</span><p>Seasonal &mdash; specialist fugu restaurants throughout Osaka, particularly around Dotonbori</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurants -->
+  <section class="section section-dark" id="restaurants">
+    <div class="container">
+      <span class="section-label reveal">Where to Eat</span>
+      <h2 class="section-title reveal">Restaurant Guide</h2>
+      <p class="section-description reveal" style="margin-bottom: 2rem;">
+        From omakase counters to &yen;300 street stalls.
+      </p>
+
+      <div class="restaurant-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="splurge">Splurge</button>
+        <button class="filter-btn" data-filter="mid">Mid-Range</button>
+        <button class="filter-btn" data-filter="budget">Budget</button>
+      </div>
+
+      <div class="restaurant-list reveal">
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Sushi Nakatani</h3>
+            <p class="restaurant-location">Hozenji</p>
+            <p class="restaurant-description">An intimate 8-seat counter where the chef serves a 20-item omakase of pristine Edomae-style sushi. Quiet, focused, and extraordinary. Reserve well in advance.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Sushi</span>
+              <span class="restaurant-tag">Omakase</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;30,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Kitashinchi Kushikatsu Bon</h3>
+            <p class="restaurant-location">Kitashinchi</p>
+            <p class="restaurant-description">Elevating humble kushikatsu to fine dining with wagyu, foie gras, and seasonal ingredients. The antithesis of Shinsekai street counters &mdash; refined, inventive, and luxurious.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Kushikatsu</span>
+              <span class="restaurant-tag">Fine Dining</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;15,000+</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="splurge">
+          <div>
+            <h3 class="restaurant-name">Matsusakagyu Yakiniku M</h3>
+            <p class="restaurant-location">Hozenji Yokocho</p>
+            <p class="restaurant-description">Premium Matsusaka beef &mdash; one of Japan's top three wagyu brands &mdash; grilled at your table in a charming alleyway setting. Exceptional marbling and melt-in-your-mouth texture.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Yakiniku</span>
+              <span class="restaurant-tag">Wagyu</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;10,000&ndash;20,000</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Ajinoya Honten</h3>
+            <p class="restaurant-location">Namba</p>
+            <p class="restaurant-description">An okonomiyaki institution serving since the post-war era. The classic pork-and-squid mix is griddled to perfection. Sit at the teppan counter and watch the masters work.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Okonomiyaki</span>
+              <span class="restaurant-tag">Institution</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,500&ndash;2,500</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Mizuno</h3>
+            <p class="restaurant-location">Dotonbori</p>
+            <p class="restaurant-description">Famous for using yama-imo (mountain yam) batter that produces an impossibly fluffy okonomiyaki. The texture is lighter and creamier than the standard version. Always a queue.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Okonomiyaki</span>
+              <span class="restaurant-tag">Fluffy Style</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,500</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="mid">
+          <div>
+            <h3 class="restaurant-name">Nishiya</h3>
+            <p class="restaurant-location">Shinsaibashi</p>
+            <p class="restaurant-description">The definitive kitsune udon experience. Fat, chewy noodles in a clear, konbu-forward dashi with perfectly simmered sweet aburaage. No frills, just mastery.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Udon</span>
+              <span class="restaurant-tag">Traditional</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;800</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Abeno Takoyaki Yamachan</h3>
+            <p class="restaurant-location">Tennoji</p>
+            <p class="restaurant-description">Consistently rated among Osaka's best takoyaki. Perfectly crispy shells with molten, flavorful centers. Simple, fast, and dangerously addictive.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Takoyaki</span>
+              <span class="restaurant-tag">Top-rated</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;600</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Kushikatsu Daruma</h3>
+            <p class="restaurant-location">Shinsekai &middot; Original Branch</p>
+            <p class="restaurant-description">The original kushikatsu institution with the iconic angry chef statue outside. Golden-fried skewers with fine panko breading. Remember: no double dipping.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Kushikatsu</span>
+              <span class="restaurant-tag">Original</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;1,500</span>
+          </div>
+        </div>
+
+        <div class="restaurant-item" data-price="budget">
+          <div>
+            <h3 class="restaurant-name">Kuromon Market Stalls</h3>
+            <p class="restaurant-location">Kuromon Ichiba</p>
+            <p class="restaurant-description">Grilled scallops, fresh uni, sashimi on sticks, and seasonal fruit. Arrive before 10 a.m. for the freshest selection and fewer crowds. Osaka's kitchen within the kitchen.</p>
+            <div class="restaurant-tags">
+              <span class="restaurant-tag">Market</span>
+              <span class="restaurant-tag">Seafood</span>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <span class="restaurant-price">&yen;300&ndash;1,500</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant Map -->
+  <section class="section map-section" id="map" aria-label="Osaka restaurant map">
+    <div class="container">
+      <span class="section-label reveal">Explore</span>
+      <h2 class="section-title reveal">Restaurant Map</h2>
+      <p class="section-description map-intro reveal">
+        Browse all featured restaurants by location. Click any marker for details. Filter by price category to find what suits your budget.
+      </p>
+      <div class="map-wrapper reveal">
+        <div class="map-controls">
+          <div class="map-filters" role="group" aria-label="Filter restaurants by price">
+            <button class="map-filter-btn active" data-filter="all">All</button>
+            <button class="map-filter-btn" data-filter="splurge">Splurge</button>
+            <button class="map-filter-btn" data-filter="mid">Mid-Range</button>
+            <button class="map-filter-btn" data-filter="budget">Budget</button>
+          </div>
+          <div class="map-legend">
+            <span class="map-legend-item"><span class="map-legend-dot splurge"></span> Splurge</span>
+            <span class="map-legend-item"><span class="map-legend-dot mid"></span> Mid-Range</span>
+            <span class="map-legend-item"><span class="map-legend-dot budget"></span> Budget</span>
+          </div>
+        </div>
+        <div id="restaurant-map" data-city="osaka" role="application" aria-label="Interactive map showing restaurant locations in Osaka"></div>
+        <p class="map-hint" role="status">Interact with the map to enable scroll zoom</p>
+        <div id="map-sr-fallback" class="sr-only" aria-label="Restaurant list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Markets -->
+  <section class="section" id="markets">
+    <div class="container">
+      <span class="section-label reveal">Street Food &amp; Markets</span>
+      <h2 class="section-title reveal">Where the City Eats</h2>
+
+      <div class="markets-grid">
+        <div class="market-card reveal">
+          <h3 class="market-name">Dotonbori</h3>
+          <p class="market-description">
+            Osaka's neon-lit food circus along the canal. Giant mechanical crabs, glowing gyoza signs, 
+            and the iconic Glico Running Man set the scene for an endless parade of takoyaki, okonomiyaki, 
+            and kushikatsu stalls. Best experienced at dusk when the lights come alive.
+          </p>
+        </div>
+        <div class="market-card reveal reveal-delay-1">
+          <h3 class="market-name">Kuromon Ichiba Market</h3>
+          <p class="market-description">
+            Known as "Osaka's Kitchen," this covered market has served the city for over a century. 
+            Fresh seafood, takoyaki, grilled skewers, seasonal fruit, and fugu. 
+            The stalls are best visited early morning before the tourist crowds arrive.
+          </p>
+        </div>
+        <div class="market-card reveal reveal-delay-2">
+          <h3 class="market-name">Shinsekai</h3>
+          <p class="market-description">
+            A retro district built around the Tsutenkaku Tower, Shinsekai is the spiritual home of kushikatsu. 
+            Neon signs, standing bars, and deep-fried everything. Working-class charm 
+            and unapologetic indulgence &mdash; pure Osaka energy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal -->
+  <section class="section section-dark" id="seasonal">
+    <div class="container">
+      <span class="section-label reveal">Time Your Visit</span>
+      <h2 class="section-title reveal">Seasonal Specialties</h2>
+
+      <div class="seasonal-grid reveal">
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x1F338;</div>
+          <h3 class="seasonal-name">Spring</h3>
+          <p class="seasonal-jp">春 &middot; Haru</p>
+          <ul class="seasonal-items">
+            <li>Sakura mochi</li>
+            <li>Hanami dango</li>
+            <li>Cherry blossom festivals</li>
+            <li>Fresh spring vegetables</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x2600;</div>
+          <h3 class="seasonal-name">Summer</h3>
+          <p class="seasonal-jp">夏 &middot; Natsu</p>
+          <ul class="seasonal-items">
+            <li>Takoyaki festivals</li>
+            <li>Hamo (pike conger)</li>
+            <li>Kakigori (shaved ice)</li>
+            <li>Tenjin Matsuri food stalls</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x1F341;</div>
+          <h3 class="seasonal-name">Autumn</h3>
+          <p class="seasonal-jp">秋 &middot; Aki</p>
+          <ul class="seasonal-items">
+            <li>Matsutake mushrooms</li>
+            <li>Chestnut desserts</li>
+            <li>Seasonal kaiseki</li>
+            <li>Autumn festival foods</li>
+          </ul>
+        </div>
+        <div class="seasonal-card">
+          <div class="seasonal-icon">&#x2744;</div>
+          <h3 class="seasonal-name">Winter</h3>
+          <p class="seasonal-jp">冬 &middot; Fuyu</p>
+          <ul class="seasonal-items">
+            <li>Fugu (pufferfish)</li>
+            <li>Nabe (hot pot)</li>
+            <li>Oden</li>
+            <li>Warming street food</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drinks -->
+  <section class="section" id="drinks">
+    <div class="container">
+      <span class="section-label reveal">Local Drinks</span>
+      <h2 class="section-title reveal">What to Drink</h2>
+
+      <div class="drinks-list reveal">
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F37A;</div>
+          <div>
+            <h3 class="drink-name">Asahi Beer</h3>
+            <p class="drink-description">Brewed in Suita since 1889, Asahi is Osaka's hometown beer. The crisp, dry Super Dry was born here and pairs perfectly with kushikatsu and takoyaki.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F376;</div>
+          <div>
+            <h3 class="drink-name">Sake from Fushimi</h3>
+            <p class="drink-description">Nearby Fushimi (Kyoto) supplies Osaka with exceptional sake. Soft water produces a mellow, slightly sweet style that complements Osaka's bold flavors.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F37B;</div>
+          <div>
+            <h3 class="drink-name">Minoh Beer</h3>
+            <p class="drink-description">Award-winning craft brewery from the Minoh hills north of Osaka. Their stout and pale ale have won international acclaim. Osaka's craft beer pioneer.</p>
+          </div>
+        </div>
+        <div class="drink-item">
+          <div class="drink-icon">&#x1F943;</div>
+          <div>
+            <h3 class="drink-name">Tachinomi (Standing Bars)</h3>
+            <p class="drink-description">Standing bars in Tenma and Kyobashi are Osaka's after-work ritual. Cheap beer, highballs, and small plates. Shoulder-to-shoulder with salarymen. The real Osaka.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Etiquette -->
+  <section class="section section-dark" id="etiquette">
+    <div class="container">
+      <span class="section-label reveal">Dining Etiquette</span>
+      <h2 class="section-title reveal">Rules of the Table</h2>
+
+      <div class="etiquette-grid">
+        <div class="etiquette-card reveal">
+          <h3 class="etiquette-card-title">Kuidaore Spirit</h3>
+          <p>Eat boldly and without hesitation. Osaka's food culture rewards enthusiasm. Try everything, order generously, and don't hold back &mdash; restraint is not an Osaka virtue.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-1">
+          <h3 class="etiquette-card-title">No Double Dipping</h3>
+          <p>At kushikatsu counters, the sauce is communal. Dip your skewer once only. Use the cabbage leaves provided to scoop extra sauce if needed. This rule is sacred.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-2">
+          <h3 class="etiquette-card-title">General Rules</h3>
+          <p>No tipping. Say "gochisosama" when finished. Never stick chopsticks upright in rice. Share tables freely in busy areas &mdash; Osakans are communal eaters.</p>
+        </div>
+        <div class="etiquette-card reveal reveal-delay-3">
+          <h3 class="etiquette-card-title">Train Etiquette</h3>
+          <p>No eating on trains or while walking in stations. Finish your takoyaki at the stall before moving on. Eating is for standing still or sitting down, not commuting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next City -->
+  <a href="kyoto.html" class="parallax-section" style="height: 50vh; min-height: 350px; cursor: pointer; display: flex; text-decoration: none; color: inherit;">
+    <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1920&q=80');"></div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content">
+      <p style="font-size: 0.8rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 1rem;">Next Destination</p>
+      <h2>Kyoto</h2>
+      <p>The Ancient Capital</p>
+    </div>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-logo">Japan Culinary Guide</p>
+        <p class="footer-tagline">For the serious food traveler</p>
+      </div>
+      <div class="footer-cities">
+        <a href="tokyo.html">Tokyo</a>
+        <a href="osaka.html">Osaka</a>
+        <a href="kyoto.html">Kyoto</a>
+        <a href="kobe.html">Kobe</a>
+        <a href="fukuoka.html">Fukuoka</a>
+        <a href="oita.html">Oita</a>
+        <a href="kyushu.html">Kyushu</a>
+      </div>
+    </div>
+    <p class="footer-bottom">Compiled from culinary resources, travel websites, and local publications.</p>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../js/maps.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
