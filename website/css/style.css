@@ -1184,6 +1184,7 @@ img {
 
 .restaurant-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 0.6rem;
 }
@@ -1192,7 +1193,6 @@ img {
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   color: var(--color-accent-gold);
-  text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
@@ -1201,6 +1201,12 @@ img {
 
 .restaurant-link:hover {
   opacity: 0.7;
+  text-decoration: underline;
+}
+
+.restaurant-link:focus-visible {
+  outline: 2px solid var(--color-accent-gold);
+  outline-offset: 2px;
 }
 
 .restaurant-link svg {
@@ -1217,13 +1223,17 @@ img {
 }
 
 .map-popup-link {
-  font-size: 0.7em;
+  font-size: 0.7rem;
   color: var(--color-accent-gold);
-  text-decoration: none;
 }
 
 .map-popup-link:hover {
   text-decoration: underline;
+}
+
+.map-popup-link:focus-visible {
+  outline: 2px solid var(--color-accent-gold);
+  outline-offset: 2px;
 }
 
 /* --- Restaurant Section Dark Theme Overrides --- */

@@ -946,8 +946,9 @@ function initCityMap(cityKey) {
     }).addTo(map);
 
     // Popup content — uses CSS classes for theme compatibility
-    const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${r.lat},${r.lng}`;
-    const gmapsDirUrl = `https://www.google.com/maps/dir/?api=1&destination=${r.lat},${r.lng}`;
+    const gmapsQuery = encodeURIComponent(r.name + ' ' + r.address);
+    const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${gmapsQuery}`;
+    const gmapsDirUrl = `https://www.google.com/maps/dir/?api=1&destination=${gmapsQuery}`;
     const popup = `
       <div class="map-popup">
         <div class="map-popup-header">
