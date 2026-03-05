@@ -2105,3 +2105,325 @@ html.dark-mode .dark-mode-toggle .icon-sun { display: block; }
     height: 300px;
   }
 }
+
+/* ===================================
+   Road Trip / Guide Tables
+   =================================== */
+
+.guide-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 2rem;
+}
+
+.guide-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.guide-table thead th {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  text-align: left;
+  padding: 1rem 1.2rem;
+  border-bottom: 2px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.guide-table tbody td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.guide-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.guide-table tbody tr:hover {
+  background: rgba(196, 163, 90, 0.04);
+}
+
+html.dark-mode .guide-table tbody tr:hover {
+  background: rgba(196, 163, 90, 0.06);
+}
+
+.guide-table .price-highlight {
+  color: var(--color-accent-gold);
+  font-weight: 500;
+}
+
+.guide-table .table-row-accent td {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.guide-table .table-row-total td {
+  border-top: 2px solid var(--color-border);
+  border-bottom: 2px solid var(--color-border);
+  background: rgba(196, 163, 90, 0.05);
+}
+
+html.dark-mode .guide-table .table-row-total td {
+  background: rgba(196, 163, 90, 0.08);
+}
+
+.guide-table .table-row-best td {
+  background: rgba(196, 163, 90, 0.1);
+  border-bottom: 2px solid var(--color-accent-gold);
+}
+
+html.dark-mode .guide-table .table-row-best td {
+  background: rgba(196, 163, 90, 0.12);
+}
+
+/* Tags (inline labels in tables) */
+.tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.tag-green {
+  background: rgba(90, 138, 106, 0.12);
+  color: #5a8a6a;
+}
+
+html.dark-mode .tag-green {
+  background: rgba(90, 138, 106, 0.2);
+  color: #7aaa8a;
+}
+
+.tag-muted {
+  background: rgba(138, 126, 114, 0.1);
+  color: var(--color-muted);
+}
+
+/* Road Trip Option blocks */
+.road-trip-option {
+  margin-top: 2rem;
+}
+
+.option-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.option-tag {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  border-radius: 2px;
+}
+
+.option-tag-gold {
+  border-color: var(--color-accent-gold);
+  color: var(--color-accent-gold);
+}
+
+.option-description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-muted);
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+}
+
+/* Pass Cards (KEP / TEP) */
+.passes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.pass-card {
+  background: rgba(247, 244, 239, 0.05);
+  border: 1px solid rgba(247, 244, 239, 0.1);
+  padding: 2.5rem;
+  position: relative;
+}
+
+.pass-card-recommended {
+  border-color: var(--color-accent-gold);
+  background: rgba(196, 163, 90, 0.06);
+}
+
+.pass-card-recommended::before {
+  content: 'Best Value';
+  position: absolute;
+  top: -1px;
+  right: 2rem;
+  background: var(--color-accent-gold);
+  color: var(--color-bg-dark);
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+}
+
+.pass-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.pass-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+  color: var(--color-text-light);
+}
+
+.pass-subtitle {
+  display: block;
+  font-size: 0.85rem;
+  font-style: italic;
+  opacity: 0.5;
+  margin-top: 0.3rem;
+}
+
+.pass-duration {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 1.5rem;
+}
+
+.pass-price-block {
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(247, 244, 239, 0.1);
+  border-bottom: 1px solid rgba(247, 244, 239, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.pass-price {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+  line-height: 1.2;
+}
+
+.pass-card-recommended .pass-price {
+  color: var(--color-accent-gold);
+}
+
+.pass-price-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+}
+
+.pass-notes {
+  list-style: none;
+  padding: 0;
+}
+
+.pass-notes li {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: rgba(247, 244, 239, 0.7);
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.pass-notes li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent-gold);
+  opacity: 0.6;
+}
+
+/* Summary table highlight */
+.guide-table-summary .table-row-best td:first-child {
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.guide-table-summary .table-row-best td:first-child::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent-gold);
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+  .guide-table {
+    font-size: 0.85rem;
+  }
+
+  .guide-table thead th,
+  .guide-table tbody td {
+    padding: 0.8rem;
+  }
+
+  .passes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .option-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .guide-table thead th,
+  .guide-table tbody td {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .pass-card {
+    padding: 1.8rem;
+  }
+
+  .pass-price {
+    font-size: 2rem;
+  }
+}
