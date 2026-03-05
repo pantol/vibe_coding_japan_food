@@ -2114,33 +2114,60 @@ html.dark-mode .dark-mode-toggle .icon-sun { display: block; }
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin-top: 2rem;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+html.dark-mode .guide-table-wrapper {
+  background: rgba(247, 244, 239, 0.03);
+  border-color: rgba(247, 244, 239, 0.1);
 }
 
 .guide-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
   line-height: 1.6;
 }
 
 .guide-table thead th {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 0.68rem;
+  font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-muted);
   text-align: left;
-  padding: 1rem 1.2rem;
+  padding: 1.1rem 1.5rem;
   border-bottom: 2px solid var(--color-border);
   white-space: nowrap;
+  background: rgba(44, 37, 32, 0.02);
+}
+
+html.dark-mode .guide-table thead th {
+  background: rgba(247, 244, 239, 0.04);
+  border-bottom-color: rgba(247, 244, 239, 0.12);
 }
 
 .guide-table tbody td {
-  padding: 1rem 1.2rem;
+  padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--color-border);
-  vertical-align: top;
+  vertical-align: middle;
+}
+
+html.dark-mode .guide-table tbody td {
+  border-bottom-color: rgba(247, 244, 239, 0.06);
+}
+
+/* Zebra striping */
+.guide-table tbody tr:nth-child(even) {
+  background: rgba(44, 37, 32, 0.02);
+}
+
+html.dark-mode .guide-table tbody tr:nth-child(even) {
+  background: rgba(247, 244, 239, 0.02);
 }
 
 .guide-table tbody tr:last-child td {
@@ -2148,41 +2175,58 @@ html.dark-mode .dark-mode-toggle .icon-sun { display: block; }
 }
 
 .guide-table tbody tr:hover {
-  background: rgba(196, 163, 90, 0.04);
+  background: rgba(196, 163, 90, 0.06);
 }
 
 html.dark-mode .guide-table tbody tr:hover {
-  background: rgba(196, 163, 90, 0.06);
+  background: rgba(196, 163, 90, 0.08);
+}
+
+/* First column emphasis */
+.guide-table tbody td:first-child {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
+/* Right-align price columns */
+.guide-table tbody td:nth-child(3),
+.guide-table tbody td:nth-child(4),
+.guide-table thead th:nth-child(3),
+.guide-table thead th:nth-child(4) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 
 .guide-table .price-highlight {
   color: var(--color-accent-gold);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .guide-table .table-row-accent td {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--color-muted);
   font-style: italic;
 }
 
 .guide-table .table-row-total td {
   border-top: 2px solid var(--color-border);
-  border-bottom: 2px solid var(--color-border);
-  background: rgba(196, 163, 90, 0.05);
+  border-bottom: none;
+  background: rgba(196, 163, 90, 0.07);
+  font-size: 0.95rem;
 }
 
 html.dark-mode .guide-table .table-row-total td {
-  background: rgba(196, 163, 90, 0.08);
+  border-top-color: rgba(247, 244, 239, 0.12);
+  background: rgba(196, 163, 90, 0.1);
 }
 
 .guide-table .table-row-best td {
-  background: rgba(196, 163, 90, 0.1);
+  background: rgba(196, 163, 90, 0.12);
   border-bottom: 2px solid var(--color-accent-gold);
 }
 
 html.dark-mode .guide-table .table-row-best td {
-  background: rgba(196, 163, 90, 0.12);
+  background: rgba(196, 163, 90, 0.15);
 }
 
 /* Tags (inline labels in tables) */
@@ -2395,12 +2439,12 @@ html.dark-mode .tag-green {
 /* Responsive tables */
 @media (max-width: 768px) {
   .guide-table {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
 
   .guide-table thead th,
   .guide-table tbody td {
-    padding: 0.8rem;
+    padding: 0.75rem 1rem;
   }
 
   .passes-grid {
@@ -2415,8 +2459,12 @@ html.dark-mode .tag-green {
 @media (max-width: 480px) {
   .guide-table thead th,
   .guide-table tbody td {
-    padding: 0.6rem;
-    font-size: 0.8rem;
+    padding: 0.6rem 0.7rem;
+    font-size: 0.75rem;
+  }
+
+  .guide-table thead th {
+    font-size: 0.6rem;
   }
 
   .pass-card {
