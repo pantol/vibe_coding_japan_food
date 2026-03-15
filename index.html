@@ -14,12 +14,15 @@
   <script>
     (function(){try{var s=localStorage.getItem('darkMode');if(s==='true'||(s===null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark-mode')}}catch(e){}})();
   </script>
+  <script>
+    (function(){try{var l=localStorage.getItem('lang');if(l)document.documentElement.lang=l}catch(e){}})();
+  </script>
 </head>
 <body>
 
   <!-- Loading Screen -->
   <div class="loading-screen">
-    <p class="loader-text">Japan Culinary Guide</p>
+    <p class="loader-text" data-i18n="loader.text">Japan Culinary Guide</p>
     <div class="loading-bar"><div class="loading-bar-inner"></div></div>
   </div>
 
@@ -31,9 +34,9 @@
       </a>
     </div>
     <ul class="nav-menu">
-      <li><a href="#destinations">Destinations</a></li>
-      <li><a href="#philosophy">Philosophy</a></li>
-      <li><a href="attractions/index.html">Attractions</a></li>
+      <li><a href="#destinations" data-i18n="nav.destinations">Destinations</a></li>
+      <li><a href="#philosophy" data-i18n="nav.philosophy">Philosophy</a></li>
+      <li><a href="attractions/index.html" data-i18n="nav.attractions">Attractions</a></li>
       <li><a href="city/tokyo.html">Tokyo</a></li>
       <li><a href="city/osaka.html">Osaka</a></li>
       <li><a href="city/kyoto.html">Kyoto</a></li>
@@ -44,10 +47,16 @@
       <li><a href="city/nagasaki.html">Nagasaki</a></li>
       <li><a href="city/nikko.html">Nikko</a></li>
     </ul>
-    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
-      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-    </button>
+    <div class="nav-controls">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang-switch="en" aria-label="English">EN</button>
+        <button class="lang-btn" data-lang-switch="pl" aria-label="Polski">PL</button>
+      </div>
+      <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </div>
     <div class="nav-hamburger">
       <span></span>
       <span></span>
@@ -57,9 +66,9 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu">
-    <a href="#destinations">Destinations</a>
-    <a href="#philosophy">Philosophy</a>
-    <a href="attractions/index.html">Attractions</a>
+    <a href="#destinations" data-i18n="nav.destinations">Destinations</a>
+    <a href="#philosophy" data-i18n="nav.philosophy">Philosophy</a>
+    <a href="attractions/index.html" data-i18n="nav.attractions">Attractions</a>
     <a href="city/tokyo.html">Tokyo</a>
     <a href="city/osaka.html">Osaka</a>
     <a href="city/kyoto.html">Kyoto</a>
@@ -79,6 +88,10 @@
     <a href="city/kyushu.html">Kyushu</a>
     <a href="city/road-trip.html">Road Trip</a>
   
+  <div class="lang-switcher" style="margin: 1rem 0;">
+    <button class="lang-btn" data-lang-switch="en" aria-label="English">EN</button>
+    <button class="lang-btn" data-lang-switch="pl" aria-label="Polski">PL</button>
+  </div>
   <button class="dark-mode-toggle" aria-label="Toggle dark mode">
     <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -90,21 +103,14 @@
     <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1553621042-f6e147245754?w=1920&q=80');"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-subtitle">A Culinary Journey</p>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">A Culinary Journey</p>
       <h1 class="hero-title">Japan</h1>
       <p class="hero-title-jp">日本料理の旅</p>
-      <p class="hero-description">
-        Every city, every prefecture, every mountain valley and coastal village 
-        has its own food traditions. This is a guide for those who want to eat 
-        like someone who lives in these places.
-      </p>
-      <a href="#destinations" class="btn btn-light">
-        Explore Destinations
-        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      <p class="hero-description" data-i18n="hero.description">Every city, every prefecture, every mountain valley and coastal village has its own food traditions. This is a guide for those who want to eat like someone who lives in these places.</p>
+      <a href="#destinations" class="btn btn-light"><span data-i18n="hero.cta">Explore Destinations</span> <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
     <div class="scroll-indicator">
-      <span>scroll</span>
+      <span data-i18n="hero.scroll">scroll</span>
       <div class="line"></div>
     </div>
   </section>
@@ -112,7 +118,7 @@
   <!-- Philosophy / Intro -->
   <section class="section-intro" id="philosophy">
     <div class="container-narrow">
-      <span class="section-label reveal">Daily Philosophy</span>
+      <span class="section-label reveal" data-i18n="philosophy.label">Daily Philosophy</span>
       <div class="divider reveal"></div>
       <figure class="daily-quote-container reveal">
         <p class="daily-quote-jp" id="daily-quote-jp" lang="ja">一期一会</p>
@@ -120,7 +126,7 @@
         <figcaption class="intro-quote-author" id="daily-quote-author">&mdash; Ii Naosuke &mdash; Ichi-go ichi-e, the philosophy of treasuring every encounter</figcaption>
       </figure>
       <div class="divider reveal"></div>
-      <p class="section-description reveal" style="margin: 2rem auto; text-align: center; text-indent: 0;">
+      <p class="section-description reveal" data-i18n-html="philosophy.description" style="margin: 2rem auto; text-align: center; text-indent: 0;">
         Japan does not have a cuisine. It has hundreds. Each destination in this guide 
         covers the food culture, essential dishes, seasonal rhythms, drinking traditions, 
         and dining etiquette of each location&mdash;the education you need before you sit 
@@ -132,9 +138,9 @@
   <!-- Destinations -->
   <section class="section" id="destinations">
     <div class="container">
-      <span class="section-label reveal">Destinations</span>
-      <h2 class="section-title reveal">Explore Japan's Culinary Regions &amp; Attractions</h2>
-      <p class="section-description reveal">
+      <span class="section-label reveal" data-i18n="dest.label">Destinations</span>
+      <h2 class="section-title reveal" data-i18n-html="dest.title">Explore Japan's Culinary Regions &amp; Attractions</h2>
+      <p class="section-description reveal" data-i18n="dest.description">
         From the refined counters of Tokyo to the volcanic kitchens of Kyushu, 
         each region offers a distinct culinary identity shaped by geography, history, 
         and the obsessions of its people. Discover temples, castles, and natural wonders along the way.
@@ -147,10 +153,10 @@
           <div class="city-card-overlay"></div>
         </div>
         <div class="city-featured-content">
-          <span class="section-label">Chapter 1</span>
+          <span class="section-label" data-i18n="tokyo.chapter">Chapter 1</span>
           <h3 class="section-title">Tokyo</h3>
-          <p class="section-title-jp" style="color: rgba(247,244,239,0.4);">東京 &mdash; The Capital of Endless Appetite</p>
-          <p class="section-description">
+          <p class="section-title-jp" data-i18n-html="tokyo.subtitle" style="color: rgba(247,244,239,0.4);">東京 &mdash; The Capital of Endless Appetite</p>
+          <p class="section-description" data-i18n="tokyo.description">
             The most cosmopolitan food city on Earth and one of the most deeply 
             traditional. More Michelin stars than any other metropolis, yet some of 
             its greatest meals are served on plastic trays in rooms with six seats 
@@ -164,7 +170,7 @@
             <span>Yakitori</span>
           </div>
           <span class="btn btn-light" style="margin-top: 1.5rem;">
-            Explore Tokyo
+            <span data-i18n="tokyo.cta">Explore Tokyo</span>
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </span>
         </div>
@@ -177,10 +183,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Chapter 2</p>
+            <p class="city-card-label" data-i18n="card.chapter2">Chapter 2</p>
             <h3 class="city-card-title">Osaka</h3>
             <p class="city-card-jp">大阪</p>
-            <p class="city-card-tagline">The Nation's Kitchen &mdash; Eating until you drop</p>
+            <p class="city-card-tagline" data-i18n-html="osaka.tagline">The Nation's Kitchen &mdash; Eating until you drop</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -191,10 +197,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Chapter 3</p>
+            <p class="city-card-label" data-i18n="card.chapter3">Chapter 3</p>
             <h3 class="city-card-title">Kyoto</h3>
             <p class="city-card-jp">京都</p>
-            <p class="city-card-tagline">The Refined Palate of the Ancient Capital</p>
+            <p class="city-card-tagline" data-i18n="kyoto.tagline">The Refined Palate of the Ancient Capital</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -205,10 +211,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Chapter 4</p>
+            <p class="city-card-label" data-i18n="card.chapter4">Chapter 4</p>
             <h3 class="city-card-title">Kobe</h3>
             <p class="city-card-jp">神戸</p>
-            <p class="city-card-tagline">Where East Met West on the Plate</p>
+            <p class="city-card-tagline" data-i18n="kobe.tagline">Where East Met West on the Plate</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -219,10 +225,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1554797589-7241bb691973?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Chapter 5</p>
+            <p class="city-card-label" data-i18n="card.chapter5">Chapter 5</p>
             <h3 class="city-card-title">Fukuoka</h3>
             <p class="city-card-jp">福岡</p>
-            <p class="city-card-tagline">Kyushu's Fearless Food Capital</p>
+            <p class="city-card-tagline" data-i18n="fukuoka.tagline">Kyushu's Fearless Food Capital</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -233,10 +239,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Chapter 6</p>
+            <p class="city-card-label" data-i18n="card.chapter6">Chapter 6</p>
             <h3 class="city-card-title">Oita</h3>
             <p class="city-card-jp">大分</p>
-            <p class="city-card-tagline">Hot Springs, Wild Mountains, and an Untouched Pantry</p>
+            <p class="city-card-tagline" data-i18n="oita.tagline">Hot Springs, Wild Mountains, and an Untouched Pantry</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -247,10 +253,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Chapter 7</p>
+            <p class="city-card-label" data-i18n="card.chapter7">Chapter 7</p>
             <h3 class="city-card-title">Kyushu</h3>
             <p class="city-card-jp">九州</p>
-            <p class="city-card-tagline">A Regional Specialties Overview</p>
+            <p class="city-card-tagline" data-i18n="kyushu.tagline">A Regional Specialties Overview</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -261,10 +267,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Attractions</p>
+            <p class="city-card-label" data-i18n="card.attractions">Attractions</p>
             <h3 class="city-card-title">Nara</h3>
             <p class="city-card-jp">奈良</p>
-            <p class="city-card-tagline">Sacred Deer &amp; Ancient Temples</p>
+            <p class="city-card-tagline" data-i18n-html="nara.tagline">Sacred Deer &amp; Ancient Temples</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -275,10 +281,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1570459027562-4a916cc6113f?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Attractions</p>
+            <p class="city-card-label" data-i18n="card.attractions">Attractions</p>
             <h3 class="city-card-title">Himeji</h3>
             <p class="city-card-jp">姫路</p>
-            <p class="city-card-tagline">The White Heron Castle</p>
+            <p class="city-card-tagline" data-i18n="himeji.tagline">The White Heron Castle</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -289,10 +295,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Attractions</p>
+            <p class="city-card-label" data-i18n="card.attractions">Attractions</p>
             <h3 class="city-card-title">Kurashiki</h3>
             <p class="city-card-jp">倉敷</p>
-            <p class="city-card-tagline">The White-Walled Merchant Quarter</p>
+            <p class="city-card-tagline" data-i18n="kurashiki.tagline">The White-Walled Merchant Quarter</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -303,10 +309,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Attractions</p>
+            <p class="city-card-label" data-i18n="card.attractions">Attractions</p>
             <h3 class="city-card-title">Hiroshima</h3>
             <p class="city-card-jp">広島</p>
-            <p class="city-card-tagline">City of Peace and Resilience</p>
+            <p class="city-card-tagline" data-i18n="hiroshima.tagline">City of Peace and Resilience</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -317,10 +323,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Attractions</p>
+            <p class="city-card-label" data-i18n="card.attractions">Attractions</p>
             <h3 class="city-card-title">Nagasaki</h3>
             <p class="city-card-jp">長崎</p>
-            <p class="city-card-tagline">Where East Met West</p>
+            <p class="city-card-tagline" data-i18n="nagasaki.tagline">Where East Met West</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -331,10 +337,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1553621042-f6e147245754?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Attractions</p>
+            <p class="city-card-label" data-i18n="card.attractions">Attractions</p>
             <h3 class="city-card-title">Beppu</h3>
             <p class="city-card-jp">別府</p>
-            <p class="city-card-tagline">The Seven Hells of Hot Springs</p>
+            <p class="city-card-tagline" data-i18n="beppu.tagline">The Seven Hells of Hot Springs</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -345,10 +351,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Attractions</p>
+            <p class="city-card-label" data-i18n="card.attractions">Attractions</p>
             <h3 class="city-card-title">Takachiho</h3>
             <p class="city-card-jp">高千穂</p>
-            <p class="city-card-tagline">Where Gods Descended from Heaven</p>
+            <p class="city-card-tagline" data-i18n="takachiho.tagline">Where Gods Descended from Heaven</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -359,10 +365,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1440581572325-0bea30075d9d?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Attractions</p>
+            <p class="city-card-label" data-i18n="card.attractions">Attractions</p>
             <h3 class="city-card-title">Yakushima</h3>
             <p class="city-card-jp">屋久島</p>
-            <p class="city-card-tagline">The Ancient Cedar Forest</p>
+            <p class="city-card-tagline" data-i18n="yakushima.tagline">The Ancient Cedar Forest</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -373,10 +379,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Attractions</p>
+            <p class="city-card-label" data-i18n="card.attractions">Attractions</p>
             <h3 class="city-card-title">Kagoshima</h3>
             <p class="city-card-jp">鹿児島</p>
-            <p class="city-card-tagline">The Naples of the East</p>
+            <p class="city-card-tagline" data-i18n="kagoshima.tagline">The Naples of the East</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -387,10 +393,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Attractions</p>
+            <p class="city-card-label" data-i18n="card.attractions">Attractions</p>
             <h3 class="city-card-title">Nikko</h3>
             <p class="city-card-jp">日光</p>
-            <p class="city-card-tagline">Lavish Shrines in Mountain Forest</p>
+            <p class="city-card-tagline" data-i18n="nikko.tagline">Lavish Shrines in Mountain Forest</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -401,10 +407,10 @@
           <div class="city-card-bg" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80');"></div>
           <div class="city-card-overlay"></div>
           <div class="city-card-content">
-            <p class="city-card-label">Planning</p>
+            <p class="city-card-label" data-i18n="card.planning">Planning</p>
             <h3 class="city-card-title">Road Trip</h3>
             <p class="city-card-jp">ロードトリップ</p>
-            <p class="city-card-tagline">Kyushu toll costs &mdash; ETC vs expressway passes</p>
+            <p class="city-card-tagline" data-i18n-html="roadtrip.tagline">Kyushu toll costs &mdash; ETC vs expressway passes</p>
           </div>
           <div class="city-card-arrow">
             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -421,30 +427,30 @@
     <div class="parallax-overlay"></div>
     <div class="parallax-content">
       <h2>Kuidaore</h2>
-      <p>"Eating until you drop" &mdash; the Osakan philosophy of food</p>
+      <p data-i18n-html="parallax.kuidaore">"Eating until you drop" &mdash; the Osakan philosophy of food</p>
     </div>
   </section>
 
   <!-- How to Use -->
   <section class="section section-dark">
     <div class="container-narrow" style="text-align: center;">
-      <span class="section-label reveal">How to Use This Guide</span>
-      <h2 class="section-title reveal" style="margin-bottom: 3rem;">Every Chapter, Two Halves</h2>
+      <span class="section-label reveal" data-i18n="howto.label">How to Use This Guide</span>
+      <h2 class="section-title reveal" data-i18n="howto.title" style="margin-bottom: 3rem;">Every Chapter, Two Halves</h2>
       
       <div class="etiquette-grid" style="text-align: left;">
         <div class="etiquette-card reveal">
-          <h3 class="etiquette-card-title">The Education</h3>
-          <p>Food culture overview, essential dishes and their history, seasonal rhythms, 
+          <h3 class="etiquette-card-title" data-i18n="howto.education.title">The Education</h3>
+          <p data-i18n-html="howto.education.text">Food culture overview, essential dishes and their history, seasonal rhythms, 
           drinking traditions, and dining etiquette. What you need to know before you sit down.</p>
         </div>
         <div class="etiquette-card reveal reveal-delay-1">
-          <h3 class="etiquette-card-title">The Recommendations</h3>
-          <p>Specific restaurants across every budget&mdash;high-end splurges, mid-range specialists, 
+          <h3 class="etiquette-card-title" data-i18n="howto.recommendations.title">The Recommendations</h3>
+          <p data-i18n-html="howto.recommendations.text">Specific restaurants across every budget&mdash;high-end splurges, mid-range specialists, 
           and budget street-level gems. With prices, addresses, and standout dishes.</p>
         </div>
         <div class="etiquette-card reveal reveal-delay-2">
-          <h3 class="etiquette-card-title">The Local Lens</h3>
-          <p>Markets worth visiting, seasonal specialties to time your trip around, 
+          <h3 class="etiquette-card-title" data-i18n="howto.local.title">The Local Lens</h3>
+          <p data-i18n="howto.local.text">Markets worth visiting, seasonal specialties to time your trip around, 
           local drinks to pair, and the etiquette rules that will earn you respect.</p>
         </div>
       </div>
@@ -457,22 +463,22 @@
     <div class="parallax-overlay"></div>
     <div class="parallax-content">
       <h2>Shokunin</h2>
-      <p>The craftsman ethos &mdash; a ramen shop may serve only one style of broth, perfected over decades</p>
+      <p data-i18n-html="parallax.shokunin">The craftsman ethos &mdash; a ramen shop may serve only one style of broth, perfected over decades</p>
     </div>
   </section>
 
   <!-- Quick Guide -->
   <section class="section">
     <div class="container">
-      <span class="section-label reveal">At a Glance</span>
-      <h2 class="section-title reveal">What Each City Does Best</h2>
+      <span class="section-label reveal" data-i18n="glance.label">At a Glance</span>
+      <h2 class="section-title reveal" data-i18n="glance.title">What Each City Does Best</h2>
       
       <div class="restaurant-list reveal" style="margin-top: 3rem;">
         <a href="city/tokyo.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Tokyo</h3>
-            <p class="restaurant-location">The Capital of Endless Appetite</p>
-            <p class="restaurant-description">Edomae sushi, shoyu ramen, tempura, tonkatsu, yakitori, soba. The city of obsessive specialization.</p>
+            <p class="restaurant-location" data-i18n="glance.tokyo.location">The Capital of Endless Appetite</p>
+            <p class="restaurant-description" data-i18n="glance.tokyo.desc">Edomae sushi, shoyu ramen, tempura, tonkatsu, yakitori, soba. The city of obsessive specialization.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">7 regions</span>
@@ -481,8 +487,8 @@
         <a href="city/osaka.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Osaka</h3>
-            <p class="restaurant-location">The Nation's Kitchen</p>
-            <p class="restaurant-description">Takoyaki, okonomiyaki, kushikatsu, kitsune udon. Bold, saucy, affordable &mdash; the democratic table.</p>
+            <p class="restaurant-location" data-i18n="glance.osaka.location">The Nation's Kitchen</p>
+            <p class="restaurant-description" data-i18n="glance.osaka.desc">Takoyaki, okonomiyaki, kushikatsu, kitsune udon. Bold, saucy, affordable &mdash; the democratic table.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Kuidaore</span>
@@ -491,8 +497,8 @@
         <a href="city/kyoto.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Kyoto</h3>
-            <p class="restaurant-location">The Refined Palate</p>
-            <p class="restaurant-description">Kaiseki, yudofu, yuba, obanzai, matcha. A thousand years of imperial and monastic culinary tradition.</p>
+            <p class="restaurant-location" data-i18n="glance.kyoto.location">The Refined Palate</p>
+            <p class="restaurant-description" data-i18n="glance.kyoto.desc">Kaiseki, yudofu, yuba, obanzai, matcha. A thousand years of imperial and monastic culinary tradition.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Kaiseki</span>
@@ -501,8 +507,8 @@
         <a href="city/kobe.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Kobe</h3>
-            <p class="restaurant-location">Where East Met West</p>
-            <p class="restaurant-description">Kobe beef, akashiyaki, sobameshi, Nada sake. Port-city cosmopolitanism and legendary wagyu.</p>
+            <p class="restaurant-location" data-i18n="glance.kobe.location">Where East Met West</p>
+            <p class="restaurant-description" data-i18n="glance.kobe.desc">Kobe beef, akashiyaki, sobameshi, Nada sake. Port-city cosmopolitanism and legendary wagyu.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Wagyu</span>
@@ -511,8 +517,8 @@
         <a href="city/fukuoka.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Fukuoka</h3>
-            <p class="restaurant-location">Kyushu's Food Capital</p>
-            <p class="restaurant-description">Hakata tonkotsu ramen, motsu nabe, mentaiko, yatai stalls. Bold, generous, startlingly affordable.</p>
+            <p class="restaurant-location" data-i18n="glance.fukuoka.location">Kyushu's Food Capital</p>
+            <p class="restaurant-description" data-i18n="glance.fukuoka.desc">Hakata tonkotsu ramen, motsu nabe, mentaiko, yatai stalls. Bold, generous, startlingly affordable.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Yatai</span>
@@ -521,8 +527,8 @@
         <a href="city/oita.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Oita</h3>
-            <p class="restaurant-location">The Onsen Prefecture</p>
-            <p class="restaurant-description">Toriten, jigoku-mushi (hell steaming), kabosu citrus, seki mackerel. Japan's best-kept culinary secret.</p>
+            <p class="restaurant-location" data-i18n="glance.oita.location">The Onsen Prefecture</p>
+            <p class="restaurant-description" data-i18n-html="glance.oita.desc">Toriten, jigoku-mushi (hell steaming), kabosu citrus, seki mackerel. Japan's best-kept culinary secret.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Onsen</span>
@@ -531,8 +537,8 @@
         <a href="city/kyushu.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Kyushu</h3>
-            <p class="restaurant-location">Regional Overview</p>
-            <p class="restaurant-description">Nagasaki champon, Kumamoto basashi, Kagoshima kurobuta, Miyazaki chicken nanban. A food world unto itself.</p>
+            <p class="restaurant-location" data-i18n="glance.kyushu.location">Regional Overview</p>
+            <p class="restaurant-description" data-i18n="glance.kyushu.desc">Nagasaki champon, Kumamoto basashi, Kagoshima kurobuta, Miyazaki chicken nanban. A food world unto itself.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Island</span>
@@ -541,8 +547,8 @@
         <a href="city/nara.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Nara</h3>
-            <p class="restaurant-location">Japan's First Permanent Capital</p>
-            <p class="restaurant-description">Sacred deer, Todai-ji's Great Buddha, Kasuga Taisha's 3000 lanterns. Ancient temples in a park where deer roam free.</p>
+            <p class="restaurant-location" data-i18n="glance.nara.location">Japan's First Permanent Capital</p>
+            <p class="restaurant-description" data-i18n="glance.nara.desc">Sacred deer, Todai-ji's Great Buddha, Kasuga Taisha's 3000 lanterns. Ancient temples in a park where deer roam free.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Temples</span>
@@ -551,8 +557,8 @@
         <a href="city/himeji.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Himeji</h3>
-            <p class="restaurant-location">The White Heron Castle</p>
-            <p class="restaurant-description">Japan's best-preserved original castle. UNESCO World Heritage, 83 buildings, never destroyed by war or disaster.</p>
+            <p class="restaurant-location" data-i18n="glance.himeji.location">The White Heron Castle</p>
+            <p class="restaurant-description" data-i18n="glance.himeji.desc">Japan's best-preserved original castle. UNESCO World Heritage, 83 buildings, never destroyed by war or disaster.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Castle</span>
@@ -561,8 +567,8 @@
         <a href="city/kurashiki.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Kurashiki</h3>
-            <p class="restaurant-location">The White-Walled Merchant Quarter</p>
-            <p class="restaurant-description">Edo-era warehouses along canals, Ohara Museum of Art, Jeans Street. Japan&rsquo;s most beautiful merchant district.</p>
+            <p class="restaurant-location" data-i18n="glance.kurashiki.location">The White-Walled Merchant Quarter</p>
+            <p class="restaurant-description" data-i18n="glance.kurashiki.desc">Edo-era warehouses along canals, Ohara Museum of Art, Jeans Street. Japan&rsquo;s most beautiful merchant district.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Heritage</span>
@@ -571,8 +577,8 @@
         <a href="city/hiroshima.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Hiroshima</h3>
-            <p class="restaurant-location">City of Peace</p>
-            <p class="restaurant-description">Peace Memorial Museum, Atomic Bomb Dome (UNESCO), Shukkeien Garden. A city rebuilt as a monument to peace.</p>
+            <p class="restaurant-location" data-i18n="glance.hiroshima.location">City of Peace</p>
+            <p class="restaurant-description" data-i18n="glance.hiroshima.desc">Peace Memorial Museum, Atomic Bomb Dome (UNESCO), Shukkeien Garden. A city rebuilt as a monument to peace.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Peace</span>
@@ -581,8 +587,8 @@
         <a href="city/nagasaki.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Nagasaki</h3>
-            <p class="restaurant-location">Where East Met West</p>
-            <p class="restaurant-description">Dejima trading post, Glover Garden, Peace Park, Inasa-yama night view. 400 years of international exchange.</p>
+            <p class="restaurant-location" data-i18n="glance.nagasaki.location">Where East Met West</p>
+            <p class="restaurant-description" data-i18n="glance.nagasaki.desc">Dejima trading post, Glover Garden, Peace Park, Inasa-yama night view. 400 years of international exchange.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Heritage</span>
@@ -591,8 +597,8 @@
         <a href="city/beppu.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Beppu</h3>
-            <p class="restaurant-location">The Seven Hells</p>
-            <p class="restaurant-description">Seven spectacular hot springs at 100&deg;C &mdash; blood-red ponds, cobalt-blue pools, geysers, and crocodile farms.</p>
+            <p class="restaurant-location" data-i18n="glance.beppu.location">The Seven Hells</p>
+            <p class="restaurant-description" data-i18n-html="glance.beppu.desc">Seven spectacular hot springs at 100&deg;C &mdash; blood-red ponds, cobalt-blue pools, geysers, and crocodile farms.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Onsen</span>
@@ -601,8 +607,8 @@
         <a href="city/takachiho.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Takachiho</h3>
-            <p class="restaurant-location">Where Gods Descended</p>
-            <p class="restaurant-description">Spectacular gorge with emerald waters, Mount Aso&rsquo;s volcanic caldera. The mythological birthplace of Japan.</p>
+            <p class="restaurant-location" data-i18n="glance.takachiho.location">Where Gods Descended</p>
+            <p class="restaurant-description" data-i18n="glance.takachiho.desc">Spectacular gorge with emerald waters, Mount Aso&rsquo;s volcanic caldera. The mythological birthplace of Japan.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Mythology</span>
@@ -611,8 +617,8 @@
         <a href="city/yakushima.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Yakushima</h3>
-            <p class="restaurant-location">The Ancient Cedar Forest</p>
-            <p class="restaurant-description">UNESCO primeval forest, Jomon Sugi (2200+ year-old cedar), Princess Mononoke&rsquo;s moss forest. A living museum of nature.</p>
+            <p class="restaurant-location" data-i18n="glance.yakushima.location">The Ancient Cedar Forest</p>
+            <p class="restaurant-description" data-i18n="glance.yakushima.desc">UNESCO primeval forest, Jomon Sugi (2200+ year-old cedar), Princess Mononoke&rsquo;s moss forest. A living museum of nature.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Nature</span>
@@ -621,8 +627,8 @@
         <a href="city/kagoshima.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Kagoshima</h3>
-            <p class="restaurant-location">The Naples of the East</p>
-            <p class="restaurant-description">Active volcano Sakurajima, Shiroyama Park, site of the last samurai battle. Subtropical climate at Kyushu&rsquo;s southern tip.</p>
+            <p class="restaurant-location" data-i18n="glance.kagoshima.location">The Naples of the East</p>
+            <p class="restaurant-description" data-i18n="glance.kagoshima.desc">Active volcano Sakurajima, Shiroyama Park, site of the last samurai battle. Subtropical climate at Kyushu&rsquo;s southern tip.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Volcano</span>
@@ -631,8 +637,8 @@
         <a href="city/nikko.html" class="restaurant-item" style="text-decoration: none;">
           <div>
             <h3 class="restaurant-name">Nikko</h3>
-            <p class="restaurant-location">Lavish Mountain Shrines</p>
-            <p class="restaurant-description">Tosho-gu mausoleum (UNESCO), three wise monkeys, Kegon Falls. Ornate gold-and-lacquer opulence in a mountain forest.</p>
+            <p class="restaurant-location" data-i18n="glance.nikko.location">Lavish Mountain Shrines</p>
+            <p class="restaurant-description" data-i18n="glance.nikko.desc">Tosho-gu mausoleum (UNESCO), three wise monkeys, Kegon Falls. Ornate gold-and-lacquer opulence in a mountain forest.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Shrines</span>
@@ -640,9 +646,9 @@
         </a>
         <a href="city/road-trip.html" class="restaurant-item" style="text-decoration: none;">
           <div>
-            <h3 class="restaurant-name">Kyushu Road Trip</h3>
-            <p class="restaurant-location">Toll Cost Comparison</p>
-            <p class="restaurant-description">ETC vs KEP vs TEP passes for a 7-day Fukuoka &rarr; Beppu &rarr; Kirishima &rarr; Yakushima &rarr; Kumamoto &rarr; Nagasaki loop. Save over &yen;6,000.</p>
+            <h3 class="restaurant-name" data-i18n="glance.roadtrip.name">Kyushu Road Trip</h3>
+            <p class="restaurant-location" data-i18n="glance.roadtrip.location">Toll Cost Comparison</p>
+            <p class="restaurant-description" data-i18n-html="glance.roadtrip.desc">ETC vs KEP vs TEP passes for a 7-day Fukuoka &rarr; Beppu &rarr; Kirishima &rarr; Yakushima &rarr; Kumamoto &rarr; Nagasaki loop. Save over &yen;6,000.</p>
           </div>
           <div style="text-align: right;">
             <span class="restaurant-price">Planning</span>
@@ -656,8 +662,8 @@
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <p class="footer-logo">Japan Culinary Guide</p>
-        <p class="footer-tagline">For the serious food traveler</p>
+        <p class="footer-logo" data-i18n="footer.logo">Japan Culinary Guide</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">For the serious food traveler</p>
       </div>
       <div class="footer-cities">
         <a href="city/tokyo.html">Tokyo</a>
@@ -680,7 +686,7 @@
         <a href="city/road-trip.html">Road Trip</a>
       </div>
     </div>
-    <p class="footer-bottom">
+    <p class="footer-bottom" data-i18n="footer.bottom">
       Compiled from culinary resources, travel websites, and local publications. 
       Images from Unsplash.
     </p>
@@ -691,6 +697,7 @@
     <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </button>
 
+  <script src="js/i18n.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
