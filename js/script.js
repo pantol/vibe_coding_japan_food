@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         jp: '旬を食す',
         text: 'To eat what is in season is to eat in harmony with nature. A strawberry in winter may fill the stomach, but a strawberry at the peak of spring nourishes the soul.',
-        author: 'Japanese culinary principle \u2014 Shun wo shosu, eating with the seasons'
+        author: 'Japanese culinary principle \u2014 Shun wo taberu, eating with the seasons'
       },
       {
         jp: '出汁は料理の基本',
@@ -366,10 +366,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     ];
 
-    // Deterministic "quote of the day" based on the current date
+    // Deterministic "quote of the day" based on the current date (UTC to avoid DST issues)
     const now = new Date();
-    const start = new Date(now.getFullYear(), 0, 0);
-    const dayOfYear = Math.floor((now - start) / 86400000);
+    const startUTC = Date.UTC(now.getFullYear(), 0, 1);
+    const todayUTC = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    const dayOfYear = Math.floor((todayUTC - startUTC) / 86400000);
     const quoteIndex = dayOfYear % quotes.length;
     const quote = quotes[quoteIndex];
 
