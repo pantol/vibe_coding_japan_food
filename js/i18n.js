@@ -682,4 +682,12 @@ const I18N = {
 
 document.addEventListener('DOMContentLoaded', function () {
   I18N.init();
+
+  // Bind click handlers to all language switcher buttons
+  document.querySelectorAll('[data-lang-switch]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var lang = btn.getAttribute('data-lang-switch');
+      I18N.setLanguage(lang);
+    });
+  });
 });
