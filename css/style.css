@@ -789,6 +789,25 @@ img {
   margin-top: 1.5rem;
 }
 
+.daily-quote-container {
+  text-align: center;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.daily-quote-jp {
+  font-family: var(--font-jp);
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: var(--color-accent-gold);
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
 /* --- Divider --- */
 .divider {
   width: 60px;
