@@ -575,14 +575,14 @@ const I18N = {
    * Initialise i18n: check localStorage for saved language, apply it.
    */
   init() {
-    var savedLang = 'en';
+    var savedLang = 'pl';
     try {
-      savedLang = localStorage.getItem('lang') || 'en';
+      savedLang = localStorage.getItem('lang') || 'pl';
     } catch (e) {
       // localStorage unavailable
     }
     if (!this.translations[savedLang]) {
-      savedLang = 'en';
+      savedLang = 'pl';
     }
     this.setLanguage(savedLang);
   },
